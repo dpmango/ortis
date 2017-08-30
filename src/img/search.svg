@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Find</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Карточка-товара" transform="translate(-1024.000000, -14.000000)" stroke-width="2" stroke="#E21776">
+            <g id="Header">
+                <path d="M1034.79391,30.4323598 C1034.11648,30.630219 1033.39992,30.7363494 1032.65883,30.7363494 C1028.4589,30.7363494 1025.05426,27.3311614 1025.05426,23.1317798 C1025.05426,18.9318451 1028.4589,15.5272102 1032.65883,15.5272102 C1036.85876,15.5272102 1040.2634,18.9318451 1040.2634,23.1317798 C1040.2634,25.2311941 1039.41224,27.132613 1038.03623,28.5086253 L1041.99999,32.4727898" id="Find"></path>
+            </g>
+        </g>
+    </g>
+</svg>

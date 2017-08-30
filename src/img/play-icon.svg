@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="122px" viewBox="0 0 122 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>play-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Продукция" transform="translate(-622.000000, -5485.000000)">
+            <g id="Видео" transform="translate(193.000000, 5170.000000)">
+                <g id="play-icon" transform="translate(429.000000, 315.000000)">
+                    <circle id="Oval-2" fill="#E21776" cx="61" cy="61" r="61"></circle>
+                    <path d="M61.824954,46.6715127 L87.2485373,61 L52.2019188,82.3716662 L52.2019188,13.0455293 C29.4803278,17.1874414 12.2527164,37.0806186 12.2527164,61 C12.2527164,87.921357 34.078643,109.747284 61,109.747284 C87.9234997,109.747284 109.747284,87.921357 109.747284,61 C109.747284,34.0765003 87.9234997,12.2527164 61,12.2527164" id="icon/play" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

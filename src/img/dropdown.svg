@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon/dropdown" transform="translate(1.000000, 1.000000)" stroke="#C1C1C1" stroke-width="2">
+            <polyline id="dropdown" transform="translate(5.898386, 3.619141) rotate(-270.000000) translate(-5.898386, -3.619141) " points="2.89838647 -2.27924584 8.89838647 3.61930413 2.89838647 9.51752709"></polyline>
+        </g>
+    </g>
+</svg>

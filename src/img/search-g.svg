@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Find</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Mobile-footer" transform="translate(-281.000000, -155.000000)" stroke="#8E8E8E" stroke-width="2">
+            <g id="find" transform="translate(10.000000, 140.137168)">
+                <path d="M283.829199,32.9005756 C283.061081,33.1249232 282.248595,33.2452618 281.40829,33.2452618 C276.646089,33.2452618 272.785659,29.3842045 272.785659,24.6226309 C272.785659,19.8604302 276.646089,16 281.40829,16 C286.17049,16 290.030921,19.8604302 290.030921,24.6226309 C290.030921,27.0031041 289.065813,29.1590754 287.505587,30.7193013 L292,35.2141681" id="Find"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>star</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="catalog/badge-new" transform="translate(-1.000000, -4.000000)" stroke="#E01976" stroke-width="2">
+            <polyline id="star" transform="translate(13.653135, 16.000000) rotate(-15.000000) translate(-13.653135, -16.000000) " points="19.6808717 22.8562128 20.4253185 26.4210863 13.6529238 22.694979 6.8813752 26.4210863 8.21224868 18.7421239 2.69585 13.5400415 10.290628 12.3458089 13.6529238 5.57891371 17.0160656 12.3458089 24.6104206 13.5400415 19.0940219 18.7421239"></polyline>
+        </g>
+    </g>
+</svg>
