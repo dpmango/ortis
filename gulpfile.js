@@ -134,12 +134,12 @@ gulp.task('clean', function () {
 
 gulp.task('watch', ['browser-sync', 'pug', 'sass', 'scripts'], function () {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
-	gulp.watch('src/templates/*.pug', ['pug']);
+	gulp.watch('src/templates/**/*.pug', ['pug']);
 	gulp.watch('src/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts', ], function () {
+gulp.task('build', ['clean', 'img', 'sass', 'pug', 'scripts', ], function () {
 
 	var buildCss = gulp.src('src/css/style.css')
 		.pipe(csso({

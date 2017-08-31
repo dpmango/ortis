@@ -3,8 +3,286 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <meta name="robots" content="noindex">
+  <title>Ortis</title>
   <link rel="stylesheet" href="css/style.css">
  </head>
- <body></body>
+ <body>
+  <header class="page-header">
+   <div class="container flex-wrap">
+    <button class="menu-toggle" type="button"></button><a class="page-header__logo" href="/"><img src="img/logo-min.svg"></a>
+    <nav class="main-nav"><a class="main-nav__link" href="#">О компании</a><a class="main-nav__link" href="#">Фото</a><a class="main-nav__link" href="#">Видео</a><a class="main-nav__link" href="#">Новинки</a><a class="main-nav__link" href="#">Информация</a><a class="main-nav__link" href="#">Партнеры</a><a class="main-nav__link" href="#">Контакты</a></nav>
+    <form class="page-header__form">
+     <input class="page-header__input" placeholder="Поиск по сайту">
+     <button class="page-header__btn" type="submit"></button>
+    </form>
+    <div class="page-header__cart"><span>Корзина</span>
+     <button type="button">15</button>
+    </div>
+   </div>
+  </header>
+  <main class="main">
+   <div class="topbar">
+    <div class="container flex-wrap"><a class="topbar__logo"><img src="img/logo-black.svg"></a>
+     <div class="topbar__info"><a class="topbar__tel" href="tel:88001004627">8 (800) 100-46-27</a>
+      <p class="topbar__text">Многоканальный, бесплатно по всей России </p>
+      <p class="topbar__text">Будни: 9:00–19:00, выходной: сб, вс.</p>
+     </div>
+    </div>
+   </div>
+   <div class="topslider">
+    <div class="topslider__slide">
+     <div class="container flex-wrap">
+      <div class="topslider__img"><img src="img/delo.svg"></div>
+      <div class="topslider__info">
+       <h2 class="topslider__title">Дело и время</h2>
+       <p class="topslider__descr">Уже более 10 лет нам доверяют не только строительные компании, но и крупнейшие производители сухих смесей. </p>
+      </div>
+     </div>
+    </div>
+    <div class="topslider__slide topslider__slide--vertical">
+     <div class="container">
+      <h2 class="topslider__title">Что может быть проще?</h2>
+      <div class="topslider__items flex-wrap">
+       <div class="topslider__item"><img class="topslider__item-img" src="img/manufac.svg">
+        <h3 class="topslider__item-title">Производство</h3>
+       </div>
+       <div class="topslider__item"><img class="topslider__item-img" src="img/import.svg">
+        <h3 class="topslider__item-title">Импорт</h3>
+       </div>
+       <div class="topslider__item"><img class="topslider__item-img" src="img/use.svg">
+        <h3 class="topslider__item-title">Применение</h3>
+       </div>
+       <div class="topslider__item"><img class="topslider__item-img" src="img/service.svg">
+        <h3 class="topslider__item-title">Обслуживание</h3>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="submenu">
+    <div class="container flex-wrap"><a class="submenu__link" href="#" data-drop="for-one">Продукция</a><a class="submenu__link" href="#" data-drop="for-two">Штукатурные станции</a><a class="submenu__link" href="#" data-drop="for-three">Шнековые пары</a><a class="submenu__link" href="#" data-drop="for-four">Торкет установки</a><a class="submenu__link" href="#" data-drop="for-five">Расходные части </a><a class="submenu__link" href="#" data-drop="for-six">Оборудовние для производства</a><a class="submenu__link" href="#" data-drop="for-seven">Сервис </a><a class="submenu__link" href="#" data-drop="for-eight">Аренда</a><a class="submenu__link" href="#" data-drop="for-nine">Сухие смеси</a></div>
+   </div>
+   <div class="catalog">
+    <div class="container">
+     <h2 class="catalog__title">Каталог</h2>
+     <div class="flex-wrap"><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Продукция</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Штукатурные станции</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Шнековые пары</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Торкет установки</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Расходные части</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Оборудовние для производства</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Сервис</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Аренда</h2></a><a class="catalog__item" href="#">
+       <h2 class="catalog__item-title">Сухие смеси</h2></a></div>
+    </div>
+   </div>
+   <div class="pop-goods">
+    <div class="container">
+     <h2 class="pop-goods__title">Популярные товары</h2>
+     <div class="flex-wrap">
+      <div class="pop-goods__item">
+       <div class="pop-goods__img"><img src="img/goods1.png">
+        <div class="pop-goods__hide">
+         <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+         <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+         <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+         <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+         <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+        </div>
+       </div>
+       <div class="pop-goods__wrap flex-wrap">
+        <div class="pop-goods__info">
+         <h3 class="pop-goods__subtitle">Название товара</h3>
+         <div class="pop-goods__price">312 500 ₽</div>
+         <div class="pop-goods__status">На складе</div>
+        </div>
+        <button class="pop-goods__buy" type="button">Купить</button>
+       </div>
+      </div>
+      <div class="pop-goods__item">
+       <div class="pop-goods__img"><img src="img/goods1.png">
+        <div class="pop-goods__hide">
+         <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+         <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+         <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+         <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+         <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+        </div>
+       </div>
+       <div class="pop-goods__wrap flex-wrap">
+        <div class="pop-goods__info">
+         <h3 class="pop-goods__subtitle">Название товара 2</h3>
+         <div class="pop-goods__price">33 000 ₽</div>
+         <div class="pop-goods__status pop-goods__status--wait">Ожидается</div>
+        </div>
+        <button class="pop-goods__buy" type="button">Купить</button>
+       </div>
+      </div>
+      <div class="pop-goods__item">
+       <div class="pop-goods__img"><img src="img/goods1.png">
+        <div class="pop-goods__hide">
+         <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+         <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+         <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+         <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+         <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+        </div>
+       </div>
+       <div class="pop-goods__wrap flex-wrap">
+        <div class="pop-goods__info">
+         <h3 class="pop-goods__subtitle">Название товара 3</h3>
+         <div class="pop-goods__price">3 100 ₽</div>
+         <div class="pop-goods__status">На складе</div>
+        </div>
+        <button class="pop-goods__buy" type="button">Купить</button>
+       </div>
+      </div>
+      <div class="pop-goods__item">
+       <div class="pop-goods__img"><img src="img/goods1.png">
+        <div class="pop-goods__hide">
+         <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+         <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+         <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+         <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+         <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+        </div>
+       </div>
+       <div class="pop-goods__wrap flex-wrap">
+        <div class="pop-goods__info">
+         <h3 class="pop-goods__subtitle">Название товара 3</h3>
+         <div class="pop-goods__price">3 100 ₽</div>
+         <div class="pop-goods__status">На складе</div>
+        </div>
+        <button class="pop-goods__buy" type="button">Купить</button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="advant">
+    <div class="container">
+     <h2 class="advant__title">Наши преимущества</h2>
+     <div class="flex-wrap">
+      <div class="advant__item">
+       <h3 class="advant__item-title">Первые руки</h3>
+       <p class="advant__item-descr">Мы всегда являемся представителями заводов и импортерами, что гарантирует наличие, лучшую цену, оперативный и профессиональный сервис.</p>
+      </div>
+      <div class="advant__item">
+       <h3 class="advant__item-title">Нам доверяют лучшие</h3>
+       <p class="advant__item-descr">Много лет лучшие производители сухих смесей выбирают наше оборудование и сервис.</p>
+      </div>
+      <div class="advant__item">
+       <h3 class="advant__item-title">10 лет на рынке</h3>
+       <p class="advant__item-descr">Большой опыт и сформировавшаяся команда профессионалов позволяют решать не стандартные задачи.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="reviews">
+    <div class="container">
+     <h2 class="reviews__title">Отзывы</h2>
+     <div class="reviews__slider">
+      <div class="reviews__slide">
+       <p class="reviews__descr">Компания «Старатели» выражает искреннюю благодарность и глубокую признательность нашему надежному партнеру ООО «ГК ОРТИС»  за многолетнее успешное сотрудничество.  </p>
+       <p class="reviews__descr"> Ваши квалифицированные специалисты всегда работают на высочайшем профессиональном уровне, благодаря этому мы всегда уверены в успешном результате совместной работы. Очень важно иметь порядочного и надежного бизнес-партнера, который не раз доказывал это на деле.</p>
+       <p class="reviews__descr">Надеемся на дальнейшее плодотворное сотрудничество и желаем успехов в профессиональной деятельности!</p>
+       <div class="reviews__img" src="img/review-img.png"><img></div>
+      </div>
+      <div class="reviews__slide">
+       <p class="reviews__descr">Компания «Старатели» выражает искреннюю благодарность и глубокую признательность нашему надежному партнеру ООО «ГК ОРТИС»  за многолетнее успешное сотрудничество.  </p>
+       <p class="reviews__descr"> Ваши квалифицированные специалисты всегда работают на высочайшем профессиональном уровне, благодаря этому мы всегда уверены в успешном результате совместной работы. Очень важно иметь порядочного и надежного бизнес-партнера, который не раз доказывал это на деле.</p>
+       <p class="reviews__descr">Надеемся на дальнейшее плодотворное сотрудничество и желаем успехов в профессиональной деятельности!</p>
+       <div class="reviews__img" src="img/review-img.png"><img></div>
+      </div>
+     </div><a class="reviews__link">Все отзывы</a>
+    </div>
+   </div>
+   <div class="news">
+    <div class="container">
+     <h2 class="news__title"></h2>
+     <div class="flex-wrap">
+      <div class="news__item">
+       <h3 class="news__title"><a>ООО "ГК ОРТИС" поздравляет с Днем Великой Победы!</a></h3>
+       <p class="news__descr">От всей души поздравляем Вас с 9 мая - замечательным, радостным днем, который наполняет наши души и сердца гордостью!</p>
+      </div>
+      <div class="news__item">
+       <h3 class="news__title"><a>ООО "ГК ОРТИС" примет участие в выставке "YugBuild 2017" г. Краснодар</a></h3>
+       <p class="news__descr">В период с 28 февраля по 3 марта 2017 года ООО "ГК ОРТИС" примет участие в крупнейшем мероприятии на Юге России - Международной выставке "YugBuild 2017".</p>
+      </div>
+      <div class="news__item">
+       <h3 class="news__title"><a>ООО "ГК ОРТИС" поздравляет с Днем Великой Победы!</a></h3>
+       <p class="news__descr">От всей души поздравляем Вас с 9 мая - замечательным, радостным днем, который наполняет наши души и сердца гордостью!</p>
+      </div>
+     </div><a class="news__link">Все новости</a>
+    </div>
+   </div>
+  </main>
+  <div class="page-footer">
+   <div class="container">
+    <div class="page-footer__topbar">
+     <div class="flex-wrap">
+      <div class="page-footer__main">
+       <div class="page-footer__logo-wrap flex-wrap">
+        <div class="page-footer__logo"><img src="img/logo-white.svg"></div>
+        <form class="page-footer__form">
+         <input class="page-footer__input">
+         <button class="page-footer__btn" type="submit"></button>
+        </form>
+       </div>
+       <div class="flex-wrap">
+        <div class="page-footer__item page-footer__item--prod">
+         <h3 class="page-footer__subtitle"></h3>
+         <ul>
+          <li><a href="#">Растворонасосы</a></li>
+          <li><a href="#">Пневмотранспортные системы</a></li>
+          <li><a href="#">Растворосмесители</a></li>
+          <li><a href="#">Бетоносмесители</a></li>
+          <li><a href="#">Оборудование для пенобетона</a></li>
+          <li><a href="#">Шпаклевочные станции</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li><a href="#">Силосные системы</a></li>
+          <li><a href="#">Оборудование для производства сухих смесей</a></li>
+          <li><a href="#">Строительные материалы</a></li>
+         </ul>
+        </div>
+        <div class="page-footer__item">
+         <ul>
+          <li><a href="#">Продукция</a></li>
+          <li><a href="#">Штукатурные станции</a></li>
+          <li><a href="#">Шнековые пары</a></li>
+          <li><a href="#">Торкет установки</a></li>
+          <li><a href="#">Расходные части</a></li>
+          <li><a href="#">Оборудовние для производства</a></li>
+          <li><a href="#">Сервис</a></li>
+          <li><a href="#">Аренда</a></li>
+          <li><a href="#">Сухие смеси</a></li>
+         </ul>
+        </div>
+        <div class="page-footer__item">
+         <ul>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Фото</a></li>
+          <li><a href="#">Видео</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Партнеры</a></li>
+          <li><a href="#">Контакты</a></li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <div class="page-footer__callback"><a class="page-footer__tel" href="tel:88001004627">8 (800) 100-46-27</a>
+       <p>Многоканальный, бесплатно по всей России</p>
+       <p>Будни: 9:00–19:00, выходной: сб, вс. </p>
+       <p class="page-footer__address">123112, г. Москва, Бизнес Парк "Румянцево", корпус Д, подъезд №19, этаж 7, офис 710</p><a class="page-footer__mail" href="mailto:at@gk-ortis.ru">at@gk-ortis.ru</a><a class="page-footer__mail" href="mailto:ag@gk-ortis.ru">ag@gk-ortis.ru</a><a class="page-footer__callback-btn">Обратный звонок</a>
+      </div>
+     </div>
+    </div>
+    <div class="page-footer__bottombar"><span class="page-footer__copy">© Copyright 2017</span><a class="page-footer__map" href="#">Карта сайта</a>
+     <div class="page-footer__dev"><span>Создание и продвижение</span><img src="img/soobwa.svg"></div>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>

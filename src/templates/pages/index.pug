@@ -1,8 +1,44 @@
+include ../modules/vars.pug
 doctype html
 html
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title
+		meta(name="robots" content="noindex")
+		title Ortis
 		link(rel="stylesheet" href="css/style.css")
 	body
+		include ../modules/header.pug
+		main.main
+			include ../modules/topbar.pug
+			include ../modules/topslider.pug
+			include ../modules/submenu.pug
+			
+			.catalog
+				.container
+					h2.catalog__title Каталог
+					.flex-wrap
+						a(href="#").catalog__item
+							h2.catalog__item-title #{prod}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{shtuk}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{shnek}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{torket}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{rashod}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{oborud}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{serv}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{rent}
+						a(href="#").catalog__item
+							h2.catalog__item-title #{syh}
+			
+			include ../modules/pop-goods.pug
+			include ../modules/advant.pug
+			include ../modules/reviews.pug
+			include ../modules/news.pug
+		include ../modules/footer.pug

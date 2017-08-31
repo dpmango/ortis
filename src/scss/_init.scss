@@ -1,4 +1,44 @@
 // Colors
 
+$white-color: #fff;
+$black-color: #000;
+
+$main-color: #E21776;
+$header-text: #003398;
+$menu-bg: #F6F6F6;
+$menu-hover: #EFEFEF;
+$text-color: #1E1E1E;
+$border-color: #e8e8e8;
+$news-bg: #F8F8F8;
+$btn-bd: #C1C1C1;
+$footer-color: #8E8E8E;
+$footer-search: #343434;
+$footer-callback: #2B2B2B;
+$in-stock: #7ED321;
+$wait: #F5A623;
 
 //Fonts
+@font-face {
+	font-family: 'nerisblack';
+	src: url('../fonts/neris-black.woff2') format('woff2'), url('../fonts/neris-black.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'nerislight';
+	src: url('../fonts/neris-light.woff2') format('woff2'), url('../fonts/neris-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'nerissemibold';
+	src: url('../fonts/neris-semibold.woff2') format('woff2'), url('../fonts/neris-semibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-black: 'nerisblack';
+$font-semi: 'nerissemibold';
+$font-light: 'nerislight';
