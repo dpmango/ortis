@@ -1,8 +1,9 @@
 .pop-goods
 	.container
 		h2.pop-goods__title Популярные товары
-		.flex-wrap
+		.flex-wrap.pop-goods__slider
 			.pop-goods__item
+				.pop-goods__new Новинка
 				.pop-goods__img
 					img(src="img/goods1.png")
 					.pop-goods__hide
@@ -13,7 +14,8 @@
 						p.pop-goods__hide-info Фракция, мм:  до 4
 				.pop-goods__wrap.flex-wrap
 					.pop-goods__info
-						h3.pop-goods__subtitle Название товара
+						h3.pop-goods__subtitle 
+							a Название товара
 						.pop-goods__price 312 500 ₽
 						.pop-goods__status На складе
 					button(type="button").pop-goods__buy Купить
@@ -28,7 +30,8 @@
 						p.pop-goods__hide-info Фракция, мм:  до 4
 				.pop-goods__wrap.flex-wrap
 					.pop-goods__info
-						h3.pop-goods__subtitle Название товара 2
+						h3.pop-goods__subtitle 
+							a Название товара 2
 						.pop-goods__price 33 000 ₽
 						.pop-goods__status.pop-goods__status--wait Ожидается
 					button(type="button").pop-goods__buy Купить
@@ -43,7 +46,8 @@
 						p.pop-goods__hide-info Фракция, мм:  до 4
 				.pop-goods__wrap.flex-wrap
 					.pop-goods__info
-						h3.pop-goods__subtitle Название товара 3
+						h3.pop-goods__subtitle 
+							a Название товара 3
 						.pop-goods__price 3 100 ₽
 						.pop-goods__status На складе
 					button(type="button").pop-goods__buy Купить
@@ -58,7 +62,8 @@
 						p.pop-goods__hide-info Фракция, мм:  до 4
 				.pop-goods__wrap.flex-wrap
 					.pop-goods__info
-						h3.pop-goods__subtitle Название товара 3
+						h3.pop-goods__subtitle 
+							a Название товара 3
 						.pop-goods__price 3 100 ₽
 						.pop-goods__status На складе
 					button(type="button").pop-goods__buy Купить

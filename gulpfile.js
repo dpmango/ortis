@@ -46,9 +46,8 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
 	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js',
-		'src/libs/slick-carousel/slick/slick.min.js',
-		'src/libs/readmore.min.js'
+		'src/libs/jquery.min.js',
+		'src/libs/slick.min.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {

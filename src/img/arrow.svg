@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="42px" viewBox="0 0 16 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="16px" height="39px" viewBox="0 0 16 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>icon/arrow</title>
+    <title>Path</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icon/arrow" stroke-width="2" stroke="#E01976">
-            <polyline id="Path" points="0 0 16 20.5100318 0 41.0189265"></polyline>
+        <g id="icon/arrow" transform="translate(0.000000, 0.003906)" stroke-width="2" stroke="#E01976">
+            <polyline id="Path" points="1 1.71815855 15 19.6644363 1 37.6097192"></polyline>
         </g>
     </g>
 </svg>
