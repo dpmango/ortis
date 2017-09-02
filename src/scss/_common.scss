@@ -62,12 +62,13 @@ body {
 }
 
 .page-header {
-	background-color: $white-color;
+	background-color: rgba(255, 255, 255, 0.95);
 	border-bottom: 1px solid $border-color;
 	max-height: 48px;
 	position: fixed;
 	width: 100%;
 	z-index: 500;
+	overflow: hidden;
 	.row {
 		margin-right: -15px;
 	}
@@ -76,11 +77,17 @@ body {
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.3s;
+		transform: translateY(30px);
 		img {
 			display: block;
 			height: auto;
 			width: 100%;
 			max-width: 170px;
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
 		}
 	}
 	&__form {
@@ -127,6 +134,10 @@ body {
 			width: 48px;
 			border: 0;
 			padding: 0;
+			transition: all 0.3s;
+			&:hover {
+				background-color: $main-color;
+			}
 		}
 	}
 }
@@ -155,8 +166,9 @@ body {
 		font-size: 16px;
 		padding-left: 17px;
 		padding-right: 17px;
+		transition: all 0.3s;
 		&:hover {
-			text-decoration: underline;
+			color: $main-color;
 		}
 	}
 }
@@ -187,8 +199,15 @@ body {
 	}
 }
 
+.submenu-helper {
+	height: 1px;
+	width: 100%;
+	background-color: transparent;
+}
+
 .submenu {
 	background-color: $menu-bg;
+	transition: all 0.3s;
 	.flex-wrap {
 		align-items: stretch;
 		justify-content: space-between;
@@ -214,6 +233,12 @@ body {
 			flex: 0 0 auto;
 		}
 	}
+	&.sticky {
+		position: fixed;
+		width: 100%;
+		top: 48px;
+		z-index: 500;
+	}
 }
 
 .page-footer {
@@ -227,13 +252,17 @@ body {
 		width: 73%;
 		padding-right: 15px;
 		background-color: $text-color;
+		align-self: stretch;
 	}
 	&__logo-wrap {
 		justify-content: space-between;
 		margin-bottom: 32px;
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 	&__logo {
 		align-self: center;
+		padding: 0 15px;
 		img {
 			display: block;
 			height: auto;
@@ -247,6 +276,7 @@ body {
 		max-width: 248px;
 		max-height: 51px;
 		flex: 0 0 auto;
+		padding: 0 15px;
 	}
 	&__input {
 		padding: 13px 27px 15px 12px;
@@ -266,7 +296,7 @@ body {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: 10px;
+		right: 25px;
 		background-image: url(../img/search-g.svg);
 		background-size: 100%;
 	}
@@ -410,10 +440,79 @@ body {
 }
 
 @media (max-width: 1440px) {
-	.slick-prev {
-		left: -21px;
+	.page-header {
+		&__logo {
+			visibility: visible;
+			opacity: 1;
+			transform: none;
+		}
+		&__form {
+			padding: 13px 3px 9px 3px;
+		}
+		&__input {
+			display: none;
+		}
+		&__btn {
+			position: static;
+			transform: none;
+		}
 	}
-	.slick-next {
-		right: -21px;
+	.main-nav {
+		font: 0 0 auto;
+		&__link {
+			padding: 0 7px;
+		}
+	}
+	.submenu-helper {
+		display: none;
+	}
+	.submenu {
+		&__link {
+			padding: 14px 15px;
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.page-header {
+		&__form {
+			margin-left: auto;
+		}
+		&__cart {
+			margin-left: 0;
+		}
+	}
+	.main-nav {
+		display: none;
+	}
+	.topbar {
+		padding: 25px 0;
+		&__logo {
+			visibility: hidden;
+			opacity: 0;
+		}
+		&__info {
+			padding-right: 0;
+		}
+	}
+	.submenu {
+		display: none;
+	}
+	.page-footer {
+		&__item {
+			flex: 0 0 50%;
+			&--prod {
+				display: none;
+			}
+		}
+		&__main {
+			width: 63%;
+		}
+		&__callback {
+			width: 37%;
+		}
 	}
 }
