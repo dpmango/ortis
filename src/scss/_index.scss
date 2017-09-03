@@ -590,3 +590,157 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.container {
+		padding: 0 15px;
+	}
+	.topslider {
+		.flex-wrap {
+			flex-direction: column;
+		}
+		&__img {
+			width: 100%;
+			img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		&__info {
+			width: 100%;
+			padding: 0;
+			text-align: center;
+		}
+		&__title {
+			margin-top: 10px;
+		}
+		&__descr {
+			font-size: 16px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__slide--vertical {
+			.flex-wrap {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+		}
+		&__items {
+			justify-content: space-between;
+			align-items: stretch;
+		}
+		&__item {
+			width: 48%;
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				display: none;
+			}
+		}
+	}
+	.catalog {
+		.flex-wrap {
+			flex-wrap: wrap;
+		}
+		&__item {
+			width: 50%;
+		}
+	}
+	.pop-goods {
+		.slick-prev {
+			left: -10px;
+		}
+		.slick-next {
+			right: -10px;
+		}
+	}
+	.reviews {
+		&__slider {
+			width: 90%;
+			.slick-prev {
+				left: -30px;
+			}
+			.slick-next {
+				right: -30px;
+			}
+		}
+	}
+	.news {
+		.flex-wrap {
+			flex-direction: column;
+			margin: 0;
+		}
+		&__item {
+			margin-bottom: 35px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__link {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 574px) {
+	.advant {
+		&__title {
+			font-size: 28px;
+			letter-spacing: 0.05em;
+		}
+		.flex-wrap {
+			flex-direction: column;
+		}
+		&__item {
+			width: 100%;
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.catalog {
+		&__title {
+			font-size: 28px;
+			margin-bottom: 24px;
+		}
+		&__item {
+			width: 100%;
+		}
+	}
+	.pop-goods {
+		&__title {
+			font-size: 28px;
+			margin-bottom: 24px;
+		}
+		.slick-dots {
+			bottom: -10px;
+		}
+	}
+	.reviews {
+		&__title {
+			font-size: 28px;
+			margin-bottom: 24px;
+		}
+		&__slider {
+			width: 100%;
+			margin-bottom: 48px;
+		}
+		.slick-dots {
+			bottom: -30px;
+		}
+		&__descr {
+			font-size: 12px;
+		}
+	}
+	.topslider {
+		&__item {
+			width: 100%;
+		}
+		.slick-dots {
+			bottom: -10px;
+		}
+	}
+}

@@ -5,7 +5,15 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		slidesToShow: 1,
 		arrows: false,
-		dots: true
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					adaptiveHeight: true
+				}
+    	}
+		]
 	});
 
 	// Популярные товары
@@ -13,7 +21,25 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		slidesToShow: 3,
 		arrows: true,
-		dots: false
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2
+				}
+    	}
+		],
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true
+				}
+    	}
+		]
 	});
 
 	// Отзывы
@@ -21,7 +47,17 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		slidesToShow: 1,
 		arrows: true,
-		dots: false
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true
+				}
+    	}
+		]
 	});
 
 	// Прилипающее подменю
