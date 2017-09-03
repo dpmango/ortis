@@ -1,12 +1,73 @@
 .submenu-helper
-.submenu
-	.container.flex-wrap
-		a.submenu__link(href="#" data-drop="for-one") #{prod}
-		a.submenu__link(href="#" data-drop="for-two") #{shtuk}
-		a.submenu__link(href="#" data-drop="for-three") #{shnek}
-		a.submenu__link(href="#" data-drop="for-four") #{torket}
-		a.submenu__link(href="#" data-drop="for-five") #{rashod} 
-		a.submenu__link(href="#" data-drop="for-six") #{oborud}
-		a.submenu__link(href="#" data-drop="for-seven") #{serv} 
-		a.submenu__link(href="#" data-drop="for-eight") #{rent}
-		a.submenu__link(href="#" data-drop="for-nine") #{syh}
+.menu-wrap
+	.submenu
+		.container.flex-wrap
+			a.submenu__link(href="#" data-drop="for-one") #{prod}
+			a.submenu__link(href="#" data-drop="for-two") #{shtuk}
+			a.submenu__link(href="#" data-drop="for-three") #{shnek}
+			a.submenu__link(href="#" data-drop="for-four") #{torket}
+			a.submenu__link(href="#" data-drop="for-five") #{rashod} 
+			a.submenu__link(href="#" data-drop="for-six") #{oborud}
+			a.submenu__link(href="#" data-drop="for-seven") #{serv} 
+			a.submenu__link(href="#" data-drop="for-eight") #{rent}
+			a.submenu__link(href="#" data-drop="for-nine") #{syh}
+	.popup-menu
+		.container
+			.popup-menu__wrap.flex-wrap#for-one
+				.popup-menu__list
+					.popup-menu__list-wrap.flex-wrap
+						.popup-menu__half
+							a(href="#" data-cat="rastvor").popup-menu__link.active Растворонасосы
+							a(href="#" data-cat="pnevmo").popup-menu__link Пневмотранспортные системы
+							a(href="#").popup-menu__link Растворосмесители
+							a(href="#").popup-menu__link Бетоносмесители
+							a(href="#").popup-menu__link Оборудование для производства сухих смесей
+						.popup-menu__half
+							a(href="#").popup-menu__link Оборудование для пенобетона
+							a(href="#").popup-menu__link Шпаклевочные станции
+							a(href="#").popup-menu__link Инструмент
+							a(href="#").popup-menu__link Силосные системы
+							a(href="#").popup-menu__link Строительные материалы
+				.popup-menu__item.flex-wrap#rastvor.active
+					.popup-menu__img
+						img(src="img/icon-shtukatur-act.svg")
+					.popup-menu__info
+						h2.popup-menu__title 
+							a(href="#") Растворонасосы
+						p.popup-menu__descr Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы
+				.popup-menu__item.flex-wrap#pnevmo
+					.popup-menu__img
+						img(src="img/icon-shtukatur-act.svg")
+					.popup-menu__info
+						h2.popup-menu__title 
+							a(href="#") Пневмотранспортные системы
+						p.popup-menu__descr Пневмотранспортные системы используются для транспортировки сухих материалов, как правило, пневмотранспортная система hurrican подключается к транспортному силосу и обеспечивает автоматическую подачу сухой смеси к штукатурной станции.
+			.popup-menu__wrap.flex-wrap#for-two
+				.popup-menu__list
+					.popup-menu__list-wrap.flex-wrap
+						.popup-menu__half
+							a(href="#" data-cat="sect1").popup-menu__link.active Другая ссылка
+							a(href="#" data-cat="sect2").popup-menu__link Вообще другая
+							a(href="#").popup-menu__link Растворосмесители
+							a(href="#").popup-menu__link Бетоносмесители
+							a(href="#").popup-menu__link Оборудование для производства сухих смесей
+						.popup-menu__half
+							a(href="#").popup-menu__link Оборудование для пенобетона
+							a(href="#").popup-menu__link Шпаклевочные станции
+							a(href="#").popup-menu__link Инструмент
+							a(href="#").popup-menu__link Силосные системы
+							a(href="#").popup-menu__link Строительные материалы
+				.popup-menu__item.flex-wrap#sect1.active
+					.popup-menu__img
+						img(src="img/icon-shtukatur-act.svg")
+					.popup-menu__info
+						h2.popup-menu__title 
+							a(href="#") Какая-то другая секция
+						p.popup-menu__descr Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция
+				.popup-menu__item.flex-wrap#sect2
+					.popup-menu__img
+						img(src="img/icon-shtukatur-act.svg")
+					.popup-menu__info
+						h2.popup-menu__title 
+							a(href="#") Вообще другая секция
+						p.popup-menu__descr Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция

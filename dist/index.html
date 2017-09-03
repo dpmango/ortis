@@ -14,8 +14,8 @@
     <div class="row flex-wrap">
      <button class="menu-toggle" type="button"></button><a class="page-header__logo" href="/"><img src="img/logo-min.svg"></a>
      <nav class="main-nav"><a class="main-nav__link" href="#">О компании</a><a class="main-nav__link" href="#">Фото</a><a class="main-nav__link" href="#">Видео</a><a class="main-nav__link" href="#">Новинки</a><a class="main-nav__link" href="#">Информация</a><a class="main-nav__link" href="#">Партнеры</a><a class="main-nav__link" href="#">Контакты</a></nav>
-     <form class="page-header__form">
-      <input class="page-header__input" placeholder="Поиск по сайту">
+     <form class="page-header__form" action="#">
+      <input class="page-header__input" placeholder="Поиск по сайту"><a class="page-header__tel" href="#">8 (800) 100-46-27</a>
       <button class="page-header__btn" type="submit"></button>
      </form>
      <div class="page-header__cart"><span>Корзина</span>
@@ -73,8 +73,58 @@
     </div>
    </div>
    <div class="submenu-helper"></div>
-   <div class="submenu">
-    <div class="container flex-wrap"><a class="submenu__link" href="#" data-drop="for-one">Продукция</a><a class="submenu__link" href="#" data-drop="for-two">Штукатурные станции</a><a class="submenu__link" href="#" data-drop="for-three">Шнековые пары</a><a class="submenu__link" href="#" data-drop="for-four">Торкет установки</a><a class="submenu__link" href="#" data-drop="for-five">Расходные части </a><a class="submenu__link" href="#" data-drop="for-six">Оборудовние для производства</a><a class="submenu__link" href="#" data-drop="for-seven">Сервис </a><a class="submenu__link" href="#" data-drop="for-eight">Аренда</a><a class="submenu__link" href="#" data-drop="for-nine">Сухие смеси</a></div>
+   <div class="menu-wrap">
+    <div class="submenu">
+     <div class="container flex-wrap"><a class="submenu__link" href="#" data-drop="for-one">Продукция</a><a class="submenu__link" href="#" data-drop="for-two">Штукатурные станции</a><a class="submenu__link" href="#" data-drop="for-three">Шнековые пары</a><a class="submenu__link" href="#" data-drop="for-four">Торкет установки</a><a class="submenu__link" href="#" data-drop="for-five">Расходные части </a><a class="submenu__link" href="#" data-drop="for-six">Оборудовние для производства</a><a class="submenu__link" href="#" data-drop="for-seven">Сервис </a><a class="submenu__link" href="#" data-drop="for-eight">Аренда</a><a class="submenu__link" href="#" data-drop="for-nine">Сухие смеси</a></div>
+    </div>
+    <div class="popup-menu">
+     <div class="container">
+      <div class="popup-menu__wrap flex-wrap" id="for-one">
+       <div class="popup-menu__list">
+        <div class="popup-menu__list-wrap flex-wrap">
+         <div class="popup-menu__half"><a class="popup-menu__link active" href="#" data-cat="rastvor">Растворонасосы</a><a class="popup-menu__link" href="#" data-cat="pnevmo">Пневмотранспортные системы</a><a class="popup-menu__link" href="#">Растворосмесители</a><a class="popup-menu__link" href="#">Бетоносмесители</a><a class="popup-menu__link" href="#">Оборудование для производства сухих смесей</a></div>
+         <div class="popup-menu__half"><a class="popup-menu__link" href="#">Оборудование для пенобетона</a><a class="popup-menu__link" href="#">Шпаклевочные станции</a><a class="popup-menu__link" href="#">Инструмент</a><a class="popup-menu__link" href="#">Силосные системы</a><a class="popup-menu__link" href="#">Строительные материалы</a></div>
+        </div>
+       </div>
+       <div class="popup-menu__item flex-wrap active" id="rastvor">
+        <div class="popup-menu__img"><img src="img/icon-shtukatur-act.svg"></div>
+        <div class="popup-menu__info">
+         <h2 class="popup-menu__title"> <a href="#">Растворонасосы</a></h2>
+         <p class="popup-menu__descr">Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы Растворонасосы</p>
+        </div>
+       </div>
+       <div class="popup-menu__item flex-wrap" id="pnevmo">
+        <div class="popup-menu__img"><img src="img/icon-shtukatur-act.svg"></div>
+        <div class="popup-menu__info">
+         <h2 class="popup-menu__title"> <a href="#">Пневмотранспортные системы</a></h2>
+         <p class="popup-menu__descr">Пневмотранспортные системы используются для транспортировки сухих материалов, как правило, пневмотранспортная система hurrican подключается к транспортному силосу и обеспечивает автоматическую подачу сухой смеси к штукатурной станции.</p>
+        </div>
+       </div>
+      </div>
+      <div class="popup-menu__wrap flex-wrap" id="for-two">
+       <div class="popup-menu__list">
+        <div class="popup-menu__list-wrap flex-wrap">
+         <div class="popup-menu__half"><a class="popup-menu__link active" href="#" data-cat="sect1">Другая ссылка</a><a class="popup-menu__link" href="#" data-cat="sect2">Вообще другая</a><a class="popup-menu__link" href="#">Растворосмесители</a><a class="popup-menu__link" href="#">Бетоносмесители</a><a class="popup-menu__link" href="#">Оборудование для производства сухих смесей</a></div>
+         <div class="popup-menu__half"><a class="popup-menu__link" href="#">Оборудование для пенобетона</a><a class="popup-menu__link" href="#">Шпаклевочные станции</a><a class="popup-menu__link" href="#">Инструмент</a><a class="popup-menu__link" href="#">Силосные системы</a><a class="popup-menu__link" href="#">Строительные материалы</a></div>
+        </div>
+       </div>
+       <div class="popup-menu__item flex-wrap active" id="sect1">
+        <div class="popup-menu__img"><img src="img/icon-shtukatur-act.svg"></div>
+        <div class="popup-menu__info">
+         <h2 class="popup-menu__title"> <a href="#">Какая-то другая секция</a></h2>
+         <p class="popup-menu__descr">Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция</p>
+        </div>
+       </div>
+       <div class="popup-menu__item flex-wrap" id="sect2">
+        <div class="popup-menu__img"><img src="img/icon-shtukatur-act.svg"></div>
+        <div class="popup-menu__info">
+         <h2 class="popup-menu__title"> <a href="#">Вообще другая секция</a></h2>
+         <p class="popup-menu__descr">Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция Какая-то другая секция</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
    </div>
    <div class="catalog">
     <div class="container">

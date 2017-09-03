@@ -101,6 +101,11 @@ body {
 		width: 100%;
 		border: 0;
 		font-size: 16px;
+		&.hidden {
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+		}
 	}
 	&__btn {
 		position: absolute;
@@ -115,6 +120,26 @@ body {
 		background-size: 17px 17px;
 		width: 17px;
 		height: 17px;
+	}
+	&__tel {
+		font-size: 15px;
+		text-decoration: none;
+		color: $text-color;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 25px;
+		transform: translateY(50%);
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		transition: all 0.3s;
+		&.active {
+			z-index: 2;
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(-50%);
+		}
 	}
 	&__cart {
 		margin-left: auto;
@@ -205,6 +230,14 @@ body {
 	background-color: transparent;
 }
 
+.menu-wrap {
+	&.sticky {
+		position: fixed;
+		width: 100%;
+		top: 48px;
+		z-index: 500;
+	}
+}
 .submenu {
 	background-color: $menu-bg;
 	transition: all 0.3s;
@@ -213,6 +246,7 @@ body {
 		justify-content: space-between;
 	}
 	&__link {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -232,12 +266,108 @@ body {
 		&:last-child {
 			flex: 0 0 auto;
 		}
+		&:before {
+			display: none;
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $main-color;
+		}
+		&.active:before {
+			display: block;
+		}
 	}
-	&.sticky {
-		position: fixed;
-		width: 100%;
-		top: 48px;
-		z-index: 500;
+}
+
+.popup-menu {
+	display: none;
+	padding-top: 32px;
+	padding-bottom: 60px;
+	background-color: $white-color;
+	width: 100%;
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+	&__wrap {
+		align-items: flex-start;
+		justify-content: space-between;
+		display: none;
+		&.active {
+			display: flex;
+		}
+	}
+	&__list {
+		width: 50%;
+	}
+	&__list-wrap {
+		align-items: flex-start;
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: $header-text;
+		font-size: 16px;
+		padding: 7px 10px;
+		&:hover,
+		&.active {
+			color: $main-color;
+			background-color: $menu-hover;
+		}
+	}
+	&__half {
+		width: 50%;
+		padding-right: 30px;
+	}
+	&__item {
+		padding-left: 24px;
+		position: relative;
+		width: 50%;
+		align-items: flex-start;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 1px;
+			background-color: $border-color;
+		}
+		display: none;
+		&.active {
+			display: flex;
+		}
+	}
+	&__img {
+		width: 40%;
+		padding-right: 40px;
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	&__info {
+		width: 60%;
+	}
+	&__title {
+		margin-top: 0;
+		margin-bottom: 19px;
+		color: $header-text;
+		font-size: 24px;
+		a {
+			transition: all 0.3s;
+			text-decoration: none;
+			color: $header-text;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	&__descr {
+		font-size: 16px;
+		color: $footer-color;
+		margin: 0;
 	}
 }
 
@@ -448,13 +578,34 @@ body {
 		}
 		&__form {
 			padding: 13px 3px 9px 3px;
+			margin-left: auto;
 		}
 		&__input {
-			display: none;
+			position: absolute;
+			width: 130px;
+			right: 25px;
+			background-color: $white-color;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 10px;
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+			&.mobile-active {
+				visibility: visible;
+				opacity: 1;
+				z-index: 2;
+			}
 		}
 		&__btn {
 			position: static;
 			transform: none;
+		}
+		&__cart {
+			margin-left: 0;
+		}
+		&__tel {
+			display: none;
 		}
 	}
 	.main-nav {
@@ -462,9 +613,6 @@ body {
 		&__link {
 			padding: 0 7px;
 		}
-	}
-	.submenu-helper {
-		display: none;
 	}
 	.submenu {
 		&__link {
@@ -499,6 +647,9 @@ body {
 		}
 	}
 	.submenu {
+		display: none;
+	}
+		.submenu-helper {
 		display: none;
 	}
 	.page-footer {
