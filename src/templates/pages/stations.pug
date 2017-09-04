@@ -1,0 +1,176 @@
+include ../modules/main.pug
++main('Ortis | Штукатурные станции')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.stations-promo
+		.container
+			.stations-promo__wrap.flex-wrap
+				h2.stations-promo__title Штукатурные станции
+				p.stations-promo__descr это профессиональное оборудование, штукатурные станции рассчитаны на беспрерывную работу в течение 24 часов. Штукатурные станции значительно облегчают труд отделочников.
+	.goods-items
+		.container
+			.goods-items__flex-wrap.flex-wrap
+				.pop-goods__item
+					.pop-goods__new Новинка
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара
+							.pop-goods__price 312 500 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 2
+							.pop-goods__price 33 000 ₽
+							.pop-goods__status.pop-goods__status--wait Ожидается
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 3
+							.pop-goods__price 3 100 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__new Новинка
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара
+							.pop-goods__price 312 500 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 2
+							.pop-goods__price 33 000 ₽
+							.pop-goods__status.pop-goods__status--wait Ожидается
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 3
+							.pop-goods__price 3 100 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__new Новинка
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара
+							.pop-goods__price 312 500 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 2
+							.pop-goods__price 33 000 ₽
+							.pop-goods__status.pop-goods__status--wait Ожидается
+						button(type="button").pop-goods__buy Купить
+				.pop-goods__item
+					.pop-goods__img
+						img(src="img/prod-slider.png")
+						.pop-goods__hide
+							p.pop-goods__hide-info Производительность, л/мин: ок. 25
+							p.pop-goods__hide-info Обороты в минуту ок.: 400
+							p.pop-goods__hide-info Диаметр статора, мм : 89
+							p.pop-goods__hide-info Длина статора, мм:  270
+							p.pop-goods__hide-info Фракция, мм:  до 4
+					.pop-goods__wrap.flex-wrap
+						.pop-goods__info
+							h3.pop-goods__subtitle 
+								a Название товара 3
+							.pop-goods__price 3 100 ₽
+							.pop-goods__status На складе
+						button(type="button").pop-goods__buy Купить
+			a.goods-items__more.common-btn Загрузить еще
+	include ../modules/advant.pug
+	include ../modules/reviews.pug
+	include ../modules/information.pug
+	include ../modules/news.pug
+	+news('Статьи', 'Читать все статьи')
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

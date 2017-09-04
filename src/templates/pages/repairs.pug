@@ -1,0 +1,44 @@
+include ../modules/main.pug
++main('Ortis | Ремонт, Аренда, Сервис')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.catalog.catalog--services
+		.container
+			h2.catalog__title Услуги
+			.flex-wrap
+				a(href="#").catalog__item
+					include ../../img/icon-shtukatur-noact.svg
+					h2.catalog__item-title Доставка
+					p.catalog__item-descr ООО "ГК ОРТИС" осуществляет доставку в любые регионы России с помощью транспортных компаний
+				a(href="#").catalog__item
+					include ../../img/icon-shtukatur-noact.svg
+					h2.catalog__item-title Аренда оборудования
+					p.catalog__item-descr Отдел аренды компании ОРТИС готов предоставить в аренду надежное оборудование немецкого производителя m-tec.
+				a(href="#").catalog__item
+					include ../../img/icon-shtukatur-noact.svg
+					h2.catalog__item-title Рассрочка
+					p.catalog__item-descr Приобретая оборудование и запасные части у нас, Вы можете оформить рассрочку на 6 месяцев!
+				a(href="#").catalog__item
+					include ../../img/icon-shtukatur-noact.svg
+					h2.catalog__item-title Пусконаладка и ввод в эксплуатацию
+					p.catalog__item-descr Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст 
+	include ../modules/advant.pug
+	include ../modules/reviews.pug
+	include ../modules/information.pug
+	.video-block
+		.container
+			h2.video-block__title Видео
+			img.video-block__img(src="img/video-bg.png")
+	include ../modules/news.pug
+	+news('Статьи', 'Читать все статьи')
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")
