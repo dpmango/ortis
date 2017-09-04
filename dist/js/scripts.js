@@ -6,6 +6,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		arrows: false,
 		dots: true,
+		accessibility: false,
 		responsive: [
 			{
 				breakpoint: 767,
@@ -22,14 +23,32 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		dots: false,
+		accessibility: false,
 		responsive: [
 			{
 				breakpoint: 767,
 				settings: {
 					slidesToShow: 2
 				}
+    	},
+			{
+				breakpoint: 574,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					dots: true
+				}
     	}
-		],
+			]
+	});
+
+	// Отзывы
+	$('.reviews__slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		arrows: true,
+		dots: false,
+		accessibility: false,
 		responsive: [
 			{
 				breakpoint: 574,
@@ -41,23 +60,19 @@ $(document).ready(function () {
     	}
 		]
 	});
-
-	// Отзывы
-	$('.reviews__slider').slick({
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		arrows: true,
-		dots: false,
-		responsive: [
-			{
-				breakpoint: 574,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-					dots: true
-				}
-    	}
-		]
+	
+	$('.menu-toggle').on('click', function(){
+		if ($(this).hasClass('is-active')) {
+			$(this).removeClass('is-active');
+			$('.site-map').hide(200);
+			$('.page-header').removeClass('site-map-active')
+			$('body').removeClass('no-scroll');
+		} else {
+			$(this).addClass('is-active');
+			$('body').addClass('no-scroll');
+			$('.site-map').show(200);
+			$('.page-header').addClass('site-map-active')
+		}
 	});
 
 	// Прилипающее подменю
@@ -77,7 +92,7 @@ $(document).ready(function () {
 
 	// Логотип при скролле
 	$(window).scroll(function () {
-		if ($(window).width() > '1439') {
+		if ($(window).width() > '767') {
 			var topPos = $('.topbar__logo').offset().top - $(window).scrollTop();
 			if (topPos <= 38) {
 				$('.page-header__logo').addClass('active');
