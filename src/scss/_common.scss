@@ -704,6 +704,7 @@ body {
 	background-color: rgba(0, 51, 152, 0.98);
 	padding-bottom: 30px;
 	overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 	.container {
 		max-width: 1070px;
 		padding-left: 15px;
@@ -889,7 +890,7 @@ body {
 
 @media (max-width: 1023px) {
 	.page-header {
-		
+
 		&__form {
 			margin-left: auto;
 		}

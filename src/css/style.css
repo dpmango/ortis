@@ -935,7 +935,8 @@ body {
   height: 100vh;
   background-color: rgba(0, 51, 152, 0.98);
   padding-bottom: 30px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
   .site-map .container {
     max-width: 1070px;
     padding-left: 15px;
@@ -3799,3 +3800,5 @@ body {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg); }
+
+/*# sourceMappingURL=style.css.map */

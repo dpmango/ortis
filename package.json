@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "gulp-consolidate": "^0.2.0",
+    "gulp-sourcemaps": "^2.6.1",
     "require-yaml": "^0.0.1"
   }
 }
