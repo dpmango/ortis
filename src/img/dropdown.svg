@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="11px" height="6px" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>dropdown</title>
+    <title>Path</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icon/dropdown" transform="translate(1.000000, 1.000000)" stroke="#C1C1C1" stroke-width="2">
-            <polyline id="dropdown" transform="translate(5.898386, 3.619141) rotate(-270.000000) translate(-5.898386, -3.619141) " points="2.89838647 -2.27924584 8.89838647 3.61930413 2.89838647 9.51752709"></polyline>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Фото" transform="translate(-328.000000, -374.000000)" stroke="#8E8E8E" stroke-width="2">
+            <g id="Group" transform="translate(32.000000, 334.000000)">
+                <polyline id="Path" transform="translate(301.304932, 42.750977) scale(-1, 1) rotate(-270.000000) translate(-301.304932, -42.750977) " points="299.617676 38.4273834 302.992188 42.7510964 299.617676 47.0745697"></polyline>
+            </g>
         </g>
     </g>
 </svg>

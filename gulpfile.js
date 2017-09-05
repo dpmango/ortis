@@ -132,14 +132,14 @@ gulp.task('img', function () {
 });
 
 gulp.task('list-pages', function() {
-  delete require.cache[require.resolve('./src/index/index.yaml')]
-  var pages = require('./src/index/index.yaml');
+  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
+  var pages = require('./src/list-pages/index.yaml');
   return gulp
-    .src('./src/index/index.html')
+    .src('src/list-pages/index.html')
     .pipe(consolidate('lodash', {
       pages: pages
     }))
-    .pipe(gulp.dest('./src'));
+    .pipe(gulp.dest('src'));
 });
 
 gulp.task('clean', function () {
@@ -152,7 +152,7 @@ gulp.task('watch', ['browser-sync', 'pug', 'sass', 'scripts'], function () {
   gulp.watch('src/templates/**/*.pug', ['pug']);
   gulp.watch('src/js/**/*.js', browserSync.reload);
   gulp.watch('src/*.html', browserSync.reload);
-  gulp.watch('src/index/**/*', ['list-pages']);
+  gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'pug', 'scripts', 'list-pages'], function () {

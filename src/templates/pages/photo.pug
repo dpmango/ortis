@@ -1,0 +1,40 @@
+include ../modules/main.pug
++main('Ortis | Фото')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.gallery
+		.container.gallery__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#").aside-menu__link--more 2017 год
+				a.aside-menu__link(href="#").aside-menu__link--more 2016 год
+				a.aside-menu__link(href="#").aside-menu__link--more 2015 год
+				a.aside-menu__link(href="#").aside-menu__link--more 2014 год
+			.gallery__main
+				h1.gallery__title Фото
+				h2.gallery__subtitle Димпломы и сертификаты
+				p.gallery__text В данному разделе представлены сертификаты, дипломы и другие награды, которые получила наша компанию за участие в различных мероприятиях.
+				.gallery__wrap.flex-wrap
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip1.png")
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip2.png")
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip3.png")
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip4.png")
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip5.png")
+					a.gallery__item.gallery__item--photo(href="#")
+						img(src="img/dip6.png")
+				a.gallery__more.common-btn Загрузить еще
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")
