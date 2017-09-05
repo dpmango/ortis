@@ -58,11 +58,33 @@
 			color: $main-color;
 			background-color: $menu-hover;
 		}
+		&--more {
+			position: relative;
+			transition: all 0.3s;
+			&:after {
+				content: '';
+				position: absolute;
+				background-repeat: no-repeat;
+				right: 15px;
+				top: 50%;
+				transform: translateY(-50%) rotate(-90deg);
+				background-image: url(../img/dropdown.svg);
+				background-size: 100%;
+				width: 11px;
+				height: 6px;
+				transition: all 0.3s;
+			}
+			&.active {
+				background-color: transparent;
+				&:after {
+					transform: translateY(-50%) rotate(0deg);
+				}
+			}
+		}
 	}
 }
 
 // Страница Новости
-
 .our-news {
 	@extend .about;
 	&__flex-wrap {
@@ -237,6 +259,7 @@
 		padding-bottom: 40px;
 		&__flex-wrap {
 			flex-direction: column;
+			justify-content: flex-start;
 		}
 		&__main {
 			margin-left: 0;
@@ -260,6 +283,7 @@
 		width: 100%;
 		order: 1;
 		margin-top: 15px;
+		flex: 0 1 100%;
 	}
 	.our-news {
 		&__more {
