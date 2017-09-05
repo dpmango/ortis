@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kirill Gorin",
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./dist --domain ortis.surge.sh"
+    }
+  },
+  "author": "Kirill Gorin, Sergey Khmelevskoy",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.6",
