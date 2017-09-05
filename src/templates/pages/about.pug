@@ -1,0 +1,36 @@
+include ../modules/main.pug
++main('Ortis | О компании')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.about
+		.container.about__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#") СМИ о нас
+				a.aside-menu__link(href="#") Новости
+				a.aside-menu__link(href="#") Статьи
+				a.aside-menu__link(href="#") Сертификаты и дипломы
+				a.aside-menu__link(href="#") Поставщики
+				a.aside-menu__link(href="#") Учебные центры
+				a.aside-menu__link(href="#") Отзывы и благодарности
+				a.aside-menu__link(href="#") Технологии
+			.about__main
+				h1.about__title О компании
+				.flex-wrap
+					.about__img
+						img(src="img/about.png")
+					.about__info
+						p.about__descr Наша компания осуществляет прямые поставки строительного оборудования из Германии, Австрии, Чехии и других стран Европы. Прямые поставки крупных партий строительного оборудования и расходных частей позволяет нашей компании предлагать нашим партнерам низкие цены на строительное оборудование и расходные части.
+						p.about__descr Специалисты нашей компании проходили обучение и стажировку в странах Европы, что обеспечивает хорошее знание и умение работать с предлагаемым нами оборудованием. К тому же наши специалисты имеют знания и опыт по восстановлению оборудования бывшего в употреблении.
+						p.about__descr Специалисты нашей компании постоянно осуществляют анализ строительного рынка как российского, так и импортного, что позволяет нам регулярно расширять ассортимент продукции и предлагать нашим партнерам лучшее для них решение.
+						p.about__descr Приобретая у нас оборудование или расходные части, клиенты могут быть уверены, что они приобретают не только оборудование, но и знания, опыт наших специалистов.
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

@@ -1,0 +1,42 @@
+include ../modules/main.pug
++main('Ortis | Одна новость')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.our-news
+		.container.our-news__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#") СМИ о нас
+				a.aside-menu__link(href="#").active Новости
+				a.aside-menu__link(href="#") Статьи
+				a.aside-menu__link(href="#") Сертификаты и дипломы
+				a.aside-menu__link(href="#") Поставщики
+				a.aside-menu__link(href="#") Учебные центры
+				a.aside-menu__link(href="#") Отзывы и благодарности
+				a.aside-menu__link(href="#") Технологии
+			.our-news__main
+				a.our-news__back(href="#") Вернуться
+				h1.our-news__title ООО "ГК ОРТИС" поздравляет с Днем Великой Победы!
+				span.our-news__date 8.05.2017
+				p.our-news__descr.our-news__descr--big От всей души поздравляем Вас с 9 мая - замечательным, радостным днем, который наполняет наши души и сердца гордостью! Пусть этот день никогда не сотрется из памяти, пусть каждый, кто горд за своих предков, сегодня отмечает День Великой Победы! Ведь сколько бы ни прошло времени – Великая Победа останется символом нашего единства и доблести!
+				img.our-news__img(src="img/may-img.png")
+				span.our-news__caption Подпись к артинке Подпись к артинке Подпись к артинке
+				h2.our-news__subtitle Заголовок второго уровня
+				p.our-news__descr.our-news__descr--big Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				ul.our-news__list
+					li Транспортировочный вал 70 об/мин;
+					li Ротор D8-2;
+					li Статор D8-2.
+				p.our-news__descr.our-news__descr--big Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				blockquote.our-news__blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				a.our-news__next.common-btn(href="#") Следующая новость
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

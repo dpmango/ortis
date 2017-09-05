@@ -1,0 +1,45 @@
+include ../modules/main.pug
++main('Ortis | Новости')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.our-news
+		.container.our-news__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#") СМИ о нас
+				a.aside-menu__link(href="#").active Новости
+				a.aside-menu__link(href="#") Статьи
+				a.aside-menu__link(href="#") Сертификаты и дипломы
+				a.aside-menu__link(href="#") Поставщики
+				a.aside-menu__link(href="#") Учебные центры
+				a.aside-menu__link(href="#") Отзывы и благодарности
+				a.aside-menu__link(href="#") Технологии
+			.our-news__main
+				h1.our-news__title Новости
+				.our-news__item
+					h2.our-news__item-title 
+						a(href="#") ООО «ГК ОРТИС» приняло участие в выставке Мосбилд 2015
+					p.our-news__descr В шестой раз компания ОРТИС приняла участие в Международной выставке MosBuild, которая прошла в г. Москва с 14.04.2015г. по 17.04.2015г. В рамках участия в выставке компания ОРТИС представила строительное оборудование...
+				.our-news__item
+					h2.our-news__item-title
+						a(href="#") ООО «ГК ОРТИС» приняло участие в выставке Мосбилд 2015
+					p.our-news__descr В шестой раз компания ОРТИС приняла участие в Международной выставке MosBuild, которая прошла в г. Москва с 14.04.2015г. по 17.04.2015г. В рамках участия в выставке компания ОРТИС представила строительное оборудование...
+				.our-news__item
+					h2.our-news__item-title
+						a(href="#") ООО «ГК ОРТИС» приняло участие в выставке Мосбилд 2015
+					p.our-news__descr В шестой раз компания ОРТИС приняла участие в Международной выставке MosBuild, которая прошла в г. Москва с 14.04.2015г. по 17.04.2015г. В рамках участия в выставке компания ОРТИС представила строительное оборудование...
+				.our-news__item
+					h2.our-news__item-title
+						a(href="#") ООО «ГК ОРТИС» приняло участие в выставке Мосбилд 2015
+					p.our-news__descr В шестой раз компания ОРТИС приняла участие в Международной выставке MosBuild, которая прошла в г. Москва с 14.04.2015г. по 17.04.2015г. В рамках участия в выставке компания ОРТИС представила строительное оборудование...
+				a.our-news__more.common-btn(href="#") Загрузить еще
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")
