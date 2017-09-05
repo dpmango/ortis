@@ -14,11 +14,13 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   postcss       = require('gulp-postcss'),
   pug      = require('gulp-pug'),
-  flexbugs      = require('postcss-flexbugs-fixes');
+  flexbugs      = require('postcss-flexbugs-fixes'),
+  consolidate = require('gulp-consolidate'),
+  yaml        = require('require-yaml');
 
 // Default task
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'pug', 'scripts', 'img'], 'watch',
+  runSequence(['sass', 'pug', 'scripts', 'img', 'list-pages'], 'watch',
     callback
   )
 })
@@ -126,6 +128,17 @@ gulp.task('img', function () {
 		.pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('list-pages', function() {
+	delete require.cache[require.resolve('./src/index/index.yaml')]
+  var pages = require('./src/index/index.yaml');
+  return gulp
+    .src('./src/index/index.html')
+    .pipe(consolidate('lodash', {
+      pages: pages
+    }))
+    .pipe(gulp.dest('./src'));
+});
+
 gulp.task('clean', function () {
 	return del.sync('dist/**');
 });
@@ -134,11 +147,12 @@ gulp.task('clean', function () {
 gulp.task('watch', ['browser-sync', 'pug', 'sass', 'scripts'], function () {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/templates/**/*.pug', ['pug']);
+  gulp.watch('src/js/**/*.js', browserSync.reload);
 	gulp.watch('src/*.html', browserSync.reload);
-	gulp.watch('src/js/**/*.js', browserSync.reload);
+	gulp.watch('src/index/**/*', ['list-pages']);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'pug', 'scripts', ], function () {
+gulp.task('build', ['clean', 'img', 'sass', 'pug', 'scripts', 'list-pages'], function () {
 
 	var buildCss = gulp.src('src/css/style.css')
 		.pipe(csso({
