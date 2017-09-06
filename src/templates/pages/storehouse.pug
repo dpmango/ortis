@@ -1,0 +1,30 @@
+include ../modules/main.pug
++main('Ortis | Склад')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.contacts
+		.container.contacts__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#") Адрес офиса
+				a.aside-menu__link(href="#").active Адрес склада
+			.contacts__main
+				h1.contacts__title Контакты
+				a.contacts__btn.contacts__btn--single.common-btn.common-btn--blue(href="#") Отправить запрос
+				.contacts__map-wrap
+					.contacts__map
+					.contacts__map-data
+						h3.contacts__map-title Адрес:
+						p.contacts__map-address г. Москва, Проектируемый проезд №134
+						p.contacts__map-text На склад можно проехать по Киевскому или Калужскому шоссе. Удаленность склада от МКАД около 1 км. Просим Вас связаться с нами, чтобы мы заказали для Вас пропуск:
+						a.contacts__map-link.common-btn.common-btn--blue Подробная схема
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

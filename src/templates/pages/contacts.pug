@@ -1,0 +1,43 @@
+include ../modules/main.pug
++main('Ortis | Контакты')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.contacts
+		.container.contacts__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#").active Адрес офиса
+				a.aside-menu__link(href="#") Адрес склада
+			.contacts__main
+				h1.contacts__title Контакты
+				.contacts__wrap
+					.contacts__tels
+						h3.contacts__tels-title Телефоны:
+						p.contacts__tel +7 495 232-41-27 (мнк.)
+						p.contacts__tel +7 909 984-29-81
+						p.contacts__tel +7 495 792-77-81
+					.contacts__mails
+						h3.contacts__mails-title E-mail:
+						a.contacts__mail(href="mailto:at@gk-ortis.ru") at@gk-ortis.ru
+						a.contacts__mail(href="mailto:ag@gk-ortis.ru") ag@gk-ortis.ru
+					.contacts__btns
+						a.contacts__btn.common-btn.common-btn--blue(href="#") Отправить запрос
+				.contacts__map-wrap
+					.contacts__map
+					.contacts__map-data
+						h3.contacts__map-title Адрес:
+						p.contacts__map-address г. Москва, Бизнес Парк "Румянцево", корпус Д, подъезд №19, этаж 7, офис 710
+						p.contacts__map-text БП "Румянцево" находится 500 м от МКАД по Киевскому шоссе. Перед корпусом Д действует платная парковка. Просим Вас связаться с нами, чтобы мы заказали для Вас пропуск: (495) 232-41-27
+						a.contacts__map-link.common-btn.common-btn--blue Подробная схема
+				h2.contacts__subtitle Реквизиты:
+				p.contacts__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

@@ -37,18 +37,36 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			img {
-				display: block;
-				height: auto;
-				max-width: 100%;
-				margin-left: auto;
-				margin-right: auto;
+		}
+		&--video {
+			flex: 0 1 50%;
+			padding: 0 12px;
+			margin-bottom: 36px;
+			&:hover {
+				.gallery__item-title {
+					color: $main-color;
+				}
 			}
+		}
+		img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&-title {
+			margin-top: 12px;
+			margin-bottom: 0;
+			font-size: 20px;
+			font-weight: 400;
+			color: $header-text;
+			transition: all 0.3s;
 		}
 	}
 	&__more {
 		@extend .our-news__next;
-		margin-top: 50px;
+		margin-top: 25px;
 	}
 }
 

@@ -1,0 +1,45 @@
+include ../modules/main.pug
++main('Ortis | Видео')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.gallery
+		.container.gallery__flex-wrap
+			aside.aside-menu
+				a.aside-menu__link(href="#") Обучающее видео
+				a.aside-menu__link(href="#") Презентации партнеров
+				a.aside-menu__link(href="#") Штукатурная станция m-tec mono-mix-II SC
+				a.aside-menu__link(href="#") Выполнение торкрет работ (сухим методом)
+				a.aside-menu__link(href="#") Штукатурная станция M280
+				a.aside-menu__link(href="#") Штукатурная станция m-tec  M300
+				a.aside-menu__link(href="#") Штукатурная станция m-tec duo-mix
+				a.aside-menu__link(href="#") Штукатурная станция m-tec duo-mix 220B
+				a.aside-menu__link(href="#") Пневмотранспортная система  m-tec Hurrican 140
+			.gallery__main
+				h1.gallery__title Видео
+				h2.gallery__subtitle Обучающее видео
+				p.gallery__text В данному разделе представлено обучающее видео по работе с оборудованием
+				.gallery__wrap.flex-wrap
+					a.gallery__item.gallery__item--video(href="#")
+						img(src="img/video-bg.png")
+						h3.gallery__item-title Название видео
+					a.gallery__item.gallery__item--video(href="#")
+						img(src="img/video-bg.png")
+						h3.gallery__item-title Название видео
+					a.gallery__item.gallery__item--video(href="#")
+						img(src="img/video-bg.png")
+						h3.gallery__item-title Название видео
+					a.gallery__item.gallery__item--video(href="#")
+						img(src="img/video-bg.png")
+						h3.gallery__item-title Название видео
+				a.gallery__more.common-btn Загрузить еще
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")
