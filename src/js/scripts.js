@@ -61,6 +61,7 @@ $(document).ready(function () {
 		]
 	});
 	
+	// Меню
 	$('.menu-toggle').on('click', function(){
 		if ($(this).hasClass('is-active')) {
 			$(this).removeClass('is-active');
@@ -172,5 +173,19 @@ $(document).ready(function () {
 			menu.slideUp(200);
 			$('.submenu__link').removeClass('active');
 		}
+	});
+	
+	// Плюс минус корзина
+	$('.cart__btn--minus').on('click', function(){
+		var amount = parseInt($(this).next('.cart__input').val());
+		
+		if (amount > 1) {
+			$(this).next('.cart__input').val(amount - 1);
+		}
+	});
+	$('.cart__btn--plus').on('click', function(){
+		var amount = parseInt($(this).prev('.cart__input').val());
+		
+			$(this).prev('.cart__input').val(amount + 1);
 	});
 });

@@ -1,0 +1,49 @@
+include ../modules/main.pug
++main('Ortis | Оформление заказа')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.order-page
+		.container
+			h1.order-page__main-title Оформление заказа
+			.order-page__row.flex-wrap
+				h3.order-page__title.order-page__header Товар
+				h3.order-page__amount.order-page__header Количество
+				h3.order-page__price.order-page__header Стоимость
+			.order-page__row.flex-wrap
+				h2.order-page__title Машинные штукатурки и смеси для полов ОСНОВИТ
+				.order-page__amount 1
+				.order-page__price 312 500 ₽
+			.order-page__row.flex-wrap
+				h2.order-page__title Машинные штукатурки и смеси для полов ОСНОВИТ
+				.order-page__amount 1
+				.order-page__price 312 500 ₽
+			.order-page__row.flex-wrap
+				h2.order-page__title Машинные штукатурки и смеси для полов ОСНОВИТ
+				.order-page__amount 1
+				.order-page__price 312 500 ₽
+			form.order-page__form
+				h2.order-page__subtitle Контактные данные
+				input.order-page__input(type="text" placeholder="Имя")
+				.order-page__form-wrap.flex-wrap
+					.order-page__input-wrap
+						input.order-page__input(type="tel" placeholder="Телефон")
+					.order-page__input-wrap
+						input.order-page__input(type="email" placeholder="E-mail")
+				textarea.order-page__textarea(placeholder="Ваше сообщение или вопрос")
+				.order-page__form-wrap.flex-wrap
+					.order-page__captcha
+					.order-page__agree
+						input.order-page__check(type="checkbox" id="check1")
+						label.order-page__label(for="check1") Согласен с <a href="#"> условиями </a>обработки персональных данных
+				button.order-page__btn.common-btn.common-btn--pink(type="submit") Заказать
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

@@ -1,0 +1,70 @@
+include ../modules/main.pug
++main('Ortis | Корзина')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.cart
+		.container
+			h1.cart__title Корзина
+			form.cart__wrapper(action="#")
+				.cart__item.flex-wrap
+					.cart__img
+						img(src="img/osnovit.png")
+					.cart__titles
+						h3.cart__header Наименование
+						h2.cart__item-title Машинные штукатурки и смеси для полов ОСНОВИТ
+					.cart__amount
+						h3.cart__header Количество
+						button.cart__btn.cart__btn--minus(type="button") -
+						input.cart__input(type="text" readonly value="1")
+						button.cart__btn.cart__btn--plus(type="button") +
+					.cart__price
+						h3.cart__header Цена
+						span 312 500 ₽
+					.cart__delete
+						button.cart__del-btn(type="button") 
+							span Удалить
+				.cart__item.flex-wrap
+					.cart__img
+						img(src="img/osnovit.png")
+					.cart__titles
+						h3.cart__header Наименование
+						h2.cart__item-title Машинные штукатурки и смеси для полов ОСНОВИТ
+					.cart__amount
+						h3.cart__header Количество
+						button.cart__btn.cart__btn--minus(type="button") -
+						input.cart__input(type="text" readonly value="1")
+						button.cart__btn.cart__btn--plus(type="button") +
+					.cart__price
+						h3.cart__header Цена
+						span 312 500 ₽
+					.cart__delete
+						button.cart__del-btn(type="button") 
+							span Удалить
+				.cart__item.flex-wrap
+					.cart__img
+						img(src="img/osnovit.png")
+					.cart__titles
+						h3.cart__header Наименование
+						h2.cart__item-title Машинные штукатурки и смеси для полов ОСНОВИТ
+					.cart__amount
+						h3.cart__header Количество
+						button.cart__btn.cart__btn--minus(type="button") -
+						input.cart__input(type="text" readonly value="1")
+						button.cart__btn.cart__btn--plus(type="button") +
+					.cart__price
+						h3.cart__header Цена
+						span 312 500 ₽
+					.cart__delete
+						button.cart__del-btn(type="button") 
+							span Удалить
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

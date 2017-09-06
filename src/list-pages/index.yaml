@@ -19,3 +19,19 @@ PageList:
   ready: 75
 - file: photo.html
   ready: 75
+- file: video.html
+  ready: 75
+- file: partners.html
+  ready: 75
+- file: contacts.html
+  ready: 90
+- file: storehouse.html
+  ready: 90
+- file: cart.html
+  ready: 100
+- file: order.html
+  ready: 100
+- file: search.html
+  ready: 100
+- file: 404.html
+  ready: 100

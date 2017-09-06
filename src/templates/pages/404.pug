@@ -1,0 +1,22 @@
+include ../modules/main.pug
++main('Ortis | 404')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.not-found
+		include ../../img/404.svg
+		.container
+			h1.not-found__title страница перемещена или удалена
+			h2.not-found__subtitle Запрашиваемая вами страница недоступна, но это не страшно.
+			h2.not-found__subtitle Начните с главной
+			a.common-btn.common-btn--pink.not-found__link(href="homepage.html") Перейти на главную
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

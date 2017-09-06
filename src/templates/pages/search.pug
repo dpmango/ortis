@@ -1,0 +1,34 @@
+include ../modules/main.pug
++main('Ortis | Поиск')
+include ../modules/header.pug
+main.main
+	include ../modules/topbar.pug
+	include ../modules/submenu.pug
+	.breadcrumbs
+		.container
+			a.breadcrumbs__link(href="#") Главная
+			a.breadcrumbs__link(href="#") Раздел
+			a.breadcrumbs__link(href="#") Подраздел
+	.search-page
+		.container
+			h1.search-page__main-title Поиск
+			form.search-page__form.flex-wrap
+				input.search-page__input(type="text" placeholder="Поиск")
+				button.search-page__btn.common-btn.common-btn--pink(type="submit") Найти
+			.search-page__result
+				h2.search-page__result-title Бетоноступы
+				p.search-page__result-text Бетоноступы изготовлены из крепкого пластика. Бетоноступы благодаря своей конструкции позволяют равномерно распределить вес рабочего на поверхности. Размер бетоноступов универсальный...
+			.search-page__result
+				h2.search-page__result-title Оборудование для работы с бетоном
+				p.search-page__result-text Lorem ipsum dolor sit amet, бетоноступы adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis ...
+			.search-page__result
+				h2.search-page__result-title Бетоноступы
+				p.search-page__result-text Бетоноступы изготовлены из крепкого пластика. Бетоноступы благодаря своей конструкции позволяют равномерно распределить вес рабочего на поверхности. Размер бетоноступов универсальный...
+			.search-page__result
+				h2.search-page__result-title Оборудование для работы с бетоном
+				p.search-page__result-text Lorem ipsum dolor sit amet, бетоноступы adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis ...
+			button.search-page__more.common-btn(type="button") Загрузить еще
+include ../modules/footer.pug
+include ../modules/site-map.pug
+script(src="js/libs.min.js")
+script(src="js/scripts.js")

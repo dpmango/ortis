@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192px" height="192px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Find</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Поиск" transform="translate(-998.000000, -357.000000)" stroke="#E8E8E8" stroke-width="2">
+            <path d="M1108.13052,525.027009 C1100.56986,527.235286 1092.57247,528.419792 1084.30126,528.419792 C1037.42641,528.419792 999.427784,490.414994 999.427784,443.546318 C999.427784,396.67147 1037.42641,358.672844 1084.30126,358.672844 C1131.17611,358.672844 1169.17473,396.67147 1169.17473,443.546318 C1169.17473,466.977569 1159.67508,488.199024 1144.31761,503.556494 L1188.55659,547.799946" id="Find"></path>
+        </g>
+    </g>
+</svg>
