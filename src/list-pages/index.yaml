@@ -11,6 +11,8 @@ PageList:
   ready: 75
 - file: stations.html
   ready: 75
+- file: goods-card.html
+  ready: 15
 - file: about.html
   ready: 75
 - file: news.html
