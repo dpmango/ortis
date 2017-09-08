@@ -13,7 +13,15 @@ main.main
 		.container.gallery__flex-wrap
 			aside.aside-menu
 				a.aside-menu__link(href="#").aside-menu__link--more 2017 год
+				.aside-menu__hide
+					a.aside-menu__link(href="#") Дипломы и сертификаты
+					a.aside-menu__link(href="#") Работы с использованием техники Filamos
+					a.aside-menu__link(href="#") Мероприятия
 				a.aside-menu__link(href="#").aside-menu__link--more 2016 год
+				.aside-menu__hide
+					a.aside-menu__link(href="#") Дипломы и сертификаты
+					a.aside-menu__link(href="#") Работы с использованием техники Filamos
+					a.aside-menu__link(href="#") Мероприятия
 				a.aside-menu__link(href="#").aside-menu__link--more 2015 год
 				a.aside-menu__link(href="#").aside-menu__link--more 2014 год
 			.gallery__main
@@ -34,6 +42,35 @@ main.main
 					a.gallery__item.gallery__item--photo(href="#")
 						img(src="img/dip6.png")
 				a.gallery__more.common-btn Загрузить еще
+	.overlay
+	.photo-popup
+		button.photo-popup__close(type="button")
+		.photo-popup__big-slider
+			.photo-popup__big-item
+				img(src="img/dip1.png")
+			.photo-popup__big-item
+				img(src="img/dip2.png")
+			.photo-popup__big-item
+				img(src="img/dip3.png")
+			.photo-popup__big-item
+				img(src="img/dip4.png")
+			.photo-popup__big-item
+				img(src="img/dip5.png")
+			.photo-popup__big-item
+				img(src="img/dip3.png")
+		.photo-popup__mini-slider
+			.photo-popup__mini-item
+				img(src="img/dip1.png")
+			.photo-popup__mini-item
+				img(src="img/dip2.png")
+			.photo-popup__mini-item
+				img(src="img/dip3.png")
+			.photo-popup__mini-item
+				img(src="img/dip4.png")
+			.photo-popup__mini-item
+				img(src="img/dip5.png")
+			.photo-popup__mini-item
+				img(src="img/dip3.png")
 include ../modules/footer.pug
 include ../modules/site-map.pug
 script(src="js/libs.min.js")

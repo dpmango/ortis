@@ -100,6 +100,134 @@ $(document).ready(function () {
 		]
 	});
 	
+	// Слайдер фото
+	$('.photo-popup__big-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		arrows: true,
+		dots: false,
+		accessibility: false,
+		asNavFor: '.photo-popup__mini-slider',
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					arrows: false
+				}
+    	}
+		]
+	});
+	$('.photo-popup__mini-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 5,
+		arrows: false,
+		dots: false,
+		accessibility: false,
+		asNavFor: '.photo-popup__big-slider',
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					slidesToShow: 3
+				}
+    	},
+			{
+				breakpoint: 414,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+	
+	// Попап фото
+	$('.gallery__item--photo').on('click', function(e){
+		e.preventDefault();
+		$('body').addClass('no-scroll');
+		$('.overlay').fadeIn(200);
+		$('.photo-popup').addClass('active');
+	});
+	$('.photo-popup__close').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.overlay').fadeOut(200);
+		$('.photo-popup').removeClass('active');
+	});
+	$(document).mouseup(function (a) {
+		var popup = $('.photo-popup');
+		if (a.target != popup[0] && !popup.has(a.target).length) {
+			popup.removeClass('active');
+			$('.overlay').fadeOut(200);
+			$('.photo-popup').removeClass('active');
+		}
+	});  
+	// Попап видео
+	$('.gallery__item--video').on('click', function(e){
+		e.preventDefault();
+		$('body').addClass('no-scroll');
+		$('.overlay').fadeIn(200);
+		$('.video-popup').addClass('active');
+	});
+	$('.video-popup__close').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.overlay').fadeOut(200);
+		$('.video-popup').removeClass('active');
+	});
+	$(document).mouseup(function (a) {
+		var popup = $('.video-popup');
+		if (a.target != popup[0] && !popup.has(a.target).length) {
+			popup.removeClass('active');
+			$('.overlay').fadeOut(200);
+			$('.video-popup').removeClass('active');
+		}
+	});  
+	
+		// Попап Добавлено в корзину
+	$('.goods-card__tocart').on('click', function(e){
+		e.preventDefault();
+		$('body').addClass('no-scroll');
+		$('.overlay').fadeIn(200);
+		$('.success-popup').addClass('active');
+	});
+	$('.success-popup__close').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.overlay').fadeOut(200);
+		$('.success-popup').removeClass('active');
+	});
+	$(document).mouseup(function (a) {
+		var popup = $('.success-popup');
+		if (a.target != popup[0] && !popup.has(a.target).length) {
+			popup.removeClass('active');
+			$('.overlay').fadeOut(200);
+			$('.success-popup').removeClass('active');
+		}
+	}); 
+	
+		// Попап Купить в 1 клик
+	$('.goods-card__buy').on('click', function(e){
+		e.preventDefault();
+		$('body').addClass('no-scroll');
+		$('.overlay').fadeIn(200);
+		$('.oneclick-popup').addClass('active');
+	});
+	$('.oneclick-popup__close').on('click', function(e){
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.overlay').fadeOut(200);
+		$('.oneclick-popup').removeClass('active');
+	});
+	$(document).mouseup(function (a) {
+		var popup = $('.oneclick-popup');
+		if (a.target != popup[0] && !popup.has(a.target).length) {
+			popup.removeClass('active');
+			$('.overlay').fadeOut(200);
+			$('.oneclick-popup').removeClass('active');
+		}
+	}); 
+	
 	// Меню
 	$('.menu-toggle').on('click', function () {
 		if ($(this).hasClass('is-active')) {
@@ -242,5 +370,17 @@ $(document).ready(function () {
     $(this).closest('.video-block__wrapper').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
 		$('.video-block__overlay').hide();
   });
+	
+	// Aside menu more
+	$('.aside-menu__link--more').on('click', function(e){
+		e.preventDefault();
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).next('.aside-menu__hide').slideUp(200);
+		} else {
+			$('.aside-menu__link--more').removeClass('active');
+			$(this).addClass('active').next('.aside-menu__hide').slideDown(200);
+		}
+	});
 	
 });

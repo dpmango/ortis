@@ -347,8 +347,22 @@
   <div class="container">
    <h2 class="video-block__title">Видео</h2>
    <div class="video-block__slider">
-    <div class="video-block__slide"><img class="video-block__img" src="img/video-bg.png"></div>
-    <div class="video-block__slide"><img class="video-block__img" src="img/video-bg.png"></div>
+    <div class="video-block__slide">
+     <div class="video-block__wrapper">
+      <div class="video-block__overlay">
+       <button class="video-block__play" type="button"></button>
+      </div>
+      <iframe src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0"></iframe>
+     </div>
+    </div>
+    <div class="video-block__slide">
+     <div class="video-block__wrapper">
+      <div class="video-block__overlay">
+       <button class="video-block__play" type="button"></button>
+      </div>
+      <iframe src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0"></iframe>
+     </div>
+    </div>
    </div>
   </div>
  </div>
@@ -480,6 +494,37 @@
    </div>
   </div>
  </div>
+</div>
+<div class="overlay"></div>
+<div class="success-popup">
+ <button class="success-popup__close" type="button"></button>
+ <h2 class="success-popup__title">Товар успешно добавлен в корзину!</h2><img class="success-popup__img" src="img/prod-slider.png">
+ <h3 class="success-popup__name">Штукатурная станция mono-mix FU (на 220В)</h3>
+ <div class="success-popup__in-cart">
+  <div class="success-popup__amount">В корзине<span>15 товаров</span></div>
+  <div class="success-popup__price">На сумму<span>312 500₽</span></div>
+ </div>
+ <div class="success-popup__buttons"><a class="success-popup__btn common-btn common-btn--blue" href="#">Продолжить покупки</a><a class="success-popup__btn common-btn common-btn--pink" href="#">Перейти к оформлению</a></div>
+</div>
+<div class="oneclick-popup">
+ <button class="oneclick-popup__close" type="button"></button>
+ <h2 class="oneclick-popup__title">Покупка в 1 клик</h2>
+ <form class="order-page__form">
+  <input class="order-page__input" type="text" placeholder="Имя">
+  <div class="order-page__input-wrap">
+   <input class="order-page__input" type="tel" placeholder="Телефон">
+  </div>
+  <div class="order-page__input-wrap">
+   <input class="order-page__input" type="email" placeholder="E-mail">
+  </div>
+  <textarea class="order-page__textarea" placeholder="Ваше сообщение или вопрос"></textarea>
+  <div class="order-page__captcha"></div>
+  <div class="order-page__agree">
+   <input class="order-page__check" type="checkbox" id="check-popup">
+   <label class="order-page__label" for="check-popup">Согласен с <a href="#"> условиями </a>обработки персональных данных</label>
+  </div>
+  <button class="order-page__btn common-btn common-btn--pink" type="submit">Купить</button>
+ </form>
 </div>
 <script src="js/libs.min.js"></script>
 <script src="js/scripts.js"></script>

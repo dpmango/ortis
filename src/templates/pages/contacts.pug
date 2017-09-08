@@ -29,7 +29,7 @@ main.main
 					.contacts__btns
 						a.contacts__btn.common-btn.common-btn--blue(href="#") Отправить запрос
 				.contacts__map-wrap
-					.contacts__map
+					.contacts__map#contacts-map
 					.contacts__map-data
 						h3.contacts__map-title Адрес:
 						p.contacts__map-address г. Москва, Бизнес Парк "Румянцево", корпус Д, подъезд №19, этаж 7, офис 710
@@ -41,3 +41,5 @@ include ../modules/footer.pug
 include ../modules/site-map.pug
 script(src="js/libs.min.js")
 script(src="js/scripts.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70")
+script(src="js/contacts-map.js")

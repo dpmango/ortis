@@ -169,12 +169,50 @@ main.main
 			h2.video-block__title Видео
 			.video-block__slider
 				.video-block__slide
-					img.video-block__img(src="img/video-bg.png")
+					.video-block__wrapper
+						.video-block__overlay
+							button.video-block__play(type="button")
+						iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 				.video-block__slide
-					img.video-block__img(src="img/video-bg.png")
+					.video-block__wrapper
+						.video-block__overlay
+							button.video-block__play(type="button")
+						iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 	include ../modules/news.pug
 	+news('Статьи', 'Читать все статьи')
 include ../modules/footer.pug
 include ../modules/site-map.pug
+
+.overlay
+.success-popup
+	button.success-popup__close(type="button")
+	h2.success-popup__title Товар успешно добавлен в корзину!
+	img.success-popup__img(src="img/prod-slider.png")
+	h3.success-popup__name Штукатурная станция mono-mix FU (на 220В)
+	.success-popup__in-cart
+		.success-popup__amount В корзине
+			span 15 товаров
+		.success-popup__price На сумму
+			span 312 500₽
+	.success-popup__buttons
+		a.success-popup__btn.common-btn.common-btn--blue(href="#") Продолжить покупки
+		a.success-popup__btn.common-btn.common-btn--pink(href="#") Перейти к оформлению
+		
+.oneclick-popup
+	button.oneclick-popup__close(type="button")
+	h2.oneclick-popup__title Покупка в 1 клик
+	form.order-page__form
+		input.order-page__input(type="text" placeholder="Имя")
+		.order-page__input-wrap
+			input.order-page__input(type="tel" placeholder="Телефон")
+		.order-page__input-wrap
+			input.order-page__input(type="email" placeholder="E-mail")
+		textarea.order-page__textarea(placeholder="Ваше сообщение или вопрос")
+		.order-page__captcha
+		.order-page__agree
+			input.order-page__check(type="checkbox" id="check-popup")
+			label.order-page__label(for="check-popup") Согласен с <a href="#"> условиями </a>обработки персональных данных
+		button.order-page__btn.common-btn.common-btn--pink(type="submit") Купить
+
 script(src="js/libs.min.js")
 script(src="js/scripts.js")

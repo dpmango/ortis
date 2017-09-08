@@ -27,18 +27,38 @@ main.main
 				p.gallery__text В данному разделе представлено обучающее видео по работе с оборудованием
 				.gallery__wrap.flex-wrap
 					a.gallery__item.gallery__item--video(href="#")
-						img(src="img/video-bg.png")
+						.video-block__wrapper
+							.video-block__overlay
+								button.video-block__play-mini(type="button")
+							iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 						h3.gallery__item-title Название видео
 					a.gallery__item.gallery__item--video(href="#")
-						img(src="img/video-bg.png")
+						.video-block__wrapper
+							.video-block__overlay
+								button.video-block__play-mini(type="button")
+							iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 						h3.gallery__item-title Название видео
 					a.gallery__item.gallery__item--video(href="#")
-						img(src="img/video-bg.png")
+						.video-block__wrapper
+							.video-block__overlay
+								button.video-block__play-mini(type="button")
+							iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 						h3.gallery__item-title Название видео
 					a.gallery__item.gallery__item--video(href="#")
-						img(src="img/video-bg.png")
+						.video-block__wrapper
+							.video-block__overlay
+								button.video-block__play-mini(type="button")
+							iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
 						h3.gallery__item-title Название видео
 				a.gallery__more.common-btn Загрузить еще
+	.overlay
+	.video-popup
+		button.video-popup__close(type="button")
+		.video-block__wrapper
+			.video-block__overlay
+				button.video-block__play(type="button")
+			iframe(src="https://www.youtube.com/embed/gi4kiQlaHWU" frameborder="0" allowfullscreen autoplay="0")
+		h3.gallery__item-title Название видео
 include ../modules/footer.pug
 include ../modules/site-map.pug
 script(src="js/libs.min.js")

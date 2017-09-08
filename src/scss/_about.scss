@@ -53,6 +53,10 @@
 		font-size: 20px;
 		padding: 10px 22px;
 		transition: all 0.3s;
+		border: 0;
+		background-color: transparent;
+		width: 100%;
+		text-align: left;
 		&:hover,
 		&.active {
 			color: $main-color;
@@ -80,6 +84,13 @@
 					transform: translateY(-50%) rotate(0deg);
 				}
 			}
+		}
+	}
+	&__hide {
+		display: none;
+		.aside-menu__link {
+			background-color: $menu-hover;
+			padding-left: 34px;
 		}
 	}
 }

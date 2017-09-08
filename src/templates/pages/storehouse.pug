@@ -18,7 +18,7 @@ main.main
 				h1.contacts__title Контакты
 				a.contacts__btn.contacts__btn--single.common-btn.common-btn--blue(href="#") Отправить запрос
 				.contacts__map-wrap
-					.contacts__map
+					.contacts__map#store-map
 					.contacts__map-data
 						h3.contacts__map-title Адрес:
 						p.contacts__map-address г. Москва, Проектируемый проезд №134
@@ -28,3 +28,5 @@ include ../modules/footer.pug
 include ../modules/site-map.pug
 script(src="js/libs.min.js")
 script(src="js/scripts.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70")
+script(src="js/store-map.js")

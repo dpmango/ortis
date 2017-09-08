@@ -13,7 +13,7 @@ main.main
 		.container
 			h1.partners__title Партнеры
 			.partners__wrap
-				.partners__map
+				.partners__map#partners-map
 				.partners__map-data
 					.partners__scroll
 						.partners__city-wrap.partners__city-wrap--msk
@@ -42,3 +42,6 @@ include ../modules/footer.pug
 include ../modules/site-map.pug
 script(src="js/libs.min.js")
 script(src="js/scripts.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70")
+script(src="js/markerclusterer.js")
+script(src="js/partners-map.js")
