@@ -1,26 +1,45 @@
+@keyframes promo-dash {
+	0% {
+		stroke-dasharray: 3000;
+		stroke-dashoffset: 3000;
+	}
+	100% {
+		stroke-dasharray: 3000;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes promo-pairs-dash {
+	0% {
+		stroke-dasharray: 6000;
+		stroke-dashoffset: 6000;
+	}
+	100% {
+		stroke-dasharray: 6000;
+		stroke-dashoffset: 0;
+	}
+}
+
 .stations-promo {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(../img/bg-stroke2.svg);
 	.container {
 		position: relative;
-		&:before {
-			content: '';
+		svg {
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			background-repeat: no-repeat;
-			background-image: url(../img/shtuk-bg.svg);
-			background-size: 100%;
-			background-position: 0 100%;
 			width: 100%;
-			height: 350px;
+			height: auto;
+			animation: promo-dash 1.2s 0.7s linear forwards;
 		}
 	}
 	&--pairs {
-		.container:before {
-			height: 370px;
-			background-image: url(../img/shnek-bg.svg);
+		.container {
+			svg {
+				animation: promo-pairs-dash 1.2s 0.7s linear forwards;
+			}
 		}
 	}
 	&__wrap {
@@ -85,17 +104,21 @@
 
 @media (max-width: 767px) {
 	.stations-promo {
+		padding-top: 40px;
 		.container {
 			&:before {
 				display: none;
 			}
+		}
+		svg {
+			display: none;
 		}
 		&__wrap {
 			transform: none;
 			width: 100%;
 			align-items: center;
 			text-align: center;
-			min-height: 270px;
+			min-height: 0;
 		}
 		&__title {
 			font-size: 36px;

@@ -1,9 +1,10 @@
 include ../modules/main.pug
 +main('Ortis')
 include ../modules/header.pug
-main.main
-	include ../modules/topbar.pug
-	include ../modules/topslider.pug
+main.main.main-homepage
+	.main-homepage__wrap
+		include ../modules/topbar.pug
+		include ../modules/topslider.pug
 	include ../modules/submenu.pug
 	
 	.catalog
@@ -11,6 +12,7 @@ main.main
 			h2.catalog__title Каталог
 			.flex-wrap
 				a(href="#").catalog__item
+					include ../../img/icon-production-noact.svg
 					h2.catalog__item-title #{prod}
 				a(href="#").catalog__item
 					include ../../img/icon-shtukatur-noact.svg
@@ -38,6 +40,7 @@ main.main
 					h2.catalog__item-title #{syh}
 	
 	include ../modules/pop-goods.pug
+	+pop-goods('Популярные товары')
 	include ../modules/advant.pug
 	include ../modules/reviews.pug
 	include ../modules/news.pug

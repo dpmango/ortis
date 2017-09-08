@@ -213,6 +213,12 @@
 		margin-bottom: 20px;
 		margin-top: 65px;
 	}
+	&__more {
+		max-width: 248px;
+		padding-left: 40px;
+		padding-right: 40px;
+		width: 100%;
+	}
 	&__blockquote {
 		margin: 24px 0;
 		color: $footer-color;
@@ -249,6 +255,12 @@
 		}
 		&__info {
 			flex: 0 1 100%;
+		}
+	}
+	.our-news {
+		&__title {
+			font-size: 32px;
+			margin-bottom: 28px;
 		}
 	}
 }
@@ -290,6 +302,9 @@
 	.our-news {
 		&__more {
 			margin-bottom: 30px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		&__descr {
 			font-size: 16px;
@@ -303,6 +318,9 @@
 			display: block;
 			margin-top: 0;
 			margin-bottom: 16px;
+		}
+		&__item-title {
+			text-align: center;
 		}
 		&__subtitle {
 			font-size: 24px;

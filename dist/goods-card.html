@@ -9,16 +9,16 @@
  </head>
  <body></body>
 </html>
-<header class="page-header">
+<header class="header">
  <div class="container">
   <div class="row flex-wrap">
-   <button class="menu-toggle hamburger hamburger--slider" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="page-header__logo" href="/"><img src="img/logo-min.svg"></a>
+   <button class="menu-toggle hamburger hamburger--slider" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="header__logo" href="/"><img src="img/logo-min.svg"></a>
    <nav class="main-nav"><a class="main-nav__link" href="#">О компании</a><a class="main-nav__link" href="#">Фото</a><a class="main-nav__link" href="#">Видео</a><a class="main-nav__link" href="#">Новинки</a><a class="main-nav__link" href="#">Информация</a><a class="main-nav__link" href="#">Партнеры</a><a class="main-nav__link" href="#">Контакты</a></nav>
-   <form class="page-header__form" action="#">
-    <input class="page-header__input" placeholder="Поиск по сайту"><a class="page-header__tel" href="#">8 (800) 100-46-27</a>
-    <button class="page-header__btn" type="submit"></button>
+   <form class="header__form" action="#">
+    <input class="header__input" placeholder="Поиск по сайту"><a class="header__tel" href="#">8 (800) 100-46-27</a>
+    <button class="header__btn" type="submit"></button>
    </form>
-   <div class="page-header__cart"><span>Корзина</span>
+   <div class="header__cart"><span>Корзина</span>
     <button type="button">15</button>
    </div>
   </div>
@@ -90,93 +90,266 @@
  <div class="breadcrumbs">
   <div class="container"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Раздел</a><a class="breadcrumbs__link" href="#">Подраздел</a></div>
  </div>
- <div class="pop-goods">
+ <div class="goods-card">
   <div class="container">
-   <h2 class="pop-goods__title">Популярные товары</h2>
-   <div class="flex-wrap pop-goods__slider">
-    <div class="pop-goods__item">
-     <div class="pop-goods__new">Новинка</div>
-     <div class="pop-goods__img"><img src="img/prod-slider.png">
-      <div class="pop-goods__hide">
-       <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
-       <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
-       <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
-       <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
-       <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
-      </div>
+   <div class="goods-card__mobile-wrap">
+    <h1 class="goods-card__title goods-card__title--mobile">Штукатурная станция mono-mix FU (на 220В)</h1>
+    <div class="goods-card__new goods-card__new--mobile">Новинка</div>
+   </div>
+   <div class="goods-card__wrap">
+    <div class="goods-card__sliders">
+     <div class="goods-card__big-slider">
+      <div class="goods-card__big-slider-item"><img src="img/prod-slider.png"></div>
+      <div class="goods-card__big-slider-item"><img src="img/prod-slider.png"></div>
+      <div class="goods-card__big-slider-item"><img src="img/prod-slider.png"></div>
+      <div class="goods-card__big-slider-item"><img src="img/prod-slider.png"></div>
      </div>
-     <div class="pop-goods__wrap flex-wrap">
-      <div class="pop-goods__info">
-       <h3 class="pop-goods__subtitle"> <a>Название товара</a></h3>
-       <div class="pop-goods__price">312 500 ₽</div>
-       <div class="pop-goods__status">На складе</div>
-      </div>
-      <button class="pop-goods__buy" type="button">Купить</button>
+     <div class="goods-card__mini-slider">
+      <div class="goods-card__mini-slider-item"><img src="img/mini-slider1.png"></div>
+      <div class="goods-card__mini-slider-item"><img src="img/mini-slider2.png"></div>
+      <div class="goods-card__mini-slider-item"><img src="img/mini-slider1.png"></div>
+      <div class="goods-card__mini-slider-item"><img src="img/mini-slider2.png"></div>
      </div>
     </div>
-    <div class="pop-goods__item">
-     <div class="pop-goods__img"><img src="img/prod-slider.png">
-      <div class="pop-goods__hide">
-       <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
-       <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
-       <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
-       <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
-       <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+    <div class="goods-card__info">
+     <h1 class="goods-card__title">Штукатурная станция mono-mix FU (на 220В)</h1>
+     <div class="goods-card__new">Новинка</div>
+     <div class="goods-card__prices">
+      <div class="goods-card__row flex-wrap">
+       <div class="goods-card__amount">312 500₽</div>
+       <div class="goods-card__nds">С НДС 18%</div>
+       <div class="goods-card__status">Ожидается</div>
+      </div>
+      <div class="goods-card__row flex-wrap">
+       <button class="goods-card__buy common-btn common-btn--pink" type="button">Купить сейчас</button>
+       <button class="goods-card__tocart common-btn common-btn--blue" type="button">Положить в корзину</button>
       </div>
      </div>
-     <div class="pop-goods__wrap flex-wrap">
-      <div class="pop-goods__info">
-       <h3 class="pop-goods__subtitle"> <a>Название товара 2</a></h3>
-       <div class="pop-goods__price">33 000 ₽</div>
-       <div class="pop-goods__status pop-goods__status--wait">Ожидается</div>
-      </div>
-      <button class="pop-goods__buy" type="button">Купить</button>
+     <div class="goods-card__buttons"><a class="goods-card__link goods-card__link--3d" href="#">3D визуализация</a><a class="goods-card__link goods-card__link--clock" href="#">Как купить в рассрочку?</a><a class="goods-card__link goods-card__link--rent" href="#">Взять этот товар в аренду</a></div>
+     <div class="goods-card__tabs"><a class="goods-card__tab active" href="#" data-id="tab-descr">Описание</a><a class="goods-card__tab" href="#" data-id="tab-tech">Технические характеристики</a><a class="goods-card__tab" href="#" data-id="tab-advant">Преимущества</a><a class="goods-card__tab" href="#" data-id="tab-set">Комплект поставки</a><a class="goods-card__tab" href="#" data-id="tab-review">Отзывы</a></div>
+     <div class="goods-card__tab-item active" id="tab-descr">
+      <p class="goods-card__text">Штукатурная станция М280 - надежное, простое в обслуживании и эксплуатации штукатурное оборудование не только на российском строительном рынке. Данная ШТУКАТУРНАЯ СТАНЦИЯ идеально подходит для начинающих компаний и компаний у которых регулярно меняется штат отделочников и нет времени на обучение нового персонала.</p>
+      <p class="goods-card__text">Штукатурная станция М280 имеет интуитивно понятную панель управления, минимум электроники и простейшую конструкцию, все это способствует широкому распространению данной штукатурной машины на российских строительных объектах.</p>
+      <p class="goods-card__text">Используя штукатурную станцию М280, можно выполнять следующие работы с применением сухих смесей для машинного нанесения: оштукатуривание внутренних и наружных стен, оштукатуривание потолков, устройство полов (наливные полы, ровнители, черновые стяжки).</p>
+      <p class="goods-card__text">Стандартный насосный блок - шнековая пара D 6-3</p>
+      <p class="goods-card__text">Увеличение производительности насосного блока - шнековая пара D8-2</p><a href="#">Сухие смеси для машинного нанесения</a>
      </div>
-    </div>
-    <div class="pop-goods__item">
-     <div class="pop-goods__img"><img src="img/prod-slider.png">
-      <div class="pop-goods__hide">
-       <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
-       <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
-       <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
-       <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
-       <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+     <div class="goods-card__tab-item" id="tab-tech">
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Производительность, л/мин:</div>
+       <div class="goods-card__tech-right">1-60</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Высота подачи, м:</div>
+       <div class="goods-card__tech-right">30</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Дальность подачи, м:</div>
+       <div class="goods-card__tech-right">20</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Давление раствора, бар:</div>
+       <div class="goods-card__tech-right">100</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left goods-card__tech-left--title">Мощность</div>
+       <div class="goods-card__tech-right"> </div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Горизонтальный привод, кВт:</div>
+       <div class="goods-card__tech-right">до 10</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Вертикальный привод, кВт:</div>
+       <div class="goods-card__tech-right">до 50</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Компрессор, кВт:</div>
+       <div class="goods-card__tech-right">до 40</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Водный насос, кВт:</div>
+       <div class="goods-card__tech-right">до 30</div>
+      </div>
+      <div class="goods-card__tech-row"></div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Электроподключение:</div>
+       <div class="goods-card__tech-right">400В, 50 Гц, 3ph</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Габаритные размеры, мм (ДхШхВ):</div>
+       <div class="goods-card__tech-right">ок. 1350х640х1390</div>
+      </div>
+      <div class="goods-card__tech-row">
+       <div class="goods-card__tech-left">Вес, кг:</div>
+       <div class="goods-card__tech-right">ок. 250</div>
       </div>
      </div>
-     <div class="pop-goods__wrap flex-wrap">
-      <div class="pop-goods__info">
-       <h3 class="pop-goods__subtitle"> <a>Название товара 3</a></h3>
-       <div class="pop-goods__price">3 100 ₽</div>
-       <div class="pop-goods__status">На складе</div>
-      </div>
-      <button class="pop-goods__buy" type="button">Купить</button>
+     <div class="goods-card__tab-item" id="tab-advant">
+      <ul class="goods-card__advant-list">
+       <li>Производится и собирается в Германии;</li>
+       <li>Максимально возможное высочайшее качество приготовления раствора;</li>
+       <li>Регулируемая производительность в стандартной комплектации;</li>
+       <li>Современная панель управления с индикатором сбоев;</li>
+       <li>Более мощный компрессор;</li>
+       <li>Специальные смесительные инструменты, обеспечивающие высочайшее качество смешивания; </li>
+       <li>Увеличенный в 2-3 раза ресурс расходных частей;</li>
+       <li>Отсутствие аналогов на мировом рынке;</li>
+       <li>Три независимые функции в одном (смесительный растворонасос, растворосмеситель непрерывного действия, растворонасос);</li>
+       <li>Возможность использовать низкокачественные и трудно перемешиваемые сухие смеси;</li>
+       <li>Небольшой размер штукатурной станции - ширина 64 см, что позволяет использовать в небольших помещениях;</li>
+       <li>Небольшой вес штукатурной станции около 250 кг и возможность разбирать на пять модулей, что обеспечивает легкую транспортировку и подъем на объект.</li>
+      </ul>
      </div>
-    </div>
-    <div class="pop-goods__item">
-     <div class="pop-goods__img"><img src="img/prod-slider.png">
-      <div class="pop-goods__hide">
-       <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
-       <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
-       <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
-       <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
-       <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
-      </div>
+     <div class="goods-card__tab-item" id="tab-set">
+      <h3 class="goods-card__set-title">Стандартный КОМПЛЕКТ ПОСТАВКИ</h3>
+      <p class="goods-card__text">штукатурной станции duo-mix 2000 (в данной комплектации штукатурная станция duo-mix 2000 готова к эксплуатации с длинной шланга 10 м, единственное, необходимо обеспечить подключение к электропитанию через кабель КГ 5х4,0 мм или КГ 4х4,0 мм и подключение к воде через водный шланг 18 мм)</p>
+      <ul class="goods-card__advant-list goods-card__advant-list--margin">
+       <li>Производится и собирается в Германии;</li>
+       <li>Максимально возможное высочайшее качество приготовления раствора;</li>
+       <li>Регулируемая производительность в стандартной комплектации;</li>
+       <li>Современная панель управления с индикатором сбоев;</li>
+       <li>Более мощный компрессор;</li>
+       <li>Специальные смесительные инструменты, обеспечивающие высочайшее качество смешивания; </li>
+       <li>Увеличенный в 2-3 раза ресурс расходных частей;</li>
+       <li>Отсутствие аналогов на мировом рынке;</li>
+      </ul>
+      <h3 class="goods-card__set-title">ДОПОЛНИТЕЛЬНЫЙ КОМПЛЕКТ ПОСТАВКИ</h3>
+      <p class="goods-card__text">штукатурной станции duo-mix 2000 (используется для устройства стяжек, наливных полов и увеличивает производительность штукатурной станции до 60 л/мин)</p>
+      <ul class="goods-card__advant-list">
+       <li>Производится и собирается в Германии;</li>
+       <li>Максимально возможное высочайшее качество приготовления раствора;</li>
+       <li>Регулируемая производительность в стандартной комплектации;</li>
+       <li>Современная панель управления с индикатором сбоев;</li>
+      </ul>
      </div>
-     <div class="pop-goods__wrap flex-wrap">
-      <div class="pop-goods__info">
-       <h3 class="pop-goods__subtitle"> <a>Название товара 3</a></h3>
-       <div class="pop-goods__price">3 100 ₽</div>
-       <div class="pop-goods__status">На складе</div>
+     <div class="goods-card__tab-item" id="tab-review">
+      <div class="goods-card__review-item flex-wrap">
+       <div class="goods-card__review-img"><img src="img/review-img.png"></div>
+       <div class="goods-card__review-info">
+        <p class="goods-card__review-text">Компания «Старатели» выражает искреннюю благодарность и глубокую признательность нашему надежному партнеру ООО «ГК ОРТИС»  за многолетнее успешное сотрудничество. </p>
+        <p class="goods-card__review-text">Ваши квалифицированные специалисты всегда работают на высочайшем профессиональном уровне, благодаря этому мы всегда уверены в успешном результате совместной работы. Очень важно иметь порядочного и надежного бизнес-партнера, который не раз доказывал это на деле. </p>
+        <p class="goods-card__review-text">Надеемся на дальнейшее плодотворное сотрудничество и желаем успехов в профессиональной деятельности!</p>
+       </div>
       </div>
-      <button class="pop-goods__buy" type="button">Купить</button>
+      <div class="goods-card__review-item flex-wrap">
+       <div class="goods-card__review-img"><img src="img/review-img.png"></div>
+       <div class="goods-card__review-info">
+        <p class="goods-card__review-text">Компания «Старатели» выражает искреннюю благодарность и глубокую признательность нашему надежному партнеру ООО «ГК ОРТИС»  за многолетнее успешное сотрудничество. </p>
+        <p class="goods-card__review-text">Ваши квалифицированные специалисты всегда работают на высочайшем профессиональном уровне, благодаря этому мы всегда уверены в успешном результате совместной работы. Очень важно иметь порядочного и надежного бизнес-партнера, который не раз доказывал это на деле. </p>
+        <p class="goods-card__review-text">Надеемся на дальнейшее плодотворное сотрудничество и желаем успехов в профессиональной деятельности!</p>
+       </div>
+      </div>
+      <div class="goods-card__review-item flex-wrap">
+       <div class="goods-card__review-img"><img src="img/review-img.png"></div>
+       <div class="goods-card__review-info">
+        <p class="goods-card__review-text">Компания «Старатели» выражает искреннюю благодарность и глубокую признательность нашему надежному партнеру ООО «ГК ОРТИС»  за многолетнее успешное сотрудничество. </p>
+        <p class="goods-card__review-text">Ваши квалифицированные специалисты всегда работают на высочайшем профессиональном уровне, благодаря этому мы всегда уверены в успешном результате совместной работы. Очень важно иметь порядочного и надежного бизнес-партнера, который не раз доказывал это на деле. </p>
+        <p class="goods-card__review-text">Надеемся на дальнейшее плодотворное сотрудничество и желаем успехов в профессиональной деятельности!</p>
+       </div>
+      </div>
+     </div><a class="goods-card__link goods-card__link--down" href="#">Скачать инструкцию</a><a class="goods-card__link goods-card__link--pdf" href="#">Скачать описание в PDF формате</a>
+     <div class="goods-card__advant flex-wrap">
+      <div class="goods-card__advant-item">Преимущество</div>
+      <div class="goods-card__advant-item">Преимущество</div>
+      <div class="goods-card__advant-item">Преимущество</div>
+      <div class="goods-card__advant-item">Преимущество</div>
      </div>
     </div>
    </div>
   </div>
  </div>
+  <div class="pop-goods black">
+   <div class="container">
+    <h2 class="pop-goods__title">С этим товаром покупают</h2>
+    <div class="flex-wrap pop-goods__slider">
+     <div class="pop-goods__item">
+      <div class="pop-goods__new">Новинка</div>
+      <div class="pop-goods__img"><img src="img/prod-slider.png">
+       <div class="pop-goods__hide">
+        <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+        <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+        <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+        <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+        <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+       </div>
+      </div>
+      <div class="pop-goods__wrap flex-wrap">
+       <div class="pop-goods__info">
+        <h3 class="pop-goods__subtitle"> <a>Название товара</a></h3>
+        <div class="pop-goods__price">312 500 ₽</div>
+        <div class="pop-goods__status">На складе</div>
+       </div>
+       <button class="pop-goods__buy" type="button">Купить</button>
+      </div>
+     </div>
+     <div class="pop-goods__item">
+      <div class="pop-goods__img"><img src="img/prod-slider.png">
+       <div class="pop-goods__hide">
+        <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+        <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+        <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+        <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+        <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+       </div>
+      </div>
+      <div class="pop-goods__wrap flex-wrap">
+       <div class="pop-goods__info">
+        <h3 class="pop-goods__subtitle"> <a>Название товара 2</a></h3>
+        <div class="pop-goods__price">33 000 ₽</div>
+        <div class="pop-goods__status pop-goods__status--wait">Ожидается</div>
+       </div>
+       <button class="pop-goods__buy" type="button">Купить</button>
+      </div>
+     </div>
+     <div class="pop-goods__item">
+      <div class="pop-goods__img"><img src="img/prod-slider.png">
+       <div class="pop-goods__hide">
+        <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+        <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+        <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+        <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+        <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+       </div>
+      </div>
+      <div class="pop-goods__wrap flex-wrap">
+       <div class="pop-goods__info">
+        <h3 class="pop-goods__subtitle"> <a>Название товара 3</a></h3>
+        <div class="pop-goods__price">3 100 ₽</div>
+        <div class="pop-goods__status">На складе</div>
+       </div>
+       <button class="pop-goods__buy" type="button">Купить</button>
+      </div>
+     </div>
+     <div class="pop-goods__item">
+      <div class="pop-goods__img"><img src="img/prod-slider.png">
+       <div class="pop-goods__hide">
+        <p class="pop-goods__hide-info">Производительность, л/мин: ок. 25</p>
+        <p class="pop-goods__hide-info">Обороты в минуту ок.: 400</p>
+        <p class="pop-goods__hide-info">Диаметр статора, мм : 89</p>
+        <p class="pop-goods__hide-info">Длина статора, мм:  270</p>
+        <p class="pop-goods__hide-info">Фракция, мм:  до 4</p>
+       </div>
+      </div>
+      <div class="pop-goods__wrap flex-wrap">
+       <div class="pop-goods__info">
+        <h3 class="pop-goods__subtitle"> <a>Название товара 3</a></h3>
+        <div class="pop-goods__price">3 100 ₽</div>
+        <div class="pop-goods__status">На складе</div>
+       </div>
+       <button class="pop-goods__buy" type="button">Купить</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
  <div class="video-block">
   <div class="container">
-   <h2 class="video-block__title">Видео</h2><img class="video-block__img" src="img/video-bg.png">
+   <h2 class="video-block__title">Видео</h2>
+   <div class="video-block__slider">
+    <div class="video-block__slide"><img class="video-block__img" src="img/video-bg.png"></div>
+    <div class="video-block__slide"><img class="video-block__img" src="img/video-bg.png"></div>
+   </div>
   </div>
  </div>
   <div class="news">
@@ -199,20 +372,20 @@
    </div>
   </div>
 </main>
-<div class="page-footer">
- <div class="page-footer__topbar">
+<footer class="footer">
+ <div class="footer__topbar">
   <div class="container">
    <div class="flex-wrap">
-    <div class="page-footer__main">
-     <div class="page-footer__logo-wrap flex-wrap"><a class="page-footer__logo" href="/"><img src="img/logo-white.svg"></a>
-      <form class="page-footer__form">
-       <input class="page-footer__input" placeholder="Поиск по сайту">
-       <button class="page-footer__btn" type="submit"></button>
+    <div class="footer__main">
+     <div class="footer__logo-wrap flex-wrap"><a class="footer__logo" href="/"><img src="img/logo-white.svg"></a>
+      <form class="footer__form">
+       <input class="footer__input" placeholder="Поиск по сайту">
+       <button class="footer__btn" type="submit"></button>
       </form>
      </div>
-     <div class="flex-wrap page-footer__wrap-item">
-      <div class="page-footer__item page-footer__item--prod">
-       <h3 class="page-footer__subtitle">Продукция</h3>
+     <div class="flex-wrap footer__wrap-item">
+      <div class="footer__item footer__item--prod">
+       <h3 class="footer__subtitle">Продукция</h3>
        <ul>
         <li><a href="#">Растворонасосы</a></li>
         <li><a href="#">Пневмотранспортные системы</a></li>
@@ -226,7 +399,7 @@
         <li><a href="#">Строительные материалы</a></li>
        </ul>
       </div>
-      <div class="page-footer__item">
+      <div class="footer__item">
        <ul>
         <li><a href="#">Продукция</a></li>
         <li><a href="#">Штукатурные станции</a></li>
@@ -239,7 +412,7 @@
         <li><a href="#">Сухие смеси</a></li>
        </ul>
       </div>
-      <div class="page-footer__item">
+      <div class="footer__item">
        <ul>
         <li><a href="#">О компании</a></li>
         <li><a href="#">Фото</a></li>
@@ -251,20 +424,20 @@
       </div>
      </div>
     </div>
-    <div class="page-footer__callback"><a class="page-footer__tel" href="tel:88001004627">8 (800) 100-46-27</a>
+    <div class="footer__callback"><a class="footer__tel" href="tel:88001004627">8 (800) 100-46-27</a>
      <p>Многоканальный, бесплатно по всей России</p>
      <p>Будни: 9:00–19:00, выходной: сб, вс. </p>
-     <p class="page-footer__address">123112, г. Москва, Бизнес Парк "Румянцево", корпус Д, подъезд №19, этаж 7, офис 710</p><a class="page-footer__mail" href="mailto:at@gk-ortis.ru">at@gk-ortis.ru</a><a class="page-footer__mail" href="mailto:ag@gk-ortis.ru">ag@gk-ortis.ru</a><a class="page-footer__callback-btn common-btn common-btn--pink">Обратный звонок</a>
+     <p class="footer__address">123112, г. Москва, Бизнес Парк "Румянцево", корпус Д, подъезд №19, этаж 7, офис 710</p><a class="footer__mail" href="mailto:at@gk-ortis.ru">at@gk-ortis.ru</a><a class="footer__mail" href="mailto:ag@gk-ortis.ru">ag@gk-ortis.ru</a><a class="footer__callback-btn common-btn common-btn--pink">Обратный звонок</a>
     </div>
    </div>
   </div>
  </div>
- <div class="page-footer__bottombar">
-  <div class="container flex-wrap"><span class="page-footer__copy">© Copyright 2017</span><a class="page-footer__map" href="#">Карта сайта</a>
-   <div class="page-footer__dev"><span>Создание и продвижение</span><img src="img/soobwa.svg"></div>
+ <div class="footer__bottombar">
+  <div class="container flex-wrap"><span class="footer__copy">© Copyright 2017</span><a class="footer__map" href="#">Карта сайта</a>
+   <div class="footer__dev"><span>Создание и продвижение</span><img src="img/soobwa.svg"></div>
   </div>
  </div>
-</div>
+</footer>
 <div class="site-map">
  <div class="container"><a class="site-map__logo" href="/"><img src="img/logo-white.svg"></a>
   <form class="site-map__form">

@@ -2,23 +2,23 @@ ProjectTitle: Ortis
 
 PageList:
 - file: homepage.html
-  ready: 85
+  ready: 100
 - file: production.html
-  ready: 75
+  ready: 100
 - file: repairs.html
-  ready: 75
+  ready: 100
 - file: pairs.html
-  ready: 75
+  ready: 100
 - file: stations.html
-  ready: 75
+  ready: 100
 - file: goods-card.html
-  ready: 15
+  ready: 75
 - file: about.html
-  ready: 75
+  ready: 100
 - file: news.html
-  ready: 75
+  ready: 100
 - file: single-news.html
-  ready: 75
+  ready: 100
 - file: photo.html
   ready: 75
 - file: video.html

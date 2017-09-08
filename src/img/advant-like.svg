@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Карточка-товара" transform="translate(-806.000000, -1237.000000)">
+            <g id="Преимущества" transform="translate(552.000000, 1237.000000)">
+                <g id="Group-6" transform="translate(254.000000, 0.000000)">
+                    <circle id="Oval-4" fill="#003398" cx="40" cy="40" r="40"></circle>
+                    <path d="M33.0704965,44.6869429 L33.0704965,52.6599897 C33.0704965,55.6387138 35.4849937,58.0539145 38.4644213,58.0539145 L47.9141667,58.0539145 C54.1065922,58.0539145 59.2669468,53.3114537 59.7889622,47.1408375 L60.57691,37.8113948 C60.7921886,35.264635 58.7829217,33.0787833 56.2277195,33.0787833 L47.7636124,33.0787833 C46.9285284,33.0787833 46.2756574,32.359781 46.3558592,31.5282146 L46.9355637,25.544736 C47.2985825,21.790024 44.3472958,18.5390358 40.5749957,18.5390358 L39.0370905,32.6032005 C38.7113585,35.5882564 36.1899255,37.8486816 33.1879851,37.8486816 L33.1879851,34.1340706 L19,34.1340706 L19,54.4188018 C19,57.2040566 21.2569076,59.4609642 24.0421624,59.4609642 L27.9115489,59.4609642" id="Page-1" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

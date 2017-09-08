@@ -21,6 +21,13 @@
 		&:focus {
 			border-color: $header-text;
 		}
+		&.error {
+			border-color: $error;
+			box-shadow: 0 0 11px $error-sh;
+		}
+		&.fill {
+			border-color: $black-color;
+		}
 	}
 	&__btn {
 		margin-left: 24px;
@@ -57,8 +64,12 @@
 	}
 	&__more {
 		display: block;
+		width: 100%;
+		padding-left: 50px;
+		padding-right: 50px;
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 248px;
 	}
 }
 
@@ -160,6 +171,8 @@
 			flex: 0 1 100%;
 			width: 100%;
 			max-width: 140px;
+			padding-top: 16px;
+			padding-bottom: 16px;
 			&:before {
 				display: none;
 			}

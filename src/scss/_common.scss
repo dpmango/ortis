@@ -67,7 +67,7 @@ body {
 	padding-top: 48px;
 }
 
-.page-header {
+.header {
 	background-color: rgba(255, 255, 255, 0.95);
 	border-bottom: 1px solid $border-color;
 	max-height: 48px;
@@ -79,12 +79,13 @@ body {
 		background-color: transparent;
 		border-color: transparent;
 //		position: static;
-		.page-header__form,
-		.page-header__cart,
-		.page-header__logo,
-		.page-header__tel,
+		.header__form,
+		.header__cart,
+		.header__logo,
+		.header__tel,
 		.main-nav {
 			visibility: hidden;
+			opacity: 0;
 		}
 	}
 	.row {
@@ -492,7 +493,7 @@ body {
 	}
 }
 
-.page-footer {
+.footer {
 	&__topbar {
 		background-color: $text-color;
 		background-image: linear-gradient(to right, $text-color 50%, $footer-callback 50%);
@@ -831,7 +832,7 @@ body {
 }
 
 @media (max-width: 1440px) {
-	.page-header {
+	.header {
 		&__form {
 			padding: 13px 3px 9px 3px;
 			margin-left: auto;
@@ -889,8 +890,7 @@ body {
 }
 
 @media (max-width: 1023px) {
-	.page-header {
-
+	.header {
 		&__form {
 			margin-left: auto;
 		}
@@ -912,7 +912,7 @@ body {
 	.submenu-helper {
 		display: none;
 	}
-	.page-footer {
+	.footer {
 		&__item {
 			flex: 0 0 50%;
 			&--prod {
@@ -934,7 +934,7 @@ body {
 }
 
 @media (max-width: 767px) {
-	.page-header {
+	.header {
 		&__logo {
 			visibility: visible;
 			opacity: 1;
@@ -953,7 +953,7 @@ body {
 			padding-right: 0;
 		}
 	}
-	.page-footer {
+	.footer {
 		.flex-wrap {
 			flex-direction: column;
 		}
@@ -1040,7 +1040,7 @@ body {
 }
 
 @media (max-width: 574px) {
-	.page-header {
+	.header {
 		&__form {
 			display: none;
 		}
