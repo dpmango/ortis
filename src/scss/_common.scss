@@ -380,6 +380,7 @@ body {
 		min-height: 100%;
 		color: $text-color;
 		align-content: center;
+		transition: all 0.3s;
 		&:hover,
 		&.active {
 			color: $main-color;
@@ -401,6 +402,15 @@ body {
 		&.active:before {
 			display: block;
 		}
+	}
+}
+
+@keyframes popup-menu {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -431,6 +441,7 @@ body {
 		color: $header-text;
 		font-size: 16px;
 		padding: 7px 10px;
+		transition: all 0.3s;
 		&:hover,
 		&.active {
 			color: $main-color;
@@ -446,6 +457,7 @@ body {
 		position: relative;
 		width: 50%;
 		align-items: flex-start;
+		transition: all 0.3s;
 		&:before {
 			content: '';
 			position: absolute;
@@ -458,6 +470,7 @@ body {
 		display: none;
 		&.active {
 			display: flex;
+			animation: popup-menu 0.8s linear;
 		}
 	}
 	&__img {
@@ -833,6 +846,9 @@ body {
 
 @media (max-width: 1440px) {
 	.header {
+		.row {
+			margin-right: -24px;
+		}
 		&__form {
 			padding: 13px 3px 9px 3px;
 			margin-left: auto;
@@ -860,6 +876,7 @@ body {
 		}
 		&__cart {
 			margin-left: 0;
+			padding-right: 0;
 		}
 		&__tel {
 			display: none;
@@ -869,6 +886,11 @@ body {
 		font: 0 0 auto;
 		&__link {
 			padding: 0 7px;
+		}
+	}
+	.breadcrumbs {
+		.container {
+			padding-left: 40px;
 		}
 	}
 	.submenu {
@@ -935,6 +957,9 @@ body {
 
 @media (max-width: 767px) {
 	.header {
+		.row {
+			margin-right: -15px;
+		}
 		&__logo {
 			visibility: visible;
 			opacity: 1;

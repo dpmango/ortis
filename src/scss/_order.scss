@@ -30,7 +30,7 @@
 		}
 	}
 	&__img {
-		flex: 0 1 10%;
+		flex: 0 0 auto;
 		img {
 			display: block;
 			height: auto;
@@ -275,6 +275,9 @@
 			border: 2px solid $border-color;
 			background-repeat: no-repeat;
 		}
+		&:hover {
+			cursor: pointer;
+		}
 		a {
 			color: $header-text;
 			&:hover {
@@ -338,11 +341,11 @@
 			flex-wrap: wrap;
 		}
 		&__img {
-			flex: 0 1 28%;
+			flex: 0 0 auto;
 		}
 		&__titles {
-			flex: 0 1 72%;
-			padding-left: 15px;
+			flex: 0 1 calc(100% - 110px);
+			padding-left: 10px;
 		}
 		&__amount,
 		&__price {
@@ -356,21 +359,21 @@
 		&__form {
 			margin-top: 25px;
 		}
-		&__title {
+		&__title:not(.order-page__header) {
 			font-size: 15px;
-			flex: 0 0 37%;
+			flex: 0 0 54%;
 		}
 		&__subtitle {
 			margin-bottom: 24px;
 			font-size: 28px;
 		}
-		&__amount{
+		&__amount:not(.order-page__header) {
 			font-size: 15px;
-			flex: 0 0 26%;
+			flex: 0 0 16%;
 		}
 		&__price {
 			font-size: 15px;
-			flex: 0 0 37%;
+			flex: 0 0 30%;
 		}
 		&__form-wrap {
 			flex-direction: column;

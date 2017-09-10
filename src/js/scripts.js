@@ -325,7 +325,7 @@ $(document).ready(function () {
 	$('.popup-menu__link').on('click', function (e) {
 		e.preventDefault();
 		var dataDrop = $(this).attr('data-cat');
-		$(this).parents('.popup-menu__half').children('.popup-menu__link').removeClass('active');
+		$(this).parents('.popup-menu__wrap').find('.popup-menu__link').removeClass('active');
 		$(this).addClass('active');
 
 		$(this).parents('.popup-menu__wrap').find('.popup-menu__item').removeClass('active');

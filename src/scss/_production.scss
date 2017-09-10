@@ -36,7 +36,7 @@
 	}
 	&__descr {
 		font-size: 16px;
-		line-height: 19px;
+		line-height: 18px;
 		margin: 0;
 		color: $footer-color;
 	}
@@ -142,9 +142,15 @@
 		&__img {
 			margin-bottom: 15px;
 			flex: 0 0 50%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 80%;
 		}
 		&__info {
 			padding-left: 0;
+		}
+		&__subtitle {
+			text-align: center;
 		}
 	}
 	.video-block {
