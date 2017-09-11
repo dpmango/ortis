@@ -69,8 +69,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		z-index: 1;
 	}
 	&__play {
+		position: relative;
 		background-color: transparent;
 		padding: 0;
 		border: 0;
@@ -79,6 +81,11 @@
 		background-image: url(../img/play-icon.svg);
 		width: 120px;
 		height: 120px;
+		transition: all 0.3s;
+		z-index: 5;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	iframe {
 		width: 100%;

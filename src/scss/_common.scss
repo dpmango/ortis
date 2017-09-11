@@ -191,22 +191,22 @@ body {
 }
 
 .menu-toggle {
-	width: 24px;
-	height: 18px;
+	width: 27px;
+	height: 21px;
 	margin-right: 24px !important;
 	flex: 0 0 auto;
 	padding: 0 !important;
 	.hamburger-box {
-		width: 24px;
-		height: 18px;
+		width: 27px;
+		height: 21px;
 	}
 	.hamburger-inner {
-		width: 24px;
+		width: 27px;
 		height: 2px;
 		background-color: $footer-color;
 		&:before,
 		&:after {
-			width: 24px;
+			width: 27px;
 			height: 2px;
 			background-color: $footer-color;
 		}
@@ -751,6 +751,7 @@ body {
 		color: $white-color;
 		text-align: center;
 		padding: 15px;
+		transition: all 0.3s;
 		&::-webkit-input-placeholder {
 			color: $white-color;
 		}
@@ -762,6 +763,10 @@ body {
 		}
 		&:-ms-input-placeholder {
 			color: $white-color;
+		}
+		&:focus {
+			border-color: $white-color;
+			text-align: left;
 		}
 	}
 	&__btn {
@@ -809,6 +814,22 @@ body {
 		transition: all 0.3s;
 		&:hover {
 			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+	&__hidden {
+		display: none;
+		padding-left: 16px;
+		padding-bottom: 30px;
+	}
+	&__hidden-link {
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.5);
+		text-decoration: none;
+		transition: all 0.3s;
+		display: block;
+		margin-bottom: 10px;
+		&:hover {
+			color: $white-color;
 		}
 	}
 	&__contact-item {
@@ -993,6 +1014,8 @@ body {
 		}
 		&__logo-wrap {
 			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
 		}
 		&__topbar {
 			background-image: none;
@@ -1093,6 +1116,14 @@ body {
 			&--contacts {
 				margin-bottom: 0;
 			}
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	.header {
+		.row {
+			margin-right: -10px;
 		}
 	}
 }

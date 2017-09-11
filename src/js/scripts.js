@@ -99,7 +99,7 @@ $(document).ready(function () {
     	}
 		]
 	});
-	
+
 	// Слайдер фото
 	$('.photo-popup__big-slider').slick({
 		slidesToScroll: 1,
@@ -140,15 +140,56 @@ $(document).ready(function () {
 			}
 		]
 	});
-	
+
+	// Слайдер попап в карте товара
+	$('.goods-card-popup__big-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 1,
+		arrows: true,
+		dots: false,
+		accessibility: false,
+		asNavFor: '.goods-card-popup__mini-slider',
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					arrows: false
+				}
+    	}
+		]
+	});
+	$('.goods-card-popup__mini-slider').slick({
+		slidesToScroll: 1,
+		slidesToShow: 5,
+		arrows: false,
+		dots: false,
+		accessibility: false,
+		asNavFor: '.goods-card-popup__big-slider',
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 574,
+				settings: {
+					slidesToShow: 3
+				}
+    	},
+			{
+				breakpoint: 414,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+
 	// Попап фото
-	$('.gallery__item--photo').on('click', function(e){
+	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
 		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(200);
 		$('.photo-popup').addClass('active');
 	});
-	$('.photo-popup__close').on('click', function(e){
+	$('.photo-popup__close').on('click', function (e) {
 		e.preventDefault();
 		$('body').removeClass('no-scroll');
 		$('.overlay').fadeOut(200);
@@ -161,15 +202,38 @@ $(document).ready(function () {
 			$('.overlay').fadeOut(200);
 			$('.photo-popup').removeClass('active');
 		}
-	});  
+	});
+
+	// Попап в карточке товара на фото
+	$('.goods-card__big-slider-item').on('click', function (e) {
+		e.preventDefault();
+		$('body').addClass('no-scroll');
+		$('.overlay').fadeIn(200);
+		$('.goods-card-popup').addClass('active');
+	});
+	$('.goods-card-popup__close').on('click', function (e) {
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.overlay').fadeOut(200);
+		$('.goods-card-popup').removeClass('active');
+	});
+	$(document).mouseup(function (a) {
+		var popup = $('.goods-card-popup');
+		if (a.target != popup[0] && !popup.has(a.target).length) {
+			popup.removeClass('active');
+			$('.overlay').fadeOut(200);
+			$('.goods-card-popup').removeClass('active');
+		}
+	});
+
 	// Попап видео
-	$('.gallery__item--video').on('click', function(e){
+	$('.gallery__item--video').on('click', function (e) {
 		e.preventDefault();
 		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(200);
 		$('.video-popup').addClass('active');
 	});
-	$('.video-popup__close').on('click', function(e){
+	$('.video-popup__close').on('click', function (e) {
 		e.preventDefault();
 		$('body').removeClass('no-scroll');
 		$('.overlay').fadeOut(200);
@@ -182,16 +246,16 @@ $(document).ready(function () {
 			$('.overlay').fadeOut(200);
 			$('.video-popup').removeClass('active');
 		}
-	});  
-	
-		// Попап Добавлено в корзину
-	$('.goods-card__tocart').on('click', function(e){
+	});
+
+	// Попап Добавлено в корзину
+	$('.goods-card__tocart').on('click', function (e) {
 		e.preventDefault();
 		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(200);
 		$('.success-popup').addClass('active');
 	});
-	$('.success-popup__close').on('click', function(e){
+	$('.success-popup__close').on('click', function (e) {
 		e.preventDefault();
 		$('body').removeClass('no-scroll');
 		$('.overlay').fadeOut(200);
@@ -204,16 +268,16 @@ $(document).ready(function () {
 			$('.overlay').fadeOut(200);
 			$('.success-popup').removeClass('active');
 		}
-	}); 
-	
-		// Попап Купить в 1 клик
-	$('.goods-card__buy').on('click', function(e){
+	});
+
+	// Попап Купить в 1 клик
+	$('.goods-card__buy').on('click', function (e) {
 		e.preventDefault();
 		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(200);
 		$('.oneclick-popup').addClass('active');
 	});
-	$('.oneclick-popup__close').on('click', function(e){
+	$('.oneclick-popup__close').on('click', function (e) {
 		e.preventDefault();
 		$('body').removeClass('no-scroll');
 		$('.overlay').fadeOut(200);
@@ -226,8 +290,8 @@ $(document).ready(function () {
 			$('.overlay').fadeOut(200);
 			$('.oneclick-popup').removeClass('active');
 		}
-	}); 
-	
+	});
+
 	// Меню
 	$('.menu-toggle').on('click', function () {
 		if ($(this).hasClass('is-active')) {
@@ -335,10 +399,22 @@ $(document).ready(function () {
 	$(document).mouseup(function (a) {
 		var menu = $('.popup-menu');
 		var links = $('.submenu');
-
 		if (a.target != menu[0] && !menu.has(a.target).length && a.target != links[0] && !links.has(a.target).length) {
 			menu.slideUp(200);
 			$('.submenu__link').removeClass('active');
+		}
+	});
+
+	// Карта сайта доп меню
+	$('.site-map__link--more').on('click', function (e) {
+		e.preventDefault();
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).next('.site-map__hidden').slideUp(200);
+		} else {
+			$('.site-map__link--more').removeClass('active');
+			$('.site-map__hidden').slideUp(200);
+			$(this).addClass('active').next('.site-map__hidden').slideDown(200);
 		}
 	});
 
@@ -353,7 +429,7 @@ $(document).ready(function () {
 		var amount = parseInt($(this).prev('.cart__input').val());
 		$(this).prev('.cart__input').val(amount + 1);
 	});
-	
+
 	// Табы карточка товара
 	$('.goods-card__tab').on('click', function (e) {
 		e.preventDefault();
@@ -364,15 +440,15 @@ $(document).ready(function () {
 		$('.goods-card__tab-item').removeClass('active');
 		$('.goods-card__tab-item#' + dataId).addClass('active');
 	});
-	
+
 	// Play video
-	$('.video-block__play').on('click', function(){
-    $(this).closest('.video-block__wrapper').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
+	$('.video-block__play').on('click', function () {
+		$(this).closest('.video-block__wrapper').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
 		$('.video-block__overlay').hide();
-  });
-	
+	});
+
 	// Aside menu more
-	$('.aside-menu__link--more').on('click', function(e){
+	$('.aside-menu__link--more').on('click', function (e) {
 		e.preventDefault();
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -382,5 +458,5 @@ $(document).ready(function () {
 			$(this).addClass('active').next('.aside-menu__hide').slideDown(200);
 		}
 	});
-	
+
 });

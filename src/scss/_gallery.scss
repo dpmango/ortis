@@ -105,8 +105,9 @@
 	transform: translate(-50%, -50%);
 	background-color: $white-color;
 	padding-top: 32px;
-	width: 100%;
+	width: calc(100% - 40px);
 	max-width: 800px;
+	max-height: calc(100% - 40px);
 	transition: all 0.3s;
 	&.active {
 		opacity: 1;

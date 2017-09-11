@@ -416,7 +416,7 @@
 		margin: 0 -15px;
 	}
 	&__item {
-		font: 0 1px 33.3%;
+		flex: 0 1 33.3%;
 		padding: 0 15px;
 		&-title {
 			font-size: 24px;
@@ -838,6 +838,15 @@
 }
 
 @media (max-width: 574px) {
+	.topslider {
+		&__slide--svg {
+			.topslider__img {
+				width: calc(100% + 20px);
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+		}
+	}
 	.advant {
 		&__title {
 			font-size: 28px;
@@ -845,10 +854,13 @@
 		}
 		.flex-wrap {
 			flex-direction: column;
+			margin-left: 0;
+			margin-right: 0;
 		}
 		&__item {
 			width: 100%;
 			margin-bottom: 40px;
+			flex: 0 1 auto;
 			&:last-child {
 				margin-bottom: 0;
 			}

@@ -325,6 +325,25 @@
 	}
 }
 
+.goods-card-popup {
+	@extend .photo-popup;
+	&__close {
+		@extend .photo-popup__close;
+	}
+	&__big-slider {
+		@extend .photo-popup__big-slider;
+	}
+	&__big-item {
+		@extend .photo-popup__big-item;
+	}
+	&__mini-slider {
+		@extend .photo-popup__mini-slider;
+	}
+	&__mini-item {
+		@extend .photo-popup__mini-item;
+	}
+}
+
 .success-popup {
 	@extend .photo-popup;
 	padding-top: 52px;
