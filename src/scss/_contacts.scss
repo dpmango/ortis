@@ -212,6 +212,24 @@
 			flex-wrap: wrap;
 			margin-bottom: 15px;
 		}
+		&__main{
+			width: calc(100% - 270px);
+		}
+		&__map-wrap{
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+		&__map-data{
+			flex: 0 0 auto;
+			position: static;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__map{
+			flex: 0 0 auto;
+		}
 		&__tels,
 		&__mails,
 		&__btns {
@@ -225,7 +243,20 @@
 }
 
 @media (max-width: 767px) {
+	.partners{
+		&__wrap{
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		&__map-data{
+			position: static;
+			width: 100%;
+		}
+	}
 	.contacts {
+		&__main{
+			width: 100%;
+		}
 		&__btn {
 			&--single {
 				display: block;
