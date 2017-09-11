@@ -1167,7 +1167,8 @@ body {
   .footer__main {
     width: 100%;
     padding-top: 40px;
-    padding-bottom: 24px; }
+    padding-bottom: 24px;
+    padding-right: 0; }
   .footer__logo {
     margin-bottom: 40px; }
   .footer__logo-wrap {
@@ -1433,14 +1434,17 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
     .catalog__item svg {
       width: 100%;
       height: auto;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 21px;
-      margin-top: auto;
       stroke-dasharray: 0;
       stroke-dashoffset: 0;
       -webkit-transition: all 0.5s;
@@ -1461,7 +1465,7 @@ body {
     font-size: 24px;
     color: #003398;
     text-decoration: none;
-    margin-top: 0;
+    margin-top: auto;
     -webkit-transition: color 0.8s;
     transition: color 0.8s; }
   .catalog__item-descr {

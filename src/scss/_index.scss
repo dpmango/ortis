@@ -179,13 +179,13 @@
 		text-align: center;
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
 		svg {
 			width: 100%;
 			height: auto;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 21px;
-			margin-top: auto;
 			stroke-dasharray: 0;
 			stroke-dashoffset: 0;
 			transition: all 0.5s;
@@ -211,7 +211,7 @@
 		font-size: 24px;
 		color: $header-text;
 		text-decoration: none;
-		margin-top: 0;
+		margin-top: auto;
 		transition: color 0.8s;
 	}
 	&__item-descr {
