@@ -12,7 +12,7 @@ PageList:
 - file: stations.html
   ready: 100
 - file: goods-card.html
-  ready: 75
+  ready: 100
 - file: about.html
   ready: 100
 - file: news.html
@@ -20,15 +20,15 @@ PageList:
 - file: single-news.html
   ready: 100
 - file: photo.html
-  ready: 75
+  ready: 100
 - file: video.html
-  ready: 75
+  ready: 100
 - file: partners.html
-  ready: 75
+  ready: 100
 - file: contacts.html
-  ready: 90
+  ready: 100
 - file: storehouse.html
-  ready: 90
+  ready: 100
 - file: cart.html
   ready: 100
 - file: order.html

@@ -182,115 +182,92 @@ $(document).ready(function () {
 		]
 	});
 
+	// Попап generic
+	function popupHelper(state){
+		if (state === "show"){
+			$('body').addClass('no-scroll');
+			$('.overlay').fadeIn(250);
+		} else if (state === "hide") {
+			$('body').removeClass('no-scroll');
+			$('.overlay').fadeOut(250);
+		}
+	}
 	// Попап фото
 	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.photo-popup').addClass('active');
 	});
 	$('.photo-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.photo-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.photo-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.photo-popup').removeClass('active');
-		}
 	});
 
 	// Попап в карточке товара на фото
 	$('.goods-card__big-slider-item').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.goods-card-popup').addClass('active');
 	});
 	$('.goods-card-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.goods-card-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.goods-card-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.goods-card-popup').removeClass('active');
-		}
 	});
 
 	// Попап видео
 	$('.gallery__item--video').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.video-popup').addClass('active');
 	});
 	$('.video-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.video-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.video-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.video-popup').removeClass('active');
-		}
 	});
 
 	// Попап Добавлено в корзину
 	$('.goods-card__tocart').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.success-popup').addClass('active');
 	});
 	$('.success-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.success-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.success-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.success-popup').removeClass('active');
-		}
 	});
 
 	// Попап Купить в 1 клик
 	$('.goods-card__buy').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.oneclick-popup').addClass('active');
 	});
 	$('.oneclick-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.oneclick-popup').removeClass('active');
 	});
-	$(document).mouseup(function (a) {
-		var popup = $('.oneclick-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.oneclick-popup').removeClass('active');
-		}
-	});
+
+	// закрытие попапа при клике вне области
+	$('.overlay').on('click', function(){
+		var popups = []
+		popups.push( $('.video-popup') );
+		popups.push( $('.success-popup') );
+		popups.push( $('.oneclick-popup') );
+		popups.push( $('.photo-popup') );
+		popups.push( $('.goods-card-popup') );
+
+		popupHelper("hide");
+
+		$.each(popups, function(i,val){
+			console.log(val)
+			val.removeClass('active');
+		})
+	})
 
 	// Меню
 	$('.menu-toggle').on('click', function () {
