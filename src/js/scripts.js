@@ -209,7 +209,9 @@ $(document).ready(function () {
 	// Попап фото
 	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show")
+		popupHelper("show");
+		// navigate slider to clicked item
+		$('.photo-popup__big-slider').slick("slickGoTo", $(this).index())
 		$('.photo-popup').addClass('active');
 	});
 	$('.photo-popup__close').on('click', function (e) {
@@ -449,13 +451,13 @@ $(document).ready(function () {
 	// Aside menu more
 	$('.aside-menu__link--more').on('click', function (e) {
 		e.preventDefault();
-		if ($(this).hasClass('active')) {
-			$(this).removeClass('active');
-			$(this).next('.aside-menu__hide').slideUp(200);
-		} else {
-			$('.aside-menu__link--more').removeClass('active');
-			$(this).addClass('active').next('.aside-menu__hide').slideDown(200);
-		}
+
+		$('.aside-menu__link--more').removeClass('active');
+		$('.aside-menu__hide').slideUp(250);
+
+		$(this).addClass('active');
+		$(this).next('.aside-menu__hide').slideDown(250);
+
 	});
 
 });
