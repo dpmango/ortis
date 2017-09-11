@@ -30,17 +30,17 @@ main.main
 				.order-page__price 312 500 ₽
 			form.order-page__form
 				h2.order-page__subtitle Контактные данные
-				input.order-page__input(type="text" placeholder="Имя")
+				input.order-page__input(type="text" name="name" placeholder="Имя")
 				.order-page__form-wrap.flex-wrap
 					.order-page__input-wrap
-						input.order-page__input(type="tel" placeholder="Телефон")
+						input.order-page__input(type="tel" name="phone" placeholder="Телефон")
 					.order-page__input-wrap
-						input.order-page__input(type="email" placeholder="E-mail")
-				textarea.order-page__textarea(placeholder="Ваше сообщение или вопрос")
+						input.order-page__input(type="email" name="email" placeholder="E-mail")
+				textarea.order-page__textarea(placeholder="Ваше сообщение или вопрос" name="text")
 				.order-page__form-wrap.flex-wrap
 					.order-page__captcha
 					.order-page__agree
-						input.order-page__check(type="checkbox" id="check1")
+						input.order-page__check(type="checkbox" name="agree" id="check1")
 						label.order-page__label(for="check1") Согласен с <a href="#"> условиями </a>обработки персональных данных
 				button.order-page__btn.common-btn.common-btn--pink(type="submit") Заказать
 include ../modules/footer.pug

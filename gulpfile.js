@@ -52,7 +52,9 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
   return gulp.src([
     'src/libs/jquery.min.js',
-    'src/libs/slick.min.js'
+    'src/libs/slick.min.js',
+    'src/libs/jquery.mask.min.js',
+    'src/libs/jquery.validate.min.js'
   ])
     .pipe(plumber({
       errorHandler: function (error) {

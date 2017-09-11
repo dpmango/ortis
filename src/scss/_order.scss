@@ -238,6 +238,11 @@
 			right: -12px;
 			color: $main-color;
 		}
+		&.has-error{
+			.order-page__input{
+				border-color: tomato;
+			}
+		}
 	}
 	&__captcha {
 		width: 48%;
@@ -251,7 +256,7 @@
 		text-align: left;
 	}
 	&__check {
-		display: none;
+		opacity: 0;
 		&:checked + label:before {
 			background-image: url(../img/check.svg);
 			background-position: 50%;
