@@ -11,10 +11,33 @@
 	}
 	&__big-slider {
 		&-item {
+			position: relative;
+			cursor: pointer;
 			img {
 				display: block;
 				height: auto;
 				width: 100%;
+			}
+			&::after{
+				display: inline-block;
+				content: ' ';
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				z-index: 2;
+				background: rgba(black, .3) url('../img/magnifier.svg') no-repeat right bottom;
+				background-size: 30px 30px;
+				opacity: 0;
+				pointer-events: none;
+				transition: all .25s ease-in-out;
+			}
+			&:hover{
+				&::after{
+					opacity: 1;
+					background-position: 90% 90%;
+				}
 			}
 		}
 	}
@@ -202,7 +225,7 @@
 	}
 	&__text {
 		font-size: 16px;
-		line-height: 18px;
+		line-height: 1.375;
 		margin-top: 0;
 		margin-bottom: 10px;
 		color: $text-color;
