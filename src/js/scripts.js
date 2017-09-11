@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+	// Prevent # behavior
+	$('[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
+
+	// detect mobile devices
+  function isMobile(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      return true
+    } else {
+      return false
+    }
+  }
+
 	// Верхний слайдер
 	$('.topslider').slick({
 		slidesToScroll: 1,
@@ -420,8 +434,16 @@ $(document).ready(function () {
 
 	// Play video
 	$('.video-block__play').on('click', function () {
-		$(this).closest('.video-block__wrapper').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
-		$('.video-block__overlay').hide();
+		var iframe = $(this).closest('.video-block__wrapper').find('iframe');
+		var addedSubject;
+		// проверить если в строке уже есть параметр
+		if ( iframe.attr('src').indexOf("?") >= 0 ){
+			addedSubject = "&autoplay=1"
+		} else {
+			addedSubject = "?autoplay=1"
+		}
+		iframe.attr("src", iframe.attr('src') + addedSubject);
+		$('.video-block__overlay').fadeOut();
 	});
 
 	// Aside menu more

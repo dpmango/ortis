@@ -701,7 +701,7 @@
 			flex-wrap: wrap;
 		}
 		&__item {
-			flex: 0 1 100%;
+			flex: 0 0 auto;
 			margin-bottom: 35px;
 			&:last-child {
 				margin-bottom: 0;

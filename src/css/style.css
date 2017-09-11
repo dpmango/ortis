@@ -1929,9 +1929,9 @@ body {
               flex-wrap: wrap; }
     .news__item {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 1 100%;
-          -ms-flex: 0 1 100%;
-              flex: 0 1 100%;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
       margin-bottom: 35px; }
       .news__item:last-child {
         margin-bottom: 0; }
@@ -2136,7 +2136,7 @@ body {
     margin-bottom: 22px; }
   .information__descr {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 1.375;
     margin: 0;
     color: #8E8E8E; }
 
