@@ -1,0 +1,562 @@
+.goods-card
+  padding-top: 32px
+  &__wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+  &__sliders
+    width: 38%
+  &__big-slider
+    &-item
+      position: relative
+      cursor: pointer
+      img
+        display: block
+        height: auto
+        width: 100%
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        z-index: 2
+        background: rgba(black, 0.3) url("../img/magnifier.svg") no-repeat right bottom
+        background-size: 30px 30px
+        opacity: 0
+        pointer-events: none
+        transition: all .25s ease-in-out
+      &:hover
+        &::after
+          opacity: 1
+          background-position: 90% 90%
+  &__mini-slider
+    &-item
+      padding: 0 5px
+      img
+        display: block
+        height: auto
+        width: 100%
+  &__info
+    width: 62%
+    padding-left: 40px
+  &__title
+    font-size: 36px
+    margin-top: 0
+    margin-bottom: 10px
+    font-family: $font-black
+    &--mobile
+      display: none
+  &__new
+    @extend .pop-goods__new
+    position: relative
+    top: 0
+    left: 0
+    margin-bottom: 24px
+    &--mobile
+      display: none
+  &__prices
+    background-color: $news-bg
+    margin-bottom: 24px
+    padding: 24px
+  &__row
+    align-items: center
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+  &__amount
+    font-family: $font-black
+    font-size: 36px
+    margin-right: 12px
+  &__nds
+    font-size: 16px
+    margin-right: 27px
+    color: $footer-color
+  &__status
+    @extend .pop-goods__status
+    @extend .pop-goods__status--wait
+  &__buy,
+  &__tocart
+    padding: 12px 33px
+    min-width: 248px
+  &__buy
+    margin-right: 24px
+  &__buttons
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 35px
+  &__link
+    display: inline-block
+    vertical-align: middle
+    font-size: 16px
+    color: $header-text
+    text-decoration: none
+    padding-left: 35px
+    position: relative
+    margin-right: 21px
+    transition: color 0.3s
+    &:hover
+      color: $main-color
+    &:last-child
+      margin-right: 0
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      background-repeat: no-repeat
+    &--3d
+      &:before
+        background-image: url(../img/3d-icon.svg)
+        width: 25px
+        height: 30px
+    &--clock
+      &:before
+        background-image: url(../img/clock-icon.svg)
+        width: 24px
+        height: 24px
+    &--rent
+      &:before
+        background-image: url(../img/rent-icon.svg)
+        width: 28px
+        height: 25px
+    &--down
+      &:before
+        background-image: url(../img/down-icon.svg)
+        width: 23px
+        height: 30px
+    &--pdf
+      &:before
+        background-image: url(../img/pdf-icon.svg)
+        width: 34px
+        height: 34px
+  &__tabs
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__tab
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 12px
+    line-height: 15px
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+    padding: 15px 25px
+    color: $footer-color
+    width: 20%
+    height: 53px
+    border-left: 1px solid transparent
+    border-right: 1px solid transparent
+    border-top: 2px solid transparent
+    border-bottom: 1px solid $border-color
+    transition: all 0.3s
+    &.active
+      border-color: $border-color
+      border-top-color: $main-color
+      border-bottom-color: transparent
+      color: $text-color
+    &:hover
+      color: $text-color
+  &__tab-item
+    padding: 24px 24px 40px 24px
+    border: 1px solid transparent
+    border-top: 0
+    margin-bottom: 40px
+    display: none
+    a
+      color: $header-text
+    &.active
+      display: block
+      border-color: $border-color
+  &__text
+    font-size: 16px
+    line-height: 1.375
+    margin-top: 0
+    margin-bottom: 10px
+    color: $text-color
+  &__tech-row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 80%
+    padding: 8px 0
+    min-height: 37px
+    border-bottom: 1px solid $border-color
+    &:first-child
+      border-top: 1px solid $border-color
+  &__tech-left
+    width: 50%
+    text-align: right
+    color: $footer-color
+    &--title
+      text-transform: uppercase
+      color: $text-color
+  &__tech-right
+    width: 50%
+    padding-left: 24px
+    color: $text-color
+    font-family: $font-semi
+  &__advant-list
+    padding: 0
+    margin: 0
+    padding-left: 10px
+    &--margin
+      margin-bottom: 40px
+    li
+      display: block
+      font-size: 16px
+      line-height: 18px
+      margin-top: 0
+      margin-bottom: 10px
+      position: relative
+      padding-left: 20px
+      &:before
+        content: ''
+        position: absolute
+        top: 8px
+        left: 0
+        width: 5px
+        height: 5px
+        background-color: $main-color
+  &__set-title
+    font-size: 16px
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 12px
+    font-family: $font-black
+  &__review-item
+    padding: 14px
+    border-radius: 16px
+    border: 1px solid $border-color
+    margin-bottom: 24px
+    align-items: flex-start
+    &:last-child
+      margin-bottom: 0
+  &__review-img
+    width: 20%
+    padding-top: 25px
+    img
+      display: block
+      height: auto
+      width: 100%
+  &__review-info
+    width: 80%
+    padding-left: 24px
+  &__review-text
+    font-size: 16px
+    line-height: 18px
+    margin-top: 0
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  &__advant
+    margin-top: 50px
+    margin-left: -10px
+    margin-right: -10px
+    justify-content: space-around
+    &-item
+      position: relative
+      text-align: center
+      padding: 104px 10px 0 10px
+      font-size: 16px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-repeat: no-repeat
+        background-image: url(../img/advant-like.svg)
+        width: 80px
+        height: 80px
+
+.goods-card-popup
+  @extend .photo-popup
+  &__close
+    @extend .photo-popup__close
+  &__big-slider
+    @extend .photo-popup__big-slider
+  &__big-item
+    @extend .photo-popup__big-item
+  &__mini-slider
+    @extend .photo-popup__mini-slider
+  &__mini-item
+    @extend .photo-popup__mini-item
+
+.success-popup
+  @extend .photo-popup
+  padding-top: 52px
+  padding-bottom: 40px
+  overflow-y: scroll
+  // max-height: 100vh;
+  &__close
+    @extend .photo-popup__close
+  &__title
+    margin-top: 0
+    margin-bottom: 32px
+    font-size: 36px
+    max-width: 610px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-family: $font-black
+  &__img
+    display: block
+    height: auto
+    width: 100%
+    max-width: 415px
+    margin-left: auto
+    margin-right: auto
+  &__name
+    margin-top: 24px
+    font-weight: 400
+    margin-bottom: 24px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    max-width: 600px
+    font-size: 24px
+    color: $header-text
+  &__in-cart
+    width: 100%
+    background-color: $news-bg
+    padding: 15px 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    margin-bottom: 24px
+  &__amount,
+  &__price
+    font-size: 16px
+    color: $footer-color
+    span
+      color: $text-color
+      margin-left: 8px
+  &__price
+    margin-left: 34px
+  &__buttons
+    display: flex
+    align-items: center
+    flex-direction: row
+    justify-content: center
+  &__btn
+    width: 100%
+    max-width: 300px
+    padding-left: 30px
+    padding-right: 30px
+    &:last-child
+      margin-left: 24px
+
+.oneclick-popup
+  @extend .success-popup
+  &__close
+    @extend .success-popup__close
+  &__title
+    @extend .success-popup__title
+    text-transform: uppercase
+    letter-spacing: 0.2em
+  .order-page__form
+    max-width: 300px
+    margin-top: 0
+    margin-bottom: 0
+    margin-left: auto
+    margin-right: auto
+  .order-page__input-wrap,
+  .order-page__captcha,
+  .order-page__agree,
+  .order-page__btn
+    width: 100%
+  .order-page__captcha
+    margin-bottom: 20px
+
+@media (max-width: 1440px)
+  .video-block
+    &__slider
+      .slick-prev
+        left: -7px
+        z-index: 50
+      .slick-next
+        right: -7px
+        z-index: 50
+
+@media (max-width: 1200px)
+  .goods-card
+    &__sliders
+      width: 35%
+    &__info
+      width: 65%
+    &__tab
+      font-size: 11px
+  .video-block
+    &__img
+      max-width: 80%
+
+@media (max-width: 1023px)
+  .goods-card
+    &__wrap
+      flex-direction: column
+    &__sliders
+      width: 100%
+      max-width: 50%
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 20px
+    &__info
+      width: 100%
+      padding-left: 0
+    &__mobile-wrap
+      text-align: center
+    &__title
+      display: none
+      text-align: center
+      &--mobile
+        display: block
+    &__new
+      display: none
+      &--mobile
+        display: inline-block
+        margin-left: auto
+        margin-right: auto
+  .success-popup
+    padding-top: 35px
+    padding-bottom: 25px
+    &__title
+      font-size: 32px
+      margin-bottom: 28px
+      max-width: 85%
+    &__name
+      margin-top: 18px
+      margin-bottom: 18px
+      max-width: 85%
+      margin-left: auto
+      margin-right: auto
+    &__buttons
+      max-width: 85%
+      margin-left: auto
+      margin-right: auto
+    &__btn
+      padding-left: 10px
+      padding-right: 10px
+
+@media (max-width: 767px)
+  .goods-card
+    &__title
+      font-size: 32px
+    &__buy,
+    &__tocart
+      min-width: 0
+    &__tab
+      font-size: 10px
+
+@media (max-width: 574px)
+  .video-block
+    &__slider
+      .slick-dots
+        bottom: -23px
+  .goods-card
+    text-align: center
+    &__title
+      font-size: 28px
+    &__sliders
+      max-width: 100%
+    &__buttons
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__link
+      margin-right: 0
+      margin-bottom: 20px
+      text-align: center
+    &__row
+      flex-direction: column
+    &__amount,
+    &__nds,
+    &__buy
+      margin-right: 0
+      margin-bottom: 10px
+    &__tab-item
+      text-align: left
+      padding: 18px
+      margin-bottom: 20px
+      margin-top: 10px
+      &.active
+        border: transparent
+        border-top: 1px solid $border-color
+    &__tabs
+      flex-wrap: wrap
+      justify-content: center
+      width: auto
+    &__tab
+      min-width: 108px
+      width: 50%
+      font-size: 12px
+      border: 1px solid transparent
+      &.active
+        border: 1px solid $main-color
+    &__tech-row
+      max-width: 100%
+      width: 100%
+      text-align: left
+    &__tech-left,
+    &__tech-right
+      font-size: 14px
+    &__review-item
+      flex-direction: column
+    &__review-img
+      width: 100%
+      text-align: center
+      max-width: 70%
+      margin-left: auto
+      margin-right: auto
+      padding-top: 0
+      margin-bottom: 10px
+    &__review-info
+      width: 100%
+      padding-left: 0
+    &__advant
+      flex-wrap: wrap
+      margin-top: 25px
+      &-item
+        margin-bottom: 15px
+        padding-top: 90px
+        width: 50%
+        &:last-child
+          margin-bottom: 0
+  .success-popup
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    &__close
+      top: 15px
+      right: 15px
+    &__img
+      max-width: 95%
+    &__amount
+      span
+        margin-left: 4px
+    &__price
+      margin-left: 10px
+      span
+        margin-left: 4px
+    &__buttons
+      flex-direction: column
+    &__btn
+      &:last-child
+        margin-left: 0
+        margin-top: 10px
+
+@media (max-width: 414px)
+  .goods-card
+    &__advant-item
+      width: 100%

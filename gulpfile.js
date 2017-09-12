@@ -31,7 +31,7 @@ var postCssProcessors = [
 ]
 
 gulp.task('sass', function () {
-  return gulp.src('src/scss/style.scss')
+  return gulp.src('src/scss/style.*.{sass,scss}')
     .pipe(plumber({
       errorHandler: function (error) {
         gutil.log('Error: ' + error.message);
@@ -150,7 +150,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('watch', ['browser-sync', 'pug', 'sass', 'scripts'], function () {
-  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/scss/**/*.{sass,scss}', ['sass']);
   gulp.watch('src/templates/**/*.pug', ['pug']);
   gulp.watch('src/js/**/*.js', browserSync.reload);
   gulp.watch('src/*.html', browserSync.reload);

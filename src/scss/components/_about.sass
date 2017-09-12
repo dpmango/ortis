@@ -1,0 +1,301 @@
+// Страница О компании
+.about
+  margin-top: 52px
+  padding-bottom: 80px
+  &__flex-wrap
+    display: flex
+    align-items: flex-start
+    flex-direction: row
+  &__main
+    flex: 0 1 auto
+    margin-left: 52px
+    .flex-wrap
+      align-items: flex-start
+  &__title
+    margin-top: 0
+    font-size: 36px
+    margin-bottom: 32px
+    text-transform: uppercase
+    letter-spacing: 0.2em
+    font-family: $font-black
+  &__img
+    width: 30%
+    margin-right: 24px
+    img
+      display: block
+      height: auto
+      width: 100%
+  &__info
+    flex: 0 1 70%
+  &__descr
+    font-weight: 300
+    margin-top: 0
+    margin-bottom: 10px
+    font-size: 20px
+    line-height: 23px
+    color: $text-color
+
+.aside-menu
+  flex: 0 0 320px
+  background-color: $menu-bg
+  padding: 24px 0
+  &__link
+    display: block
+    text-decoration: none
+    color: $header-text
+    font-size: 20px
+    padding: 10px 22px
+    transition: all 0.3s
+    border: 0
+    background-color: transparent
+    width: 100%
+    text-align: left
+    &:hover,
+    &.active
+      color: $main-color
+      background-color: $menu-hover
+    &--more
+      position: relative
+      transition: all 0.3s
+      &:after
+        content: ""
+        position: absolute
+        background-repeat: no-repeat
+        right: 15px
+        top: 50%
+        transform: translateY(-50%) rotate(-90deg)
+        background-image: url(../img/dropdown.svg)
+        background-size: 100%
+        width: 11px
+        height: 6px
+        transition: all 0.3s
+      &.active
+        background-color: transparent
+        &:after
+          transform: translateY(-50%) rotate(0deg)
+  &__hide
+    display: none
+    .aside-menu__link
+      background-color: $menu-hover
+      padding-left: 34px
+
+// Страница Новости
+.our-news
+  @extend .about
+  &__flex-wrap
+    @extend .about__flex-wrap
+  &__main
+    @extend .about__main
+  &__title
+    @extend .about__title
+    margin-bottom: 12px
+  &__item
+    margin-bottom: 32px
+    padding-bottom: 32px
+    border-bottom: 1px solid $border-color
+    &-title
+      font-size: 24px
+      margin-top: 0
+      margin-bottom: 12px
+      color: $header-text
+      font-weight: 400
+      a
+        text-decoration: none
+        color: $header-text
+        transition: all 0.3s
+        &:hover
+          color: $main-color
+  &__descr
+    color: $text-color
+    margin: 0
+    font-size: 16px
+    &--big
+      font-size: 20px
+  &__back
+    text-decoration: none
+    display: inline-block
+    padding-left: 15px
+    font-size: 20px
+    margin-bottom: 24px
+    color: $header-text
+    transition: all 0.3s
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background-repeat: no-repeat
+      background-image: url(../img/arrow-pink.svg)
+      width: 6px
+      height: 12px
+    &:hover
+      color: $main-color
+  &__date
+    display: inline-block
+    margin-top: -24px
+    margin-bottom: 24px
+    color: $footer-color
+    font-size: 16px
+  &__img
+    display: block
+    height: auto
+    margin-left: auto
+    margin-right: auto
+    margin-top: 36px
+    margin-bottom: 12px
+    max-width: 100%
+  &__caption
+    display: block
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-size: 16px
+    color: $footer-color
+  &__subtitle
+    margin: 24px 0
+    font-size: 36px
+    font-family: $font-black
+  &__list
+    margin-top: 24px
+    margin-bottom: 33px
+    padding-left: 10px
+    li
+      display: block
+      padding-left: 20px
+      position: relative
+      font-size: 20px
+      color: $text-color
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        background-color: $main-color
+        width: 5px
+        height: 5px
+  &__next
+    padding-left: 30px
+    padding-right: 30px
+    max-width: 250px
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 20px
+    margin-top: 65px
+  &__more
+    max-width: 248px
+    padding-left: 40px
+    padding-right: 40px
+    width: 100%
+  &__blockquote
+    margin: 24px 0
+    color: $footer-color
+    padding-left: 32px
+    position: relative
+    font-size: 20px
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 2px
+      background-color: $header-text
+
+@media (max-width: 1023px)
+  .aside-menu
+    flex: 0 0 270px
+  .about
+    &__main
+      margin-left: 30px
+      .flex-wrap
+        flex-direction: column
+    &__img
+      width: 100%
+      margin-right: 0
+      margin-bottom: 15px
+      img
+        width: auto
+        margin-left: auto
+        margin-right: auto
+        max-width: 100%
+    &__info
+      flex: 0 1 100%
+    &__descr
+      font-size: 18px
+      line-height: 21px
+  .our-news
+    &__title
+      font-size: 32px
+
+@media (max-width: 767px)
+  .about
+    margin-top: 40px
+    padding-bottom: 40px
+    &__flex-wrap
+      flex-direction: column
+      justify-content: flex-start
+    &__main
+      margin-left: 0
+      order: 0
+      flex-direction: column
+      flex: 0 1 100%
+      width: 100%
+      .flex-wrap
+        align-items: center
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+      text-align: center
+    &__descr
+      font-size: 16px
+      text-align: center
+  .aside-menu
+    width: 100%
+    order: 1
+    margin-top: 15px
+    flex: 0 1 100%
+  .our-news
+    &__title
+      margin-bottom: 12px
+    &__more
+      margin-bottom: 30px
+      display: block
+      margin-left: auto
+      margin-right: auto
+    &__descr
+      font-size: 16px
+      text-align: center
+    &__back
+      font-size: 16px
+    &__date
+      text-align: center
+      display: block
+      margin-top: 0
+      margin-bottom: 16px
+    &__item-title
+      text-align: center
+    &__subtitle
+      font-size: 24px
+      margin: 16px 0
+      text-align: center
+    &__list
+      li
+        font-size: 16px
+    &__blockquote
+      font-size: 16px
+      margin: 16px 0
+    &__next
+      margin-top: 35px
+
+@media (max-width: 574px)
+  .about
+    &__img
+      width: 70%
+      min-width: 55%

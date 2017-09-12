@@ -1,0 +1,720 @@
+.main-homepage
+  &__wrap
+    background-repeat: no-repeat
+    background-image: url(../img/bg-stroke2.svg)
+    background-size: cover
+  .topslider
+    padding-top: 0
+    background-image: none
+    &__slide
+      padding-top: 150px
+      &--svg
+        padding-top: 45px
+  .topbar
+    position: absolute
+    background-color: transparent
+    top: 48px
+    left: 0
+    width: 100%
+    z-index: 1
+
+.topslider
+  background-repeat: no-repeat
+  //	background-image: url(../img/bg-stroke2.svg);
+  background-size: cover
+  &--production
+    .topslider__title--pink
+      font-size: 50px
+    .topslider__slide
+      background-image: url(../img/bg-stroke2.svg)
+      background-repeat: no-repeat
+      background-size: cover
+  &__img
+    width: 45%
+    min-height: 350px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    overflow: hidden
+    img
+      display: block
+      height: auto
+      width: 100%
+    &--sizes
+      img
+        max-width: 420px
+        margin-left: auto
+  &__slide--svg
+    .topslider__img
+      width: calc(45% + 24px)
+      margin-left: -24px
+      img
+        height: 100%
+        width: auto
+  &__info
+    width: 55%
+    padding-left: 60px
+  &__title
+    margin-top: 0
+    text-transform: uppercase
+    font-weight: 300
+    color: $header-text
+    font-size: 50px
+    margin-bottom: 35px
+    letter-spacing: 0.05em
+    font-family: $font-black
+    &--pink
+      color: $main-color
+      font-size: 60px
+  &__descr
+    color: $text-color
+    max-width: 435px
+    margin: 0
+    font-size: 20px
+  &__slide
+    padding-top: 35px
+    padding-bottom: 55px
+    &--vertical
+      text-align: center
+  &__items
+    justify-content: space-between
+  &__item
+    width: 20%
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: calc(50% - 15px)
+      left: 99%
+      background-repeat: no-repeat
+      background-image: url(../img/arrow-after.svg)
+      background-size: 100%
+      height: 9px
+      width: 35%
+    &:last-child
+      &:before
+        display: none
+    &-img
+      display: block
+      height: auto
+      width: 100%
+    &-title
+      margin-top: 11px
+      margin-bottom: 0
+      font-size: 20px
+      color: $text-color
+      text-align: center
+
+@keyframes swan-dash
+  0%
+    stroke-dasharray: 3000
+    stroke-dashoffset: 3000
+  100%
+    stroke-dasharray: 3000
+    stroke-dashoffset: 0
+
+
+.catalog
+  padding-top: 81px
+  &--services
+    padding-bottom: 80px
+    .flex-wrap
+      justify-content: space-around !important
+    .catalog__item
+      width: 35%
+  &__title
+    text-align: center
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 52px
+    color: $text-color
+    letter-spacing: 0.1em
+    font-size: 36px
+    font-family: $font-black
+  .flex-wrap
+    flex-wrap: wrap
+    justify-content: center
+    align-items: stretch
+  &__item
+    width: 33.3333%
+    padding-bottom: 27px
+    text-decoration: none
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    svg
+      width: 100%
+      height: auto
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 21px
+      stroke-dasharray: 0
+      stroke-dashoffset: 0
+      transition: all 0.5s
+      g[id*="icon"]
+        transition: stroke 0.5s
+      &:hover
+        g[id*="icon"]
+          stroke: $main-color
+        animation: swan-dash 0.8s linear forwards
+    &:hover
+      .catalog__item-title
+        color: $main-color
+  &__item-title
+    text-align: center
+    margin-bottom: 0
+    font-size: 24px
+    color: $header-text
+    text-decoration: none
+    margin-top: auto
+    transition: color 0.8s
+  &__item-descr
+    font-size: 16px
+    margin-top: 10px
+    margin-bottom: 0
+    color: $text-color
+
+.pop-goods
+  padding: 80px 0
+  &.black
+    .pop-goods__title
+      color: $text-color
+  &__title
+    text-align: center
+    text-transform: uppercase
+    font-size: 36px
+    letter-spacing: 0.1em
+    margin-top: 0
+    margin-bottom: 52px
+    color: $main-color
+    font-family: $font-black
+  &__item
+    width: 33.33%
+    border: 1px solid transparent
+    padding: 20px
+    background-color: $white-color
+    position: relative
+    &:hover
+      border-color: $border-color
+      .pop-goods__hide
+        visibility: visible
+        opacity: 1
+      .pop-goods__buy
+        visibility: visible
+        opacity: 1
+  &__img
+    position: relative
+    img
+      display: block
+      height: auto
+      margin-left: auto
+      margin-right: auto
+      max-width: 100%
+  &__hide
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(248, 248, 248, 0.9)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 20px
+    z-index: 5
+    &-info
+      margin-top: 0
+      font-size: 16px
+      margin-bottom: 10px
+      color: $text-color
+  &__wrap
+    justify-content: space-between
+    align-items: flex-end
+  &__info
+    max-width: 70%
+  &__subtitle
+    font-size: 20px
+    color: $header-text
+    margin-top: 15px
+    margin-bottom: 4px
+    font-weight: 400
+    a
+      text-decoration: none
+      color: $header-text
+      transition: all 0.3s
+      &:hover
+        color: $main-color
+        cursor: pointer
+  &__price
+    font-size: 16px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
+    font-family: $font-black
+  &__status
+    display: inline-block
+    vertical-align: middle
+    padding-left: 16px
+    font-size: 12px
+    color: $footer-color
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: $in-stock
+    &--wait:before
+      background-color: $wait
+  &__buy
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s
+    text-align: center
+    border: 0
+    padding: 12px 10px
+    color: $white-color
+    text-transform: uppercase
+    background-color: $header-text
+    font-size: 14px
+    &:hover
+      background-color: $main-color
+  &__new
+    position: absolute
+    top: 25px
+    left: 20px
+    color: $main-color
+    font-size: 12px
+    padding-left: 32px
+    z-index: 3
+    text-transform: uppercase
+    font-family: $font-semi
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      background-repeat: no-repeat
+      background-image: url(../img/star.svg)
+      width: 24px
+      height: 25px
+
+.advant
+  padding: 52px 0
+  background-repeat: no-repeat
+  background-image: url(../img/bg-advant.png)
+  background-size: cover
+  position: relative
+  background-position: 50%
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba(255, 255, 255, 0.9)
+  &__title
+    font-weight: 400
+    letter-spacing: 0.2em
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 57px
+    text-align: center
+    font-size: 36px
+    position: relative
+    z-index: 2
+    font-family: $font-black
+  .flex-wrap
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    z-index: 2
+    margin: 0 -15px
+  &__item
+    flex: 0 1 33.3%
+    padding: 0 15px
+    &-title
+      font-size: 24px
+      text-align: center
+      padding-top: 160px
+      margin-top: 0
+      margin-bottom: 20px
+      color: $header-text
+      position: relative
+      font-weight: 400
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-repeat: no-repeat
+        width: 120px
+        height: 120px
+        background-size: 100%
+      &--first:before
+        background-image: url(../img/flag.svg)
+      &--thumbup:before
+        background-image: url(../img/thumbup.svg)
+      &--ten:before
+        background-image: url(../img/10years.svg)
+    &-descr
+      font-size: 16px
+      margin: 0 auto 0 auto
+      text-align: center
+      max-width: 240px
+      color: $text-color
+
+.reviews
+  padding: 80px 0
+  background-color: $white-color
+  background-repeat: no-repeat
+  background-image: url(../img/review-bg.svg)
+  background-position: 0 20%
+  text-align: center
+  &__title
+    margin-top: 0
+    margin-bottom: 51px
+    font-size: 36px
+    text-transform: uppercase
+    letter-spacing: 0.2em
+    font-weight: 400
+    text-align: center
+    color: $text-color
+    font-family: $font-black
+  &__slider
+    width: 52%
+    margin-left: auto
+    margin-right: auto
+    border-radius: 16px
+    background-color: $white-color
+    box-shadow: 0 15px 40px -10px #bfbfbf
+    margin-bottom: 35px
+    .slick-prev
+      left: -120px
+    .slick-next
+      right: -120px
+  &__slide
+    padding: 36px 41px
+    text-align: center
+  &__descr
+    font-size: 16px
+    line-height: 19px
+    margin-top: 0
+    margin-bottom: 15px
+    color: $text-color
+  &__img
+    margin-top: 30px
+    position: relative
+    padding-top: 20px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      height: 2px
+      width: 200px
+      background-color: $border-color
+    img
+      display: block
+      height: auto
+      margin-left: auto
+      margin-right: auto
+  &__link
+    padding-left: 40px
+    padding-right: 40px
+
+.news
+  padding: 52px 0
+  background-color: $news-bg
+  text-align: center
+  &__title
+    font-size: 36px
+    text-align: center
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 52px
+    color: $text-color
+    letter-spacing: 0.2em
+    font-family: $font-black
+  .flex-wrap
+    margin: 0 -20px
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 64px
+  &__item
+    flex: 0 1px 33.3%
+    padding: 0 20px
+    text-align: left
+  &__item-title
+    font-size: 20px
+    color: $header-text
+    margin-top: 0
+    margin-bottom: 20px
+    font-weight: 400
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: -10px
+      width: 2px
+      height: 100%
+      background-color: $footer-color
+    a
+      transition: all 0.3s
+      &:hover
+        cursor: pointer
+        color: $main-color
+  &__descr
+    font-size: 16px
+    margin-top: auto
+    margin-bottom: 0
+    color: $footer-color
+  &__link
+    margin-left: auto
+    margin-right: auto
+    padding-left: 40px
+    padding-right: 40px
+
+@media (max-width: 1440px)
+  .pop-goods
+    .slick-prev
+      left: -7px
+      z-index: 10
+    .slick-next
+      right: -7px
+      z-index: 10
+  .main-homepage
+    .topslider
+      &__slide
+        &--svg
+          padding-top: 150px
+  .topslider
+    &__slide--svg
+      .topslider__img
+        height: 250px
+        min-height: 1px
+        position: relative
+        img
+          position: absolute
+          height: 100%
+          bottom: 0
+          right: 0
+
+@media (max-width: 1023px)
+  .topslider
+    &__title
+      font-size: 40px
+      margin-bottom: 20px
+      &--pink
+        font-size: 40px
+    &__slide
+      padding-bottom: 35px
+    .slick-dots
+      bottom: 5px
+  .catalog
+    padding-top: 40px
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+  .pop-goods
+    padding: 40px 0
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+    &__hide-info
+      font-size: 13px
+  .advant
+    padding: 40px 0
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+    &__item
+      &-title
+        padding-top: 125px
+        &:before
+          width: 100px
+          height: 100px
+  .reviews
+    padding: 40px 0
+    background-size: 50%
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+    &__slider
+      width: 72%
+      .slick-prev
+        left: -100px
+      .slick-next
+        right: -100px
+  .news
+    padding: 40px 0
+    .flex-wrap
+      flex-wrap: wrap
+    &__item
+      flex: 0 0 auto
+      margin-bottom: 35px
+      &:last-child
+        margin-bottom: 0
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+
+@media (max-width: 767px)
+  .container
+    padding: 0 15px
+  .main-homepage
+    &__wrap
+      background-image: none
+  .topslider
+    &--production
+      .topslider__slide
+        background: none
+      .topslider__title--pink
+        font-size: 40px
+    .flex-wrap
+      flex-direction: column
+    &__img
+      width: 100%
+      img
+        margin-left: auto
+        margin-right: auto
+    &__slide--svg
+      .topslider__img
+        width: calc(100% + 30px)
+        margin-left: -15px
+        margin-right: -15px
+        height: auto
+        min-height: 1px
+        position: relative
+        img
+          position: static
+          width: 100%
+          height: auto
+    &__info
+      width: 100%
+      padding: 0
+      text-align: center
+    &__title
+      margin-top: 10px
+    &__descr
+      font-size: 16px
+      margin-left: auto
+      margin-right: auto
+    &__slide
+      background-image: none
+    &__slide--vertical
+      .flex-wrap
+        flex-direction: row
+        flex-wrap: wrap
+    &__items
+      justify-content: space-between
+      align-items: stretch
+    &__item
+      width: 48%
+      margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        display: none
+    .slick-dots
+      bottom: -5px
+  .catalog
+    .flex-wrap
+      flex-wrap: wrap
+    &__item
+      width: 50%
+    &--services
+      padding-bottom: 40px
+      .catalog__item
+        width: 50%
+        &-title
+          margin-top: 0
+  .pop-goods
+  .reviews
+    &__slider
+      width: 90%
+      .slick-prev
+        left: -30px
+      .slick-next
+        right: -30px
+  .news
+    .flex-wrap
+      flex-direction: column
+      margin: 0
+    &__link
+      display: none
+
+@media (max-width: 574px)
+  .topslider
+    &__slide--svg
+      .topslider__img
+        width: calc(100% + 20px)
+        margin-left: -10px
+        margin-right: -10px
+  .advant
+    &__title
+      font-size: 28px
+      letter-spacing: 0.05em
+    .flex-wrap
+      flex-direction: column
+      margin-left: 0
+      margin-right: 0
+    &__item
+      width: 100%
+      margin-bottom: 40px
+      flex: 0 1 auto
+      &:last-child
+        margin-bottom: 0
+  .catalog
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    &__item
+      width: 100%
+    &--services
+      .catalog__item
+        width: 100%
+  .pop-goods
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    .slick-dots
+      bottom: -10px
+  .reviews
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    &__slider
+      width: 100%
+      margin-bottom: 48px
+    .slick-dots
+      bottom: -30px
+    &__descr
+      font-size: 12px
+  .topslider
+    &__item
+      width: 100%
+    .slick-dots
+      bottom: -10px
+  .news
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+
+@media (max-width: 414px)
+  .container
+    padding-left: 10px
+    padding-right: 10px

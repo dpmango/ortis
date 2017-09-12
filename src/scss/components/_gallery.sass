@@ -1,0 +1,208 @@
+.gallery
+  @extend .about
+  padding-bottom: 60px
+  &__flex-wrap
+    @extend .about__flex-wrap
+  &__title
+    @extend .about__title
+  &__main
+    @extend .about__main
+  &__wrap
+    flex-wrap: wrap
+    margin: 0 -6px
+    align-items: stretch !important
+  &__subtitle
+    font-size: 24px
+    margin-top: 0
+    margin-bottom: 12px
+    font-weight: 400
+    color: $text-color
+  &__text
+    font-size: 16px
+    color: $footer-color
+    margin-top: 0
+    margin-bottom: 32px
+  &__item
+    position: relative
+    cursor: pointer
+    text-decoration: none
+    &--photo
+      flex: 0 1 33.33%
+      padding: 0 6px
+      margin-bottom: 24px
+      display: flex
+      justify-content: center
+      align-items: center
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        top: 0
+        right: 6px
+        left: 6px
+        bottom: 0
+        z-index: 2
+        background: rgba(black, 0.3) url("../img/magnifier.svg") no-repeat right bottom
+        background-size: 30px 30px
+        opacity: 0
+        pointer-events: none
+        transition: all .25s ease-in-out
+      &:hover
+        &::after
+          opacity: 1
+          background-position: 90% 90%
+    &--video
+      flex: 0 1 50%
+      padding: 0 6px
+      margin-bottom: 36px
+      iframe
+        width: 100%
+        min-height: 300px
+      &:hover
+        .gallery__item-title
+          color: $main-color
+    img
+      display: block
+      height: auto
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+    &-title
+      margin-top: 12px
+      margin-bottom: 0
+      font-size: 20px
+      font-weight: 400
+      color: $header-text
+      transition: all 0.3s
+    .video-block__play-mini
+      border: 0
+      padding: 0
+      background-color: transparent
+      background-image: url(../img/play-icon.svg)
+      background-size: 100%
+      width: 80px
+      height: 80px
+  &__more
+    @extend .our-news__next
+    margin-top: 25px
+
+.overlay
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  min-height: 100vh
+  background-color: rgba(0, 0, 0, 0.43)
+  z-index: 9990
+  top: 0
+  left: 0
+
+.photo-popup
+  z-index: -10
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: $white-color
+  padding-top: 32px
+  width: calc(100% - 40px)
+  max-width: 800px
+  max-height: calc(100vh - 40px)
+  transition: all 0.3s
+  &.active
+    opacity: 1
+    z-index: 9999
+    visibility: visible
+  &__close
+    border: 0
+    background-color: transparent
+    padding: 0
+    background-repeat: no-repeat
+    position: absolute
+    top: 24px
+    right: 24px
+    background-image: url(../img/close.svg)
+    background-size: 100%
+    width: 34px
+    height: 34px
+    z-index: 30
+  &__big-slider
+    padding: 0 72px
+    padding-bottom: 10px
+    .slick-prev
+      left: 24px
+    .slick-next
+      right: 24px
+  &__big-item
+    img
+      display: block
+      height: auto
+      width: auto
+      margin-left: auto
+      margin-right: auto
+      max-width: 100%
+  &__mini-slider
+    padding: 24px 0
+    background-color: $news-bg
+  &__mini-item
+    cursor: pointer
+    img
+      display: block
+      height: auto
+      width: auto
+      margin-left: auto
+      margin-right: auto
+      max-width: 120px
+      padding-left: 5px
+      padding-right: 5px
+
+.video-popup
+  @extend .photo-popup
+  padding: 80px 24px 24px 24px
+  &__close
+    @extend .photo-popup__close
+  iframe
+    min-height: 430px
+    width: 100%
+
+@media (max-width: 1023px)
+  .gallery
+    &__wrap
+      flex-direction: row !important
+    &__item
+      &--photo
+        flex: 0 1 50%
+      &--video
+        iframe
+          min-height: 200px
+  .photo-popup
+    &__close
+      width: 25px
+      height: 25px
+
+@media (max-width: 767px)
+  .gallery
+    &__wrap
+      flex-direction: column !important
+    &__item
+      &--photo
+        flex: 0 1 auto
+      &--video
+        flex: 0 1 auto
+        iframe
+          min-height: 300px
+    &__more
+      margin-top: 25px
+    &__subtitle
+      text-align: center
+    &__text
+      text-align: center
+  .photo-popup
+    &__big-slider
+      padding-left: 24px
+      padding-right: 24px
+  .video-popup
+    iframe
+      min-height: 300px

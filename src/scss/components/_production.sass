@@ -1,0 +1,137 @@
+.information
+  margin-bottom: 80px
+  &__title
+    text-align: center
+    margin-top: 0
+    margin-bottom: 48px
+    font-size: 36px
+    font-family: $font-black
+    text-transform: uppercase
+    letter-spacing: 0.2em
+  &__row
+    align-items: flex-start
+    margin-bottom: 53px
+    &:last-child
+      margin-bottom: 0
+  &__img
+    flex: 0 0 300px
+    img
+      display: block
+      height: auto
+      width: 100%
+  &__info
+    padding-left: 23px
+  &__subtitle
+    margin-top: 0
+    color: $header-text
+    font-weight: 400
+    font-size: 24px
+    margin-bottom: 22px
+  &__descr
+    font-size: 16px
+    line-height: 1.375
+    margin: 0
+    color: $footer-color
+
+.video-block
+  margin-bottom: 80px
+  &__title
+    text-align: center
+    margin-top: 0
+    margin-bottom: 48px
+    font-size: 36px
+    font-family: $font-black
+    text-transform: uppercase
+    letter-spacing: 0.2em
+  &__wrapper
+    margin-left: auto
+    margin-right: auto
+    max-width: 980px
+    position: relative
+  &__overlay
+    background-color: transparent
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+  &__play
+    position: relative
+    background-color: transparent
+    padding: 0
+    border: 0
+    background-repeat: no-repeat
+    background-size: 100%
+    background-image: url(../img/play-icon.svg)
+    width: 120px
+    height: 120px
+    transition: all 0.3s
+    z-index: 5
+    &:hover
+      opacity: 0.8
+  iframe
+    width: 100%
+    height: 100%
+    min-height: 550px
+  //	&__img {
+  //		display: block;
+  //		height: auto;
+  //		margin-left: auto;
+  //		margin-right: auto;
+  //		width: 100%;
+  //		max-width: 980px;
+  //	}
+
+@media (max-width: 1023px)
+  .information,
+  .video-block
+    margin-bottom: 40px
+    &__title
+      font-size: 32px
+      margin-bottom: 35px
+  .video-block
+    iframe
+      min-height: 450px
+
+@media (max-width: 767px)
+  .information
+    &__img
+      flex: 0 0 30%
+  .video-block
+    iframe
+      min-height: 350px
+    &__play
+      width: 90px
+      height: 90px
+
+@media (max-width: 574px)
+  .information
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    &__row
+      flex-direction: column
+      margin-bottom: 35px
+    &__img
+      margin-bottom: 15px
+      flex: 0 0 50%
+      margin-left: auto
+      margin-right: auto
+      max-width: 80%
+    &__info
+      padding-left: 0
+    &__subtitle
+      text-align: center
+  .video-block
+    &__title
+      font-size: 28px
+      margin-bottom: 24px
+    iframe
+      min-height: 250px
+    &__play
+      width: 60px
+      height: 60px
