@@ -448,6 +448,11 @@ $(document).ready(function () {
 		$('.video-block__overlay').fadeOut();
 	});
 
+	// hide play btn on mobile
+	if ( isMobile() ){
+		$('.video-block__play, .video-block__overlay').hide();
+	}
+
 	// Aside menu more
 	$('.aside-menu__link--more').on('click', function (e) {
 		e.preventDefault();
