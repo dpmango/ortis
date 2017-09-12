@@ -674,7 +674,7 @@ body, html {
 
 .menu-toggle {
   width: 27px;
-  height: 21px;
+  height: 27px;
   margin-right: 24px !important;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -683,7 +683,7 @@ body, html {
   padding: 0 !important; }
   .menu-toggle .hamburger-box {
     width: 27px;
-    height: 21px; }
+    height: 27px; }
   .menu-toggle .hamburger-inner {
     width: 27px;
     height: 2px;
@@ -835,7 +835,7 @@ body, html {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    overflow-x: scroll; }
+    overflow: hidden; }
   .submenu__link {
     position: relative;
     display: -webkit-box;
