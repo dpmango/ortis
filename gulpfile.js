@@ -31,7 +31,7 @@ var postCssProcessors = [
 ]
 
 gulp.task('sass', function () {
-  return gulp.src('src/scss/style.*.{sass,scss}')
+  return gulp.src('src/scss/style.sass')
     .pipe(plumber({
       errorHandler: function (error) {
         gutil.log('Error: ' + error.message);
