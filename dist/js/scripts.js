@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+	// Prevent # behavior
+	$('[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
+
+	// detect mobile devices
+  function isMobile(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      return true
+    } else {
+      return false
+    }
+  }
+
 	// Верхний слайдер
 	$('.topslider').slick({
 		slidesToScroll: 1,
@@ -182,115 +196,94 @@ $(document).ready(function () {
 		]
 	});
 
+	// Попап generic
+	function popupHelper(state){
+		if (state === "show"){
+			$('body').addClass('no-scroll');
+			$('.overlay').fadeIn(250);
+		} else if (state === "hide") {
+			$('body').removeClass('no-scroll');
+			$('.overlay').fadeOut(250);
+		}
+	}
 	// Попап фото
 	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show");
+		// navigate slider to clicked item
+		$('.photo-popup__big-slider').slick("slickGoTo", $(this).index())
 		$('.photo-popup').addClass('active');
 	});
 	$('.photo-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.photo-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.photo-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.photo-popup').removeClass('active');
-		}
 	});
 
 	// Попап в карточке товара на фото
 	$('.goods-card__big-slider-item').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.goods-card-popup').addClass('active');
 	});
 	$('.goods-card-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.goods-card-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.goods-card-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.goods-card-popup').removeClass('active');
-		}
 	});
 
 	// Попап видео
 	$('.gallery__item--video').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.video-popup').addClass('active');
 	});
 	$('.video-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.video-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.video-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.video-popup').removeClass('active');
-		}
 	});
 
 	// Попап Добавлено в корзину
 	$('.goods-card__tocart').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.success-popup').addClass('active');
 	});
 	$('.success-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.success-popup').removeClass('active');
-	});
-	$(document).mouseup(function (a) {
-		var popup = $('.success-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.success-popup').removeClass('active');
-		}
 	});
 
 	// Попап Купить в 1 клик
 	$('.goods-card__buy').on('click', function (e) {
 		e.preventDefault();
-		$('body').addClass('no-scroll');
-		$('.overlay').fadeIn(200);
+		popupHelper("show")
 		$('.oneclick-popup').addClass('active');
 	});
 	$('.oneclick-popup__close').on('click', function (e) {
 		e.preventDefault();
-		$('body').removeClass('no-scroll');
-		$('.overlay').fadeOut(200);
+		popupHelper("hide")
 		$('.oneclick-popup').removeClass('active');
 	});
-	$(document).mouseup(function (a) {
-		var popup = $('.oneclick-popup');
-		if (a.target != popup[0] && !popup.has(a.target).length) {
-			popup.removeClass('active');
-			$('.overlay').fadeOut(200);
-			$('.oneclick-popup').removeClass('active');
-		}
-	});
+
+	// закрытие попапа при клике вне области
+	$('.overlay').on('click', function(){
+		var popups = []
+		popups.push( $('.video-popup') );
+		popups.push( $('.success-popup') );
+		popups.push( $('.oneclick-popup') );
+		popups.push( $('.photo-popup') );
+		popups.push( $('.goods-card-popup') );
+
+		popupHelper("hide");
+
+		$.each(popups, function(i,val){
+			console.log(val)
+			val.removeClass('active');
+		})
+	})
 
 	// Меню
 	$('.menu-toggle').on('click', function () {
@@ -443,20 +436,112 @@ $(document).ready(function () {
 
 	// Play video
 	$('.video-block__play').on('click', function () {
-		$(this).closest('.video-block__wrapper').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
-		$('.video-block__overlay').hide();
+		var iframe = $(this).closest('.video-block__wrapper').find('iframe');
+		var addedSubject;
+		// проверить если в строке уже есть параметр
+		if ( iframe.attr('src').indexOf("?") >= 0 ){
+			addedSubject = "&autoplay=1"
+		} else {
+			addedSubject = "?autoplay=1"
+		}
+		iframe.attr("src", iframe.attr('src') + addedSubject);
+		$('.video-block__overlay').fadeOut();
 	});
 
 	// Aside menu more
 	$('.aside-menu__link--more').on('click', function (e) {
 		e.preventDefault();
-		if ($(this).hasClass('active')) {
-			$(this).removeClass('active');
-			$(this).next('.aside-menu__hide').slideUp(200);
-		} else {
-			$('.aside-menu__link--more').removeClass('active');
-			$(this).addClass('active').next('.aside-menu__hide').slideDown(200);
-		}
+
+		$('.aside-menu__link--more').removeClass('active');
+		$('.aside-menu__hide').slideUp(250);
+
+		$(this).addClass('active');
+		$(this).next('.aside-menu__hide').slideDown(250);
+
 	});
+
+	// Masked input
+	$(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
+	$(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
+
+	$(".js-indexMask").mask("999 999", { placeholder: "000 000" });
+
+	$("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
+
+
+	// GENERIC FUNCTIONS
+	////////////////////
+
+  var validateErrorPlacement = function(error, element) {
+    // error.addClass('ui-input__validation');
+    // error.appendTo(element.parent("div"));
+		return false;
+  }
+  var validateHighlight = function(element) {
+    $(element).parent('div').addClass("has-error");
+  }
+  var validateUnhighlight = function(element) {
+    $(element).parent('div').removeClass("has-error");
+  }
+  var validateSubmitHandler = function(form) {
+    $(form).addClass('loading');
+    $.ajax({
+      type: "POST",
+      url: $(form).attr('action'),
+      data: $(form).serialize(),
+      success: function(response) {
+        $(form).removeClass('loading');
+        var data = $.parseJSON(response);
+        if (data.status == 'success') {
+          // do something I can't test
+        } else {
+            $(form).find('[data-error]').html(data.message).show();
+        }
+      }
+    });
+  }
+
+  var validatePhone = {
+    required: true,
+    normalizer: function(value) {
+        var PHONE_MASK = '+X (XXX) XXX-XXXX';
+        if (!value || value === PHONE_MASK) {
+            return value;
+        } else {
+            return value.replace(/[^\d]/g, '');
+        }
+    },
+    minlength: 11,
+    digits: true
+  }
+
+  ///////////////
+  // ORDER FORM
+  ///////////////
+  $(".order-page__form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+      },
+      phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+      }
+    }
+  });
 
 });
