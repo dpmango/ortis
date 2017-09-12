@@ -1345,7 +1345,7 @@ body, html {
   .site-map__tel:hover, .site-map__mail:hover {
     color: rgba(255, 255, 255, 0.5); }
 
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .header .row {
     margin-right: -24px; }
   .header__form {
@@ -1393,7 +1393,7 @@ body, html {
   .site-map__row {
     margin: 0 -15px; } }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .header__form {
     margin-left: auto; }
   .header__cart {
@@ -1420,7 +1420,7 @@ body, html {
   .site-map__link {
     margin-bottom: 10px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .header .row {
     margin-right: -15px; }
   .header__logo {
@@ -1514,7 +1514,7 @@ body, html {
   .site-map__tel, .site-map__mail, .site-map__address {
     font-size: 18px; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .header__form {
     display: none; }
   .header__cart {
@@ -1540,7 +1540,7 @@ body, html {
     .site-map__item--contacts {
       margin-bottom: 0; } }
 
-@media (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .header .row {
     margin-right: -10px; } }
 
@@ -2120,7 +2120,7 @@ body, html {
     padding-left: 40px;
     padding-right: 40px; }
 
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .pop-goods .slick-prev {
     left: -7px;
     z-index: 10; }
@@ -2139,7 +2139,7 @@ body, html {
       bottom: 0;
       right: 0; } }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .topslider__title {
     font-size: 40px;
     margin-bottom: 20px; }
@@ -2201,7 +2201,7 @@ body, html {
       font-size: 32px;
       margin-bottom: 35px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .container {
     padding: 0 15px; }
   .main-homepage__wrap {
@@ -2300,7 +2300,7 @@ body, html {
   .news__link {
     display: none; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .topslider__slide--svg .topslider__img {
     width: -webkit-calc(100% + 20px);
     width: calc(100% + 20px);
@@ -2356,7 +2356,7 @@ body, html {
     font-size: 28px;
     margin-bottom: 24px; } }
 
-@media (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .container {
     padding-left: 10px;
     padding-right: 10px; } }
@@ -2457,7 +2457,7 @@ body, html {
     height: 100%;
     min-height: 550px; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .information,
   .video-block {
     margin-bottom: 40px; }
@@ -2468,7 +2468,7 @@ body, html {
   .video-block iframe {
     min-height: 450px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .information__img {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 30%;
@@ -2480,7 +2480,7 @@ body, html {
     width: 90px;
     height: 90px; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .information__title {
     font-size: 28px;
     margin-bottom: 24px; }
@@ -2616,7 +2616,7 @@ body, html {
     padding-left: 40px;
     padding-right: 40px; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .stations-promo__title {
     font-size: 38px; }
   .stations-promo__descr {
@@ -2628,7 +2628,7 @@ body, html {
         -ms-transform: translateX(55%);
             transform: translateX(55%); } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .stations-promo {
     padding-top: 40px; }
     .stations-promo .container:before {
@@ -2655,7 +2655,7 @@ body, html {
     .goods-items .pop-goods__item {
       width: 50%; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .goods-items .pop-goods__item {
     width: 100%; } }
 
@@ -2905,7 +2905,7 @@ body, html {
     width: 2px;
     background-color: #003398; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .aside-menu {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 270px;
@@ -2939,7 +2939,7 @@ body, html {
   .our-news__title {
     font-size: 32px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .about, .our-news, .gallery, .contacts {
     margin-top: 40px;
     padding-bottom: 40px; }
@@ -3023,7 +3023,7 @@ body, html {
   .our-news__next, .gallery__more {
     margin-top: 35px; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .about__img {
     width: 70%;
     min-width: 55%; } }
@@ -3210,7 +3210,7 @@ body, html {
     min-height: 430px;
     width: 100%; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .gallery__wrap {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -3228,7 +3228,7 @@ body, html {
     width: 25px;
     height: 25px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .gallery__wrap {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
@@ -3440,7 +3440,7 @@ body, html {
     font-size: 16px;
     color: #8e8e8e; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .contacts__wrap {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -3486,7 +3486,7 @@ body, html {
     text-align: left;
     margin-top: 15px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .partners__wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3507,7 +3507,7 @@ body, html {
     margin-left: auto;
     margin-right: auto; } }
 
-@media (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .contacts__tels, .contacts__mails, .contacts__btns {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 100%;
@@ -3805,7 +3805,7 @@ body, html {
   .order-page__btn {
     margin-top: 32px; }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .cart {
     padding: 40px 0; }
     .cart__title {
@@ -3849,7 +3849,7 @@ body, html {
       font-size: 28px;
       margin-bottom: 24px; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .cart__item {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4039,7 +4039,7 @@ body, html {
     margin-top: -20px;
     padding: 12px 40px; }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .search-page {
     overflow-x: hidden; }
     .search-page__btn:before {
@@ -4047,7 +4047,7 @@ body, html {
       width: 172px;
       height: 172px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .not-found {
     padding: 40px 0;
     overflow-x: hidden; }
@@ -4068,7 +4068,7 @@ body, html {
     .not-found__btn {
       margin-top: -10px; } }
 
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .search-page__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4559,7 +4559,7 @@ body, html {
 .oneclick-popup .order-page__captcha {
   margin-bottom: 20px; }
 
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .video-block__slider .slick-prev {
     left: -7px;
     z-index: 50; }
@@ -4567,7 +4567,7 @@ body, html {
     right: -7px;
     z-index: 50; } }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .goods-card__sliders {
     width: 35%; }
   .goods-card__info {
@@ -4577,7 +4577,7 @@ body, html {
   .video-block__img {
     max-width: 80%; } }
 
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .goods-card__wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4627,7 +4627,7 @@ body, html {
       padding-left: 10px;
       padding-right: 10px; } }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .goods-card__title {
     font-size: 32px; }
   .goods-card__buy, .goods-card__tocart {
@@ -4635,7 +4635,7 @@ body, html {
   .goods-card__tab {
     font-size: 10px; } }
 
-@media (max-width: 574px) {
+@media only screen and (max-width: 575px) {
   .video-block__slider .slick-dots {
     bottom: -23px; }
   .goods-card {
@@ -4753,7 +4753,7 @@ body, html {
     margin-left: 0;
     margin-top: 10px; } }
 
-@media (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .goods-card__advant-item {
     width: 100%; } }
 
