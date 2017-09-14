@@ -68,16 +68,11 @@
     font-size: 16px
     margin-bottom: 0
 
-.contacts
-  @extend .about
-  padding-bottom: 46px
-  &__flex-wrap
-    @extend .about__flex-wrap
-  &__main
-    @extend .about__main
-    width: calc(100% - 372px)
-  &__title
-    @extend .about__title
+.text-page
+  &--contacts
+    padding-bottom: 46px
+    .text-page__main
+      width: calc(100% - 372px)
   &__wrap
     display: flex
     justify-content: space-between
@@ -166,12 +161,13 @@
     color: $footer-color
 
 +r($desktop)
+  .text-page.text-page--contacts
+    &__main
+      width: calc(100% - 270px)
   .contacts
     &__wrap
       flex-wrap: wrap
       margin-bottom: 15px
-    &__main
-      width: calc(100% - 270px)
     &__map-wrap
       display: flex
       flex-direction: column-reverse
@@ -200,9 +196,10 @@
     &__map-data
       position: static
       width: 100%
+  .text-page--contacts
+    .text-page__main
+        width: 100%
   .contacts
-    &__main
-      width: 100%
     &__btn
       &--single
         display: block

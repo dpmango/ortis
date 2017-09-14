@@ -1,5 +1,5 @@
 // Страница О компании
-.about
+.text-page
   margin-top: 52px
   padding-bottom: 80px
   &__flex-wrap
@@ -80,15 +80,11 @@
       padding-left: 34px
 
 // Страница Новости
+.text-page
+  &--our-news
+    &__title
+      margin-bottom: 12px
 .our-news
-  @extend .about
-  &__flex-wrap
-    @extend .about__flex-wrap
-  &__main
-    @extend .about__main
-  &__title
-    @extend .about__title
-    margin-bottom: 12px
   &__item
     margin-bottom: 32px
     padding-bottom: 32px
@@ -211,7 +207,7 @@
 +r($desktop)
   .aside-menu
     flex: 0 0 270px
-  .about
+  .text-page
     &__main
       margin-left: 30px
       .flex-wrap
@@ -230,12 +226,12 @@
     &__descr
       font-size: 18px
       line-height: 21px
-  .our-news
+  .text-page--our-news
     &__title
       font-size: 32px
 
 +r($tablet)
-  .about
+  .text-page
     margin-top: 40px
     padding-bottom: 40px
     &__flex-wrap
@@ -261,7 +257,7 @@
     order: 1
     margin-top: 15px
     flex: 0 1 100%
-  .our-news
+  .text-page--our-news
     &__title
       margin-bottom: 12px
     &__more
@@ -295,7 +291,7 @@
       margin-top: 35px
 
 +r($mobile)
-  .about
+  .text-page
     &__img
       width: 70%
       min-width: 55%
