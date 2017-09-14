@@ -1,9 +1,17 @@
 .main-homepage
   &__wrap
-    background-repeat: no-repeat
-    background-image: url(../img/bg-stroke2.svg)
-    background-size: cover
+    position: relative
+    // background-repeat: no-repeat
+    // background-image: url(../img/bg-stroke2.svg)
+    // background-size: cover
+  video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
   .topslider
+    position: relative
     padding-top: 0
     background-image: none
     &__slide
@@ -19,15 +27,23 @@
     z-index: 1
 
 .topslider
+  position: relative
   background-repeat: no-repeat
   background-size: cover
+  video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+  .slick-list
+    z-index: 2
+  .slick-dots
+    z-index: 2
   &--production
     .topslider__title--pink
       font-size: 50px
-    .topslider__slide
-      background-image: url(../img/bg-stroke2.svg)
-      background-repeat: no-repeat
-      background-size: cover
   &__img
     width: 45%
     min-height: 350px
@@ -577,7 +593,11 @@
   .main-homepage
     &__wrap
       background-image: none
+    video
+      display: none
   .topslider
+    video
+      display: none
     &--production
       .topslider__slide
         background: none

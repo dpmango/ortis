@@ -133,6 +133,11 @@ gulp.task('img', function () {
     .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('video', function () {
+  return gulp.src('src/video/**/*')
+    .pipe(gulp.dest('dist/video'));
+});
+
 gulp.task('list-pages', function() {
   delete require.cache[require.resolve('./src/list-pages/index.yaml')]
   var pages = require('./src/list-pages/index.yaml');
@@ -157,7 +162,7 @@ gulp.task('watch', ['browser-sync', 'pug', 'sass', 'scripts'], function () {
   gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'pug', 'scripts', 'list-pages'], function () {
+gulp.task('build', ['clean', 'img', 'video', 'sass', 'pug', 'scripts', 'list-pages'], function () {
 
   var buildCss = gulp.src('src/css/style.css')
     .pipe(csso({

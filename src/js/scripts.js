@@ -22,6 +22,7 @@ $(document).ready(function () {
 		dots: true,
 		accessibility: false,
 		adaptiveHeight: false,
+		slide: ".topslider__slide",
 		responsive: [
 			{
 				breakpoint: 767,
