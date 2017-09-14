@@ -165,11 +165,12 @@ body, html
         background-color: $main-color
 
 .menu-toggle
+  margin-top: -15px
   width: 27px
   height: 27px
   margin-right: 24px !important
   flex: 0 0 auto
-  padding: 0 !important
+  padding: 0px !important
   .hamburger-box
     width: 27px
     height: 27px
@@ -206,8 +207,9 @@ body, html
       background-color: $black-color
       &:before,
       &:after
-        opacity: 1
         background-color: $black-color
+      &::after
+        background: $black-color
 
 .main-nav
   margin-left: auto
@@ -726,13 +728,14 @@ body, html
       top: 50%
       transform: translateY(-50%)
       padding: 10px
-      visibility: hidden
       opacity: 0
-      z-index: -1
+      z-index: 2
+      pointer-events: none
+      box-shadow: 0px 0px 6px rgba(black, .2)
+      transition: all .25s ease
       &.mobile-active
-        visibility: visible
         opacity: 1
-        z-index: 2
+        pointer-events: all
     &__btn
       position: static
       transform: none

@@ -4,7 +4,46 @@ function initMap() {
 		lng: 46.440835
 	};
 
-	var cluster = '../img/cluster1.svg';
+	var clusterRed = '../img/clusterRed.svg';
+	var clusterBlue = '../img/clusterBlue.svg';
+
+	var locations = [
+		{
+			pos: {
+				lat: 55.530613,
+				lng: 37.574737
+			},
+			marker: clusterRed
+		},
+		{
+			pos: {
+				lat: 51.710951,
+				lng: 39.225445
+			},
+			marker: clusterBlue
+			},
+		{
+			pos: {
+				lat: 51.692139,
+				lng: 39.151593
+			},
+			marker: clusterBlue
+			},
+		{
+			pos: {
+				lat: 55.827435,
+				lng: 49.112308
+			},
+			marker: clusterBlue
+		},
+		{
+			pos: {
+				lat: 55.819253,
+				lng: 49.100104
+			},
+			marker: clusterRed
+		}
+	];
 
 	var mapPartners = new google.maps.Map(document.getElementById('partners-map'), {
 		center: centerMap,
@@ -21,7 +60,7 @@ function initMap() {
 						"lightness": 17
             }
         ]
-    },
+    	},
 			{
 				"featureType": "landscape",
 				"elementType": "geometry",
@@ -33,7 +72,7 @@ function initMap() {
 						"lightness": 20
             }
         ]
-    },
+    	},
 			{
 				"featureType": "road.highway",
 				"elementType": "geometry.fill",
@@ -45,7 +84,7 @@ function initMap() {
 						"lightness": 17
             }
         ]
-    },
+    	},
 			{
 				"featureType": "road.highway",
 				"elementType": "geometry.stroke",
@@ -60,7 +99,7 @@ function initMap() {
 						"weight": 0.2
             }
         ]
-    },
+    	},
 			{
 				"featureType": "road.arterial",
 				"elementType": "geometry",
@@ -72,7 +111,7 @@ function initMap() {
 						"lightness": 18
             }
         ]
-    },
+    	},
 			{
 				"featureType": "road.local",
 				"elementType": "geometry",
@@ -84,7 +123,7 @@ function initMap() {
 						"lightness": 16
             }
         ]
-    },
+    	},
 			{
 				"featureType": "poi",
 				"elementType": "geometry",
@@ -96,7 +135,7 @@ function initMap() {
 						"lightness": 21
             }
         ]
-    },
+    	},
 			{
 				"featureType": "poi.park",
 				"elementType": "geometry",
@@ -108,7 +147,7 @@ function initMap() {
 						"lightness": 21
             }
         ]
-    },
+    	},
 			{
 				"elementType": "labels.text.stroke",
 				"stylers": [
@@ -122,7 +161,7 @@ function initMap() {
 						"lightness": 16
             }
         ]
-    },
+    	},
 			{
 				"elementType": "labels.text.fill",
 				"stylers": [
@@ -136,7 +175,7 @@ function initMap() {
 						"lightness": 40
             }
         ]
-    },
+    	},
 			{
 				"elementType": "labels.icon",
 				"stylers": [
@@ -144,7 +183,7 @@ function initMap() {
 						"visibility": "off"
             }
         ]
-    },
+    	},
 			{
 				"featureType": "transit",
 				"elementType": "geometry",
@@ -156,7 +195,7 @@ function initMap() {
 						"lightness": 19
             }
         ]
-    },
+    	},
 			{
 				"featureType": "administrative",
 				"elementType": "geometry.fill",
@@ -168,7 +207,7 @@ function initMap() {
 						"lightness": 20
             }
         ]
-    },
+    	},
 			{
 				"featureType": "administrative",
 				"elementType": "geometry.stroke",
@@ -183,25 +222,38 @@ function initMap() {
 						"weight": 1.2
             }
         ]
-    }
-]
+    	}
+		]
 	});
 
-	//	var markerOffice = new google.maps.Marker({
-	//    position: office,
-	//    map: mapOffice,
-	//    title: 'Офис',
-	//		iconOffice: iconOffice
-	//  });
 	var markers = locations.map(function (location, i) {
+		console.log(location)
 		return new google.maps.Marker({
-			position: location,
+			position: location.pos,
 			map: mapPartners,
-			icon: cluster
+			icon: location.marker
 		});
 	});
+
+	var styles = [[{
+		url: '../img/clusterBlue1.png',
+		height: 24,
+		width: 24,
+		textColor: "#ffffff",
+		textSize: 12
+	}, {
+		url: '../images/people45.png',
+		height: 45,
+		width: 45,
+		anchor: [24, 0],
+		textColor: '#ff0000',
+		textSize: 12
+	}]];
+
 	var markerCluster = new MarkerClusterer(mapPartners, markers, {
-		imagePath: '../img/cluster1'
+		imagePath: '../img/clusterBlue',
+		styles: styles[0],
+		zoomOnClick: true
 	});
 	//		// Смена города
 	//		$('.contacts__select').on('change', function () {
@@ -217,27 +269,13 @@ function initMap() {
 	//				}
 	//			});
 	//		});
+
+	$('.partners__item').on('click', function(){
+		var mapItem = $(this).data('map') - 1;
+
+		mapPartners.setCenter(locations[mapItem].pos);
+		mapPartners.setZoom(15);
+	})
+
 }
 google.maps.event.addDomListener(window, 'load', initMap);
-var locations = [
-	{
-		lat: 55.530613, 
-		lng: 37.574737
-	},
-	{
-		lat: 51.710951,
-		lng: 39.225445
-		},
-	{
-		lat: 51.692139,
-		lng: 39.151593
-		},
-	{
-		lat: 55.827435,
-		lng: 49.112308
-	},
-	{
-		lat: 55.819253,
-		lng: 49.100104
-	}
-	];

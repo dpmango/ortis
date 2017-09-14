@@ -209,62 +209,71 @@ $(document).ready(function () {
 	// Попап фото
 	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show");
+		popupHelper("show");;
 		// navigate slider to clicked item
 		$('.photo-popup__big-slider').slick("slickGoTo", $(this).index())
 		$('.photo-popup').addClass('active');
 	});
 	$('.photo-popup__close').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("hide")
+		popupHelper("hide");
 		$('.photo-popup').removeClass('active');
 	});
 
 	// Попап в карточке товара на фото
 	$('.goods-card__big-slider-item').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show")
+		popupHelper("show");
 		$('.goods-card-popup').addClass('active');
 	});
 	$('.goods-card-popup__close').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("hide")
+		popupHelper("hide");
 		$('.goods-card-popup').removeClass('active');
 	});
 
 	// Попап видео
 	$('.gallery__item--video').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show")
+		popupHelper("show");
 		$('.video-popup').addClass('active');
+		if ( $('.video-popup').data('video') ){
+			$('.video-popup iframe').attr('src', $('.video-popup').data('video') )
+		}
+		// autoplay by default
+		playVideo($('.video-popup .video-block__play'));
 	});
 	$('.video-popup__close').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("hide")
+		popupHelper("hide");
+		var targetFrame = $(this).parent().find('iframe');
+		var savedUrl = targetFrame.attr('src');
+		targetFrame.attr('src', "");
+		$(this).parent().data('video', savedUrl);
 		$('.video-popup').removeClass('active');
 	});
 
 	// Попап Добавлено в корзину
 	$('.goods-card__tocart').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show")
+		popupHelper("show");
 		$('.success-popup').addClass('active');
 	});
 	$('.success-popup__close').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("hide")
+		popupHelper("hide");
 		$('.success-popup').removeClass('active');
 	});
 
 	// Попап Купить в 1 клик
 	$('.goods-card__buy').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("show")
+		popupHelper("show");
 		$('.oneclick-popup').addClass('active');
 	});
 	$('.oneclick-popup__close').on('click', function (e) {
 		e.preventDefault();
-		popupHelper("hide")
+		popupHelper("hide");
 		$('.oneclick-popup').removeClass('active');
 	});
 
@@ -277,10 +286,9 @@ $(document).ready(function () {
 		popups.push( $('.photo-popup') );
 		popups.push( $('.goods-card-popup') );
 
-		popupHelper("hide");
+		popupHelper("hide");;
 
 		$.each(popups, function(i,val){
-			console.log(val)
 			val.removeClass('active');
 		})
 	})
@@ -436,7 +444,11 @@ $(document).ready(function () {
 
 	// Play video
 	$('.video-block__play').on('click', function () {
-		var iframe = $(this).closest('.video-block__wrapper').find('iframe');
+		playVideo($(this));
+	});
+
+	function playVideo(that){
+		var iframe = that.closest('.video-block__wrapper').find('iframe');
 		var addedSubject;
 		// проверить если в строке уже есть параметр
 		if ( iframe.attr('src').indexOf("?") >= 0 ){
@@ -445,8 +457,13 @@ $(document).ready(function () {
 			addedSubject = "?autoplay=1"
 		}
 		iframe.attr("src", iframe.attr('src') + addedSubject);
-		$('.video-block__overlay').fadeOut();
-	});
+		that.closest('.video-block__overlay').fadeOut();
+	}
+
+	// hide play btn on mobile
+	if ( isMobile() ){
+		$('.video-block__play, .video-block__overlay').hide();
+	}
 
 	// Aside menu more
 	$('.aside-menu__link--more').on('click', function (e) {
