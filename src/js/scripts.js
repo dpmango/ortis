@@ -21,7 +21,7 @@ $(document).ready(function () {
 		arrows: false,
 		dots: true,
 		accessibility: false,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		responsive: [
 			{
 				breakpoint: 767,
