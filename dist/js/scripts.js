@@ -21,7 +21,8 @@ $(document).ready(function () {
 		arrows: false,
 		dots: true,
 		accessibility: false,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
+		slide: ".topslider__slide",
 		responsive: [
 			{
 				breakpoint: 767,
@@ -199,13 +200,50 @@ $(document).ready(function () {
 	// Попап generic
 	function popupHelper(state){
 		if (state === "show"){
-			$('body').addClass('no-scroll');
+			// $('body').addClass('no-scroll');
 			$('.overlay').fadeIn(250);
+			disableScroll();
+
 		} else if (state === "hide") {
-			$('body').removeClass('no-scroll');
+			// $('body').removeClass('no-scroll');
 			$('.overlay').fadeOut(250);
+			enableScroll();
 		}
 	}
+	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+	function preventDefault(e) {
+	  e = e || window.event;
+	  if (e.preventDefault)
+	      e.preventDefault();
+	  e.returnValue = false;
+	}
+
+	function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+	}
+
+	function disableScroll() {
+	  if (window.addEventListener) // older FF
+	      window.addEventListener('DOMMouseScroll', preventDefault, false);
+	  window.onwheel = preventDefault; // modern standard
+	  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+	  window.ontouchmove  = preventDefault; // mobile
+	  document.onkeydown  = preventDefaultForScrollKeys;
+	}
+
+	function enableScroll() {
+	    if (window.removeEventListener)
+	        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+	    window.onmousewheel = document.onmousewheel = null;
+	    window.onwheel = null;
+	    window.ontouchmove = null;
+	    document.onkeydown = null;
+	}
+
 	// Попап фото
 	$('.gallery__item--photo').on('click', function (e) {
 		e.preventDefault();
