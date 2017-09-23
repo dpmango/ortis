@@ -4,7 +4,7 @@ include ../modules/header.pug
 main.main.main-homepage
 	.main-homepage__wrap
 		include ../modules/topbar.pug
-		video(width='100%', height='auto', autoplay='autoplay', loop='loop', preload='auto')
+		video(playsinline autoplay muted loop)
 			source(src='video/back.mp4')
 		include ../modules/topslider.pug
 	include ../modules/submenu.pug

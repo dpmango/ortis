@@ -1552,9 +1552,15 @@ body, html {
 
 .main-homepage video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   z-index: -1; }
 
 .main-homepage .topslider {
@@ -1580,10 +1586,16 @@ body, html {
   background-size: cover; }
   .topslider video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1; }
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    z-index: -1; }
   .topslider .slick-list {
     z-index: 2; }
   .topslider .slick-dots {
@@ -1678,19 +1690,11 @@ body, html {
       text-align: center; }
 
 @-webkit-keyframes swan-dash {
-  0% {
-    stroke-dasharray: 3000;
-    stroke-dashoffset: 3000; }
-  100% {
-    stroke-dasharray: 3000;
+  to {
     stroke-dashoffset: 0; } }
 
 @keyframes swan-dash {
-  0% {
-    stroke-dasharray: 3000;
-    stroke-dashoffset: 3000; }
-  100% {
-    stroke-dasharray: 3000;
+  to {
     stroke-dashoffset: 0; } }
 
 .catalog {
@@ -1751,15 +1755,12 @@ body, html {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 21px;
-      stroke-dasharray: 0;
-      stroke-dashoffset: 0;
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
-      .catalog__item svg g[id*="icon"] {
-        -webkit-transition: stroke 0.5s;
-        transition: stroke 0.5s; }
       .catalog__item svg:hover g[id*="icon"] {
-        stroke: #e21776; }
+        stroke: #e21776;
+        -webkit-animation: swan-dash 0.8s linear both;
+                animation: swan-dash 0.8s linear both; }
     .catalog__item:hover .catalog__item-title {
       color: #e21776; }
   .catalog__item-title {

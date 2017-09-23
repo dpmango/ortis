@@ -616,16 +616,19 @@ $(document).ready(function () {
 	// Вычисление длины свг
 	//////////////
 
-//	$('.catalog__item svg').hover(function () {
-//		var svgPathElem = $(this).find('path');
-//		var pathSum = 0;
-//		for (var i = 0; i < svgPathElem.length; i++) {
-//			var path = svgPathElem[i];
-//			var pathLen = parseInt(path.getTotalLength());
-//			var pathSum = pathSum + pathLen;
-//		}
-//		$(this).find('[id *= "icon"]').attr('stroke-dasharray', pathSum);
-//		$(this).find('[id *= "icon"]').attr('stroke-dashoffset', pathSum);
-//	});
+	$('.catalog__item svg').hover(function () {
+		var svgPathElem = $(this).find('path');
+		var pathSum = 0;
+		for (var i = 0; i < svgPathElem.length; i++) {
+			var path = svgPathElem[i];
+			var pathLen = parseInt(path.getTotalLength());
+			var pathSum = pathSum + pathLen;
+		}
+		$(this).find('[id *= "icon"]').attr('stroke-dasharray', pathSum);
+		$(this).find('[id *= "icon"]').attr('stroke-dashoffset', pathSum);
+	}, function(){
+		$(this).find('[id *= "icon"]').attr('stroke-dasharray', 0);
+		$(this).find('[id *= "icon"]').attr('stroke-dashoffset', 0);
+	});
 
 });
