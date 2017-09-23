@@ -1,18 +1,18 @@
 $(document).ready(function () {
 
 	// Prevent # behavior
-	$('[href="#"]').click(function(e) {
+	$('[href="#"]').click(function (e) {
 		e.preventDefault();
 	});
 
 	// detect mobile devices
-  function isMobile(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      return true
-    } else {
-      return false
-    }
-  }
+	function isMobile() {
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			return true
+		} else {
+			return false
+		}
+	}
 
 	// Верхний слайдер
 	$('.topslider').slick({
@@ -198,8 +198,8 @@ $(document).ready(function () {
 	});
 
 	// Попап generic
-	function popupHelper(state){
-		if (state === "show"){
+	function popupHelper(state) {
+		if (state === "show") {
 			// $('body').addClass('no-scroll');
 			$('.overlay').fadeIn(250);
 			disableScroll();
@@ -210,38 +210,43 @@ $(document).ready(function () {
 			enableScroll();
 		}
 	}
-	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+	var keys = {
+		37: 1,
+		38: 1,
+		39: 1,
+		40: 1
+	};
 
 	function preventDefault(e) {
-	  e = e || window.event;
-	  if (e.preventDefault)
-	      e.preventDefault();
-	  e.returnValue = false;
+		e = e || window.event;
+		if (e.preventDefault)
+			e.preventDefault();
+		e.returnValue = false;
 	}
 
 	function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
+		if (keys[e.keyCode]) {
+			preventDefault(e);
+			return false;
+		}
 	}
 
 	function disableScroll() {
-	  if (window.addEventListener) // older FF
-	      window.addEventListener('DOMMouseScroll', preventDefault, false);
-	  window.onwheel = preventDefault; // modern standard
-	  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-	  window.ontouchmove  = preventDefault; // mobile
-	  document.onkeydown  = preventDefaultForScrollKeys;
+		if (window.addEventListener) // older FF
+			window.addEventListener('DOMMouseScroll', preventDefault, false);
+		window.onwheel = preventDefault; // modern standard
+		window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+		window.ontouchmove = preventDefault; // mobile
+		document.onkeydown = preventDefaultForScrollKeys;
 	}
 
 	function enableScroll() {
-	    if (window.removeEventListener)
-	        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-	    window.onmousewheel = document.onmousewheel = null;
-	    window.onwheel = null;
-	    window.ontouchmove = null;
-	    document.onkeydown = null;
+		if (window.removeEventListener)
+			window.removeEventListener('DOMMouseScroll', preventDefault, false);
+		window.onmousewheel = document.onmousewheel = null;
+		window.onwheel = null;
+		window.ontouchmove = null;
+		document.onkeydown = null;
 	}
 
 	// Попап фото
@@ -275,8 +280,8 @@ $(document).ready(function () {
 		e.preventDefault();
 		popupHelper("show");
 		$('.video-popup').addClass('active');
-		if ( $('.video-popup').data('video') ){
-			$('.video-popup iframe').attr('src', $('.video-popup').data('video') )
+		if ($('.video-popup').data('video')) {
+			$('.video-popup iframe').attr('src', $('.video-popup').data('video'))
 		}
 		// autoplay by default
 		playVideo($('.video-popup .video-block__play'));
@@ -316,17 +321,17 @@ $(document).ready(function () {
 	});
 
 	// закрытие попапа при клике вне области
-	$('.overlay').on('click', function(){
+	$('.overlay').on('click', function () {
 		var popups = []
-		popups.push( $('.video-popup') );
-		popups.push( $('.success-popup') );
-		popups.push( $('.oneclick-popup') );
-		popups.push( $('.photo-popup') );
-		popups.push( $('.goods-card-popup') );
+		popups.push($('.video-popup'));
+		popups.push($('.success-popup'));
+		popups.push($('.oneclick-popup'));
+		popups.push($('.photo-popup'));
+		popups.push($('.goods-card-popup'));
 
 		popupHelper("hide");;
 
-		$.each(popups, function(i,val){
+		$.each(popups, function (i, val) {
 			val.removeClass('active');
 		})
 	})
@@ -485,11 +490,11 @@ $(document).ready(function () {
 		playVideo($(this));
 	});
 
-	function playVideo(that){
+	function playVideo(that) {
 		var iframe = that.closest('.video-block__wrapper').find('iframe');
 		var addedSubject;
 		// проверить если в строке уже есть параметр
-		if ( iframe.attr('src').indexOf("?") >= 0 ){
+		if (iframe.attr('src').indexOf("?") >= 0) {
 			addedSubject = "&autoplay=1"
 		} else {
 			addedSubject = "?autoplay=1"
@@ -499,7 +504,7 @@ $(document).ready(function () {
 	}
 
 	// hide play btn on mobile
-	if ( isMobile() ){
+	if (isMobile()) {
 		$('.video-block__play, .video-block__overlay').hide();
 	}
 
@@ -516,87 +521,111 @@ $(document).ready(function () {
 	});
 
 	// Masked input
-	$(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
-	$(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
+	$(".js-dateMask").mask("99.99.9999", {
+		placeholder: "__ __ ____"
+	});
+	$(".js-dateMask2").mask("99.99.99", {
+		placeholder: "ДД.ММ.ГГ"
+	});
 
-	$(".js-indexMask").mask("999 999", { placeholder: "000 000" });
+	$(".js-indexMask").mask("999 999", {
+		placeholder: "000 000"
+	});
 
-	$("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
+	$("input[type='tel']").mask("+7 (000) 000-0000", {
+		placeholder: "+7 (___) ___-____"
+	});
 
 
 	// GENERIC FUNCTIONS
 	////////////////////
 
-  var validateErrorPlacement = function(error, element) {
-    // error.addClass('ui-input__validation');
-    // error.appendTo(element.parent("div"));
+	var validateErrorPlacement = function (error, element) {
+		// error.addClass('ui-input__validation');
+		// error.appendTo(element.parent("div"));
 		return false;
-  }
-  var validateHighlight = function(element) {
-    $(element).parent('div').addClass("has-error");
-  }
-  var validateUnhighlight = function(element) {
-    $(element).parent('div').removeClass("has-error");
-  }
-  var validateSubmitHandler = function(form) {
-    $(form).addClass('loading');
-    $.ajax({
-      type: "POST",
-      url: $(form).attr('action'),
-      data: $(form).serialize(),
-      success: function(response) {
-        $(form).removeClass('loading');
-        var data = $.parseJSON(response);
-        if (data.status == 'success') {
-          // do something I can't test
-        } else {
-            $(form).find('[data-error]').html(data.message).show();
-        }
-      }
-    });
-  }
+	}
+	var validateHighlight = function (element) {
+		$(element).parent('div').addClass("has-error");
+	}
+	var validateUnhighlight = function (element) {
+		$(element).parent('div').removeClass("has-error");
+	}
+	var validateSubmitHandler = function (form) {
+		$(form).addClass('loading');
+		$.ajax({
+			type: "POST",
+			url: $(form).attr('action'),
+			data: $(form).serialize(),
+			success: function (response) {
+				$(form).removeClass('loading');
+				var data = $.parseJSON(response);
+				if (data.status == 'success') {
+					// do something I can't test
+				} else {
+					$(form).find('[data-error]').html(data.message).show();
+				}
+			}
+		});
+	}
 
-  var validatePhone = {
-    required: true,
-    normalizer: function(value) {
-        var PHONE_MASK = '+X (XXX) XXX-XXXX';
-        if (!value || value === PHONE_MASK) {
-            return value;
-        } else {
-            return value.replace(/[^\d]/g, '');
-        }
-    },
-    minlength: 11,
-    digits: true
-  }
+	var validatePhone = {
+		required: true,
+		normalizer: function (value) {
+			var PHONE_MASK = '+X (XXX) XXX-XXXX';
+			if (!value || value === PHONE_MASK) {
+				return value;
+			} else {
+				return value.replace(/[^\d]/g, '');
+			}
+		},
+		minlength: 11,
+		digits: true
+	}
 
-  ///////////////
-  // ORDER FORM
-  ///////////////
-  $(".order-page__form").validate({
-    errorPlacement: validateErrorPlacement,
-    highlight: validateHighlight,
-    unhighlight: validateUnhighlight,
-    submitHandler: validateSubmitHandler,
-    rules: {
-      name: "required",
-      email: {
-        required: true,
-        email: true
-      },
-      phone: validatePhone
-    },
-    messages: {
-      name: "Заполните это поле",
-      email: {
-          required: "Заполните это поле",
-          email: "Email содержит неправильный формат"
-      },
-      phone: {
-          required: "Заполните это поле",
-          minlength: "Введите корректный телефон"
-      }
-    }
-  });
+	///////////////
+	// ORDER FORM
+	///////////////
+	$(".order-page__form").validate({
+		errorPlacement: validateErrorPlacement,
+		highlight: validateHighlight,
+		unhighlight: validateUnhighlight,
+		submitHandler: validateSubmitHandler,
+		rules: {
+			name: "required",
+			email: {
+				required: true,
+				email: true
+			},
+			phone: validatePhone
+		},
+		messages: {
+			name: "Заполните это поле",
+			email: {
+				required: "Заполните это поле",
+				email: "Email содержит неправильный формат"
+			},
+			phone: {
+				required: "Заполните это поле",
+				minlength: "Введите корректный телефон"
+			}
+		}
+	});
+
+	///////////////
+	// Вычисление длины свг
+	//////////////
+
+//	$('.catalog__item svg').hover(function () {
+//		var svgPathElem = $(this).find('path');
+//		var pathSum = 0;
+//		for (var i = 0; i < svgPathElem.length; i++) {
+//			var path = svgPathElem[i];
+//			var pathLen = parseInt(path.getTotalLength());
+//			var pathSum = pathSum + pathLen;
+//		}
+//		$(this).find('[id *= "icon"]').attr('stroke-dasharray', pathSum);
+//		$(this).find('[id *= "icon"]').attr('stroke-dashoffset', pathSum);
+//	});
 
 });

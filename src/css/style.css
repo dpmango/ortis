@@ -893,6 +893,8 @@ body, html {
     opacity: 1; } }
 
 .popup-menu {
+  z-index: 10;
+  position: relative;
   display: none;
   padding-top: 32px;
   padding-bottom: 60px;
@@ -1552,7 +1554,8 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 .main-homepage .topslider {
   position: relative;
@@ -1755,11 +1758,8 @@ body, html {
       .catalog__item svg g[id*="icon"] {
         -webkit-transition: stroke 0.5s;
         transition: stroke 0.5s; }
-      .catalog__item svg:hover {
-        -webkit-animation: swan-dash 0.8s linear forwards;
-                animation: swan-dash 0.8s linear forwards; }
-        .catalog__item svg:hover g[id*="icon"] {
-          stroke: #e21776; }
+      .catalog__item svg:hover g[id*="icon"] {
+        stroke: #e21776; }
     .catalog__item:hover .catalog__item-title {
       color: #e21776; }
   .catalog__item-title {
