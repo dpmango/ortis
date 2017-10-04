@@ -25,7 +25,7 @@
   .topbar
     position: absolute
     background-color: transparent
-    top: 48px
+    top: 0px
     left: 0
     width: 100%
     z-index: 1
@@ -157,7 +157,7 @@
     justify-content: center
     align-items: stretch
   &__item
-    width: 33.3333%
+    width: 29%
     padding-bottom: 27px
     text-decoration: none
     text-align: center
@@ -186,6 +186,7 @@
     text-align: center
     margin-bottom: 0
     font-size: 24px
+    font-weight: 400
     color: $header-text
     text-decoration: none
     margin-top: auto
@@ -232,6 +233,7 @@
       margin-left: auto
       margin-right: auto
       max-width: 100%
+      padding: 25px 25px 0 25px
   &__hide
     visibility: hidden
     opacity: 0
@@ -332,11 +334,23 @@
 .advant
   padding: 52px 0
   background-repeat: no-repeat
-  background-image: url(../img/bg-advant.png)
+  background-image: url(../img/bg-advant1.png)
   background-size: cover
   position: relative
   background-position: 50%
+  overflow: hidden
+  .advant__video
+    position: absolute;
+    top: 0
+    left: 0
+    min-height: 100%;
+    min-width: 100%;
+    width: auto
+    height: auto
+    transform: none
+    z-index: 0;
   &:before
+    display: none
     content: ''
     position: absolute
     width: 100%
@@ -655,7 +669,7 @@
       &:before
         display: none
     .slick-dots
-      bottom: -5px
+      bottom: 5px
   .catalog
     .flex-wrap
       flex-wrap: wrap
@@ -733,7 +747,7 @@
     &__item
       width: 100%
     .slick-dots
-      bottom: -10px
+      bottom: 0px
   .news
     &__title
       font-size: 28px

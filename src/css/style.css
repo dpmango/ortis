@@ -1575,7 +1575,7 @@ body, html {
 .main-homepage .topbar {
   position: absolute;
   background-color: transparent;
-  top: 48px;
+  top: 0px;
   left: 0;
   width: 100%;
   z-index: 1; }
@@ -1732,7 +1732,7 @@ body, html {
         -ms-flex-align: stretch;
             align-items: stretch; }
   .catalog__item {
-    width: 33.3333%;
+    width: 29%;
     padding-bottom: 27px;
     text-decoration: none;
     text-align: center;
@@ -1767,6 +1767,7 @@ body, html {
     text-align: center;
     margin-bottom: 0;
     font-size: 24px;
+    font-weight: 400;
     color: #003398;
     text-decoration: none;
     margin-top: auto;
@@ -1812,7 +1813,8 @@ body, html {
       height: auto;
       margin-left: auto;
       margin-right: auto;
-      max-width: 100%; }
+      max-width: 100%;
+      padding: 25px 25px 0 25px; }
   .pop-goods__hide {
     visibility: hidden;
     opacity: 0;
@@ -1936,11 +1938,25 @@ body, html {
 .advant {
   padding: 52px 0;
   background-repeat: no-repeat;
-  background-image: url(../img/bg-advant.png);
+  background-image: url(../img/bg-advant1.png);
   background-size: cover;
   position: relative;
-  background-position: 50%; }
+  background-position: 50%;
+  overflow: hidden; }
+  .advant .advant__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    z-index: 0; }
   .advant:before {
+    display: none;
     content: '';
     position: absolute;
     width: 100%;
@@ -2292,7 +2308,7 @@ body, html {
     .topslider__item:before {
       display: none; }
   .topslider .slick-dots {
-    bottom: -5px; }
+    bottom: 5px; }
   .catalog .flex-wrap {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2372,7 +2388,7 @@ body, html {
   .topslider__item {
     width: 100%; }
   .topslider .slick-dots {
-    bottom: -10px; }
+    bottom: 0px; }
   .news__title {
     font-size: 28px;
     margin-bottom: 24px; } }
