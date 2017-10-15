@@ -422,12 +422,14 @@ $(document).ready(function () {
 	$('.submenu__link').on('click', function (e) {
 		e.preventDefault();
 		var dataDrop = $(this).attr('data-drop');
-		$('.submenu__link').removeClass('active');
-		$(this).addClass('active');
+		if ( dataDrop ){
+			$('.submenu__link').removeClass('active');
+			$(this).addClass('active');
 
-		$('.popup-menu').slideDown(200);
-		$('.popup-menu__wrap').removeClass('active');
-		$('.popup-menu__wrap#' + dataDrop).addClass('active');
+			$('.popup-menu').slideDown(200);
+			$('.popup-menu__wrap').removeClass('active');
+			$('.popup-menu__wrap#' + dataDrop).addClass('active');
+		}
 	});
 
 	$('.popup-menu__link').on('click', function (e) {
